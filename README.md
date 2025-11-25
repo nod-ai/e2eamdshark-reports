@@ -1,4 +1,4 @@
-# e2eshark-reports
+# e2eamdshark-reports
 
 This repo contains status reports of e2e runs of over 2000 models using AMD-SHARK/IREE/MLIR infra.
 They are organized by date and you can find a statusreport.md, summaryreport.md, and timereport.md

@@ -3,17 +3,17 @@
 **TOTAL TESTS = 18**
 |Stage|# Passing|% of Total|% of Attempted|
 |--|--|--|--|
-| Setup | 0 | 0.0% | 0.0% |
-| IREE Compilation | 0 | 0.0% | 0.0% |
-| Gold Inference | 0 | 0.0% | 0.0% |
-| IREE Inference Invocation | 0 | 0.0% | 0.0% |
-| Inference Comparison (PASS) | 0 | 0.0% | 0.0% |
+| Setup | 17 | 94.4% | 94.4% |
+| IREE Compilation | 17 | 94.4% | 100.0% |
+| Gold Inference | 17 | 94.4% | 100.0% |
+| IREE Inference Invocation | 17 | 94.4% | 100.0% |
+| Inference Comparison (PASS) | 17 | 94.4% | 100.0% |
 ## Fail Summary
 
 **TOTAL TESTS = 18**
 |Stage|# Failed at Stage|% of Total|
 |--|--|--|
-| Setup | 18 | 100.0% |
+| Setup | 1 | 5.6% |
 | IREE Compilation | 0 | 0.0% |
 | Gold Inference | 0 | 0.0% |
 | IREE Inference Invocation | 0 | 0.0% |
@@ -25,20 +25,20 @@ Namespace(device='hip', backend='rocm', target_chip='gfx942', iree_compile_args=
 | Test | Exit Status | Mean Benchmark Time (ms) | Notes |
 |--|--|--|--|
 | biogpt_Opset16_transformers | setup | None | |
-| biogpt_Opset17_transformers | setup | None | |
-| gpt2_Opset16_transformers | setup | None | |
-| gpt2_Opset18_transformers | setup | None | |
-| gpt2doubleheads_Opset16_transformers | setup | None | |
-| gpt2doubleheads_Opset17_transformers | setup | None | |
-| gpt2lmhead_Opset16_transformers | setup | None | |
-| gpt2lmhead_Opset17_transformers | setup | None | |
-| gptj_Opset16_transformers | setup | None | |
-| gptj_Opset18_transformers | setup | None | |
-| gptneox_Opset16_transformers | setup | None | |
-| gptneox_Opset18_transformers | setup | None | |
-| openaigpt_Opset16_transformers | setup | None | |
-| openaigpt_Opset18_transformers | setup | None | |
-| openaigptdoubleheads_Opset16_transformers | setup | None | |
-| openaigptdoubleheads_Opset17_transformers | setup | None | |
-| openaigptlmhead_Opset16_transformers | setup | None | |
-| openaigptlmhead_Opset17_transformers | setup | None | |
+| biogpt_Opset17_transformers | PASS | None | |
+| gpt2_Opset16_transformers | PASS | None | |
+| gpt2_Opset18_transformers | PASS | None | |
+| gpt2doubleheads_Opset16_transformers | PASS | None | |
+| gpt2doubleheads_Opset17_transformers | PASS | None | |
+| gpt2lmhead_Opset16_transformers | PASS | None | |
+| gpt2lmhead_Opset17_transformers | PASS | None | |
+| gptj_Opset16_transformers | PASS | None | |
+| gptj_Opset18_transformers | PASS | None | |
+| gptneox_Opset16_transformers | PASS | None | |
+| gptneox_Opset18_transformers | PASS | None | |
+| openaigpt_Opset16_transformers | PASS | None | |
+| openaigpt_Opset18_transformers | PASS | None | |
+| openaigptdoubleheads_Opset16_transformers | PASS | None | |
+| openaigptdoubleheads_Opset17_transformers | PASS | None | |
+| openaigptlmhead_Opset16_transformers | PASS | None | |
+| openaigptlmhead_Opset17_transformers | PASS | None | |

@@ -6,8 +6,8 @@
 | Setup | 826 | 100.0% | 100.0% |
 | IREE Compilation | 826 | 100.0% | 100.0% |
 | Gold Inference | 826 | 100.0% | 100.0% |
-| IREE Inference Invocation | 826 | 100.0% | 100.0% |
-| Inference Comparison (PASS) | 821 | 99.4% | 99.4% |
+| IREE Inference Invocation | 822 | 99.5% | 99.5% |
+| Inference Comparison (PASS) | 817 | 98.9% | 99.4% |
 ## Fail Summary
 
 **TOTAL TESTS = 826**
@@ -16,7 +16,7 @@
 | Setup | 0 | 0.0% |
 | IREE Compilation | 0 | 0.0% |
 | Gold Inference | 0 | 0.0% |
-| IREE Inference Invocation | 0 | 0.0% |
+| IREE Inference Invocation | 4 | 0.5% |
 | Inference Comparison | 5 | 0.6% |
 ## Test Run Detail
 Test was run with the following arguments:
@@ -27,8 +27,8 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_llvm-cpu_onnx_model_zoo_com
 | alexnet_Opset18_torch_hub | PASS | None | |
 | beit_base_patch16_224_Opset16_timm | PASS | None | |
 | beit_large_patch16_224_Opset17_timm | PASS | None | |
-| beit_large_patch16_384_Opset16_timm | PASS | None | |
-| beit_large_patch16_384_Opset17_timm | PASS | None | |
+| beit_large_patch16_384_Opset16_timm | compiled_inference | None | |
+| beit_large_patch16_384_Opset17_timm | compiled_inference | None | |
 | cait_m36_384_Opset16_timm | PASS | None | |
 | cait_m48_448_Opset17_timm | PASS | None | |
 | cait_s24_384_Opset18_timm | PASS | None | |
@@ -179,7 +179,7 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_llvm-cpu_onnx_model_zoo_com
 | vit_large_patch16_224_Opset16_timm | PASS | None | |
 | vit_large_patch16_224_Opset18_timm | PASS | None | |
 | vit_large_patch16_224_in21k_Opset17_timm | PASS | None | |
-| vit_large_patch16_384_Opset17_timm | PASS | None | |
+| vit_large_patch16_384_Opset17_timm | compiled_inference | None | |
 | vit_large_patch32_384_Opset16_timm | PASS | None | |
 | vit_relpos_base_patch16_224_Opset16_timm | PASS | None | |
 | vit_relpos_medium_patch16_224_Opset17_timm | PASS | None | |
@@ -408,7 +408,7 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_llvm-cpu_onnx_model_zoo_com
 | cs3darknet_focus_l_Opset18_timm | PASS | None | |
 | cs3darknet_x_Opset17_timm | PASS | None | |
 | darknet53_Opset17_timm | PASS | None | |
-| deit3_large_patch16_384_Opset16_timm | PASS | None | |
+| deit3_large_patch16_384_Opset16_timm | compiled_inference | None | |
 | deit3_small_patch16_384_in21ft1k_Opset16_timm | PASS | None | |
 | densenet121_Opset16_timm | PASS | None | |
 | densenet161_Opset18_timm | PASS | None | |

@@ -1884,9 +1884,9 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_llvm-cpu_hf_onnx_model_zoo_
 | led_Opset16 | compilation | None | |
 | led_Opset17 | compilation | None | |
 | led_Opset18 | compilation | None | |
-| longformer_Opset16 | compilation | None | |
-| longformer_Opset17 | compilation | None | |
-| longformer_Opset18 | compilation | None | |
+| longformer_Opset16 | import_model | None | |
+| longformer_Opset17 | import_model | None | |
+| longformer_Opset18 | import_model | None | |
 | longt5_Opset16 | PASS | None | |
 | longt5_Opset17 | PASS | None | |
 | longt5encoder_Opset16 | PASS | None | |

@@ -8,24 +8,24 @@ progression tolerance: 10.0%
 
 |model name|exit_status|analysis|old_time_ms|new_time_ms|change_ms|percent_change|
 |---|---|---|---|---|---|---|
-|migraphx_ORT__bert_base_cased_1|PASS|regression|85.632|1856.8691|1771.237|2068.43%|
-|migraphx_ORT__bert_base_uncased_1|PASS|regression|86.1524|1866.8547|1780.7023|2066.92%|
-|migraphx_ORT__bert_large_uncased_1|PASS|regression|260.9527|20372.4083|20111.4556|7706.94%|
-|migraphx_ORT__distilgpt2_1|PASS|regression|31.2671|874.4496|843.1825|2696.71%|
-|migraphx_ORT__onnx_models__bert_base_cased_1_fp16_gpu|Numerics|regression|83.0977|2589.3238|2506.2261|3016.0%|
-|migraphx_ORT__onnx_models__bert_large_uncased_1_fp16_gpu|Numerics|regression|244.0676|14062.4299|13818.3623|5661.7%|
-|migraphx_ORT__onnx_models__distilgpt2_1_fp16_gpu|Numerics|regression|40.5572|619.8901|579.3328|1428.43%|
-|migraphx_cadene__dpn92i1|PASS|regression|186.2736|768.2872|582.0136|312.45%|
-|migraphx_cadene__inceptionv4i16|PASS|regression|7257.2016|9533.8605|2276.6589|31.37%|
-|migraphx_cadene__resnext101_64x4di1|PASS|regression|330.1171|1015.8396|685.7225|207.72%|
-|migraphx_huggingface-transformers__bert_mrpc8|PASS|regression|420.8|14303.2635|13882.4635|3299.06%|
-|migraphx_mlperf__resnet50_v1|PASS|regression|100.8666|354.6132|253.7467|251.57%|
-|migraphx_models__whisper-tiny-decoder|PASS|regression|40.8811|529.8784|488.9973|1196.14%|
-|migraphx_models__whisper-tiny-encoder|Numerics|regression|182.9736|2371.1359|2188.1623|1195.89%|
-|migraphx_pytorch-examples__wlang_gru|PASS|regression|70.2852|111.7586|41.4734|59.01%|
-|migraphx_torchvision__densenet121i32|PASS|regression|1377.2882|5028.1441|3650.856|265.08%|
-|migraphx_torchvision__inceptioni1|PASS|regression|258.7426|373.0908|114.3482|44.19%|
-|migraphx_torchvision__resnet50i1|PASS|regression|99.4756|240.2369|140.7613|141.5%|
+|migraphx_ORT__bert_base_cased_1|PASS|regression|85.632|1798.7883|1713.1562|2000.6%|
+|migraphx_ORT__bert_base_uncased_1|PASS|regression|86.1524|1819.9664|1733.814|2012.5%|
+|migraphx_ORT__bert_large_uncased_1|PASS|regression|260.9527|19965.5253|19704.5726|7551.01%|
+|migraphx_ORT__distilgpt2_1|PASS|regression|31.2671|870.3567|839.0896|2683.62%|
+|migraphx_ORT__onnx_models__bert_base_cased_1_fp16_gpu|Numerics|regression|83.0977|2613.9824|2530.8847|3045.67%|
+|migraphx_ORT__onnx_models__bert_large_uncased_1_fp16_gpu|Numerics|regression|244.0676|14011.3874|13767.3199|5640.78%|
+|migraphx_ORT__onnx_models__distilgpt2_1_fp16_gpu|Numerics|regression|40.5572|604.2878|563.7306|1389.96%|
+|migraphx_cadene__dpn92i1|PASS|regression|186.2736|885.287|699.0134|375.26%|
+|migraphx_cadene__inceptionv4i16|PASS|regression|7257.2016|9788.5154|2531.3137|34.88%|
+|migraphx_cadene__resnext101_64x4di1|PASS|regression|330.1171|1023.1227|693.0056|209.93%|
+|migraphx_huggingface-transformers__bert_mrpc8|PASS|regression|420.8|13987.2044|13566.4044|3223.96%|
+|migraphx_mlperf__resnet50_v1|PASS|regression|100.8666|347.8519|246.9853|244.86%|
+|migraphx_models__whisper-tiny-decoder|PASS|regression|40.8811|540.1295|499.2484|1221.22%|
+|migraphx_models__whisper-tiny-encoder|Numerics|regression|182.9736|2407.7478|2224.7742|1215.9%|
+|migraphx_pytorch-examples__wlang_gru|PASS|regression|70.2852|93.5454|23.2602|33.09%|
+|migraphx_torchvision__densenet121i32|PASS|regression|1377.2882|5063.377|3686.0888|267.63%|
+|migraphx_torchvision__inceptioni1|PASS|regression|258.7426|378.8298|120.0872|46.41%|
+|migraphx_torchvision__resnet50i1|PASS|regression|99.4756|219.3173|119.8417|120.47%|
 
 ## 22 Regressions Found:
 

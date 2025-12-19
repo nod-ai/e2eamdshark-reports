@@ -7,7 +7,7 @@
 | IREE Compilation | 65 | 89.0% | 89.0% |
 | Gold Inference | 65 | 89.0% | 100.0% |
 | IREE Inference Invocation | 65 | 89.0% | 100.0% |
-| Inference Comparison (PASS) | 38 | 52.1% | 58.5% |
+| Inference Comparison (PASS) | 40 | 54.8% | 61.5% |
 ## Fail Summary
 
 **TOTAL TESTS = 73**
@@ -17,7 +17,7 @@
 | IREE Compilation | 8 | 11.0% |
 | Gold Inference | 0 | 0.0% |
 | IREE Inference Invocation | 0 | 0.0% |
-| Inference Comparison | 27 | 37.0% |
+| Inference Comparison | 25 | 34.2% |
 ## Test Run Detail
 Test was run with the following arguments:
 Namespace(device='hip', backend='rocm', target_chip='gfx942', iree_compile_args=None, mode='cl-onnx-iree', torchtolinalg=False, stages=None, skip_stages=None, benchmark=False, load_inputs=False, groups='all', test_filter=None, testsfile='onnx_tests/models/external_lists/vai-vision-int8_unique.txt', tolerance=None, verbose=True, rundirectory='./test-onnx', no_artifacts=False, cleanup='3', report=True, report_file='reports/vai-vision-int8_unique.md', get_metadata=True)
@@ -76,10 +76,10 @@ Namespace(device='hip', backend='rocm', target_chip='gfx942', iree_compile_args=
 | MobileNetV3_small_vaiq | Numerics | None | |
 | ResNet101_vaiq | PASS | None | |
 | ResNet152_vaiq | PASS | None | |
-| ResNet18_vaiq | Numerics | None | |
+| ResNet18_vaiq | PASS | None | |
 | resnet32ts.ra2_in1k_vaiq | PASS | None | |
 | resnet33ts.ra2_in1k_vaiq | PASS | None | |
-| ResNet34_vaiq | Numerics | None | |
+| ResNet34_vaiq | PASS | None | |
 | resnet50.a1_in1k_vaiq | PASS | None | |
 | ResNet50_vaiq | PASS | None | |
 | RRDB_ESRGAN_pro_vaiq | compilation | None | |

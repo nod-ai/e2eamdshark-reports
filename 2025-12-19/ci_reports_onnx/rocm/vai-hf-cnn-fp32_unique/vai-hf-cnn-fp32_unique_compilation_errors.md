@@ -1,11 +1,11 @@
 
 # COMPILATION ERROR ANALYSIS
 
-**Total compilation failures: 128**
+**Total compilation failures: 127**
 
 | Status | Count |
 |---|---|
-| Timeouts | 49 |
+| Timeouts | 48 |
 | Errors | 79 |
 | No log | 0 |
 
@@ -144,7 +144,6 @@
 | coat_lite_tiny | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/coat_lite_tiny/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/coat_lite_tiny/compiled_model.vmfb |
 | coat_mini | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/coat_mini/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/coat_mini/compiled_model.vmfb |
 | coat_tiny | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/coat_tiny/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/coat_tiny/compiled_model.vmfb |
-| coatnet_2_rw_224.sw_in12k | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/coatnet_2_rw_224.sw_in12k/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/coatnet_2_rw_224.sw_in12k/compiled_model.vmfb |
 | coatnet_3_rw_224.sw_in12k | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/coatnet_3_rw_224.sw_in12k/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/coatnet_3_rw_224.sw_in12k/compiled_model.vmfb |
 | coatnet_rmlp_1_rw2_224.sw_in12k | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/coatnet_rmlp_1_rw2_224.sw_in12k/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/coatnet_rmlp_1_rw2_224.sw_in12k/compiled_model.vmfb |
 | coatnet_rmlp_1_rw2_224.sw_in12k_ft_in1k | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/coatnet_rmlp_1_rw2_224.sw_in12k_ft_in1k/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/coatnet_rmlp_1_rw2_224.sw_in12k_ft_in1k/compiled_model.vmfb |

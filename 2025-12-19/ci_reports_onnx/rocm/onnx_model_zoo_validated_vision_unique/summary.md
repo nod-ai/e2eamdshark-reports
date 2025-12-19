@@ -7,7 +7,7 @@
 | IREE Compilation | 55 | 77.5% | 77.5% |
 | Gold Inference | 55 | 77.5% | 100.0% |
 | IREE Inference Invocation | 54 | 76.1% | 98.2% |
-| Inference Comparison (PASS) | 39 | 54.9% | 72.2% |
+| Inference Comparison (PASS) | 40 | 56.3% | 74.1% |
 ## Fail Summary
 
 **TOTAL TESTS = 71**
@@ -17,7 +17,7 @@
 | IREE Compilation | 16 | 22.5% |
 | Gold Inference | 0 | 0.0% |
 | IREE Inference Invocation | 1 | 1.4% |
-| Inference Comparison | 15 | 21.1% |
+| Inference Comparison | 14 | 19.7% |
 ## Test Run Detail
 Test was run with the following arguments:
 Namespace(device='hip', backend='rocm', target_chip='gfx942', iree_compile_args=None, mode='cl-onnx-iree', torchtolinalg=False, stages=None, skip_stages=None, benchmark=False, load_inputs=False, groups='all', test_filter=None, testsfile='onnx_tests/models/external_lists/onnx_model_zoo_validated_vision_unique.txt', tolerance=None, verbose=True, rundirectory='./test-onnx', no_artifacts=False, cleanup='3', report=True, report_file='reports/onnx_model_zoo_validated_vision_unique.md', get_metadata=True)
@@ -78,7 +78,7 @@ Namespace(device='hip', backend='rocm', target_chip='gfx942', iree_compile_args=
 | squeezenet1.0-13-qdq | compilation | None | |
 | squeezenet1.0-6 | Numerics | None | |
 | squeezenet1.0-9 | Numerics | None | |
-| squeezenet1.1-7 | Numerics | None | |
+| squeezenet1.1-7 | PASS | None | |
 | super-resolution-10 | PASS | None | |
 | tinyyolov2-7 | compiled_inference | None | |
 | version-RFB-320 | compilation | None | |

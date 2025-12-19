@@ -824,7 +824,7 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_hf_onnx_model_zoo_non_
 | resnet18d_Opset17 | compiled_inference | None | |
 | resnet18d_Opset18 | compiled_inference | None | |
 | resnet200d_Opset16 | PASS | None | |
-| alexnet_Opset18 | Numerics | None | |
+| alexnet_Opset18 | PASS | None | |
 | beit_base_patch16_224_Opset16 | PASS | None | |
 | beit_base_patch16_224_Opset17 | PASS | None | |
 | beit_base_patch16_384_Opset16 | PASS | None | |
@@ -1204,7 +1204,7 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_hf_onnx_model_zoo_non_
 | rexnetr_200_Opset16 | PASS | None | |
 | rexnetr_200_Opset17 | PASS | None | |
 | sequencer2d_m_Opset17 | Numerics | None | |
-| sequencer2d_s_Opset16 | PASS | None | |
+| sequencer2d_s_Opset16 | Numerics | None | |
 | seresnext101d_32x8d_Opset16 | PASS | None | |
 | seresnext101d_32x8d_Opset17 | PASS | None | |
 | seresnextaa101d_32x8d_Opset16 | PASS | None | |

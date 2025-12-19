@@ -7,7 +7,7 @@
 | IREE Compilation | 22 | 78.6% | 78.6% |
 | Gold Inference | 22 | 78.6% | 100.0% |
 | IREE Inference Invocation | 22 | 78.6% | 100.0% |
-| Inference Comparison (PASS) | 12 | 42.9% | 54.5% |
+| Inference Comparison (PASS) | 13 | 46.4% | 59.1% |
 ## Fail Summary
 
 **TOTAL TESTS = 28**
@@ -17,14 +17,14 @@
 | IREE Compilation | 6 | 21.4% |
 | Gold Inference | 0 | 0.0% |
 | IREE Inference Invocation | 0 | 0.0% |
-| Inference Comparison | 10 | 35.7% |
+| Inference Comparison | 9 | 32.1% |
 ## Test Run Detail
 Test was run with the following arguments:
 Namespace(device='hip', backend='rocm', target_chip='gfx942', iree_compile_args=None, mode='cl-onnx-iree', torchtolinalg=False, stages=None, skip_stages=None, benchmark=False, load_inputs=False, groups='all', test_filter=None, testsfile='onnx_tests/models/external_lists/amdshark-test-suite_unique.txt', tolerance=None, verbose=True, rundirectory='./test-onnx', no_artifacts=False, cleanup='3', report=True, report_file='reports/amdshark-test-suite_unique.md', get_metadata=True)
 
 | Test | Exit Status | Mean Benchmark Time (ms) | Notes |
 |--|--|--|--|
-| AlexNet_vaiq_int8 | Numerics | None | |
+| AlexNet_vaiq_int8 | PASS | None | |
 | ConvNeXt_vaiq_int8 | compilation | None | |
 | CSP-DarkNet_vaiq_int8 | Numerics | None | |
 | DarkNet53_vaiq_int8 | Numerics | None | |

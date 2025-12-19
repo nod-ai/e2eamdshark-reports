@@ -4,17 +4,17 @@
 |Stage|# Passing|% of Total|% of Attempted|
 |--|--|--|--|
 | Setup | 357 | 99.2% | 99.2% |
-| IREE Compilation | 229 | 63.6% | 64.1% |
-| Gold Inference | 229 | 63.6% | 100.0% |
-| IREE Inference Invocation | 228 | 63.3% | 99.6% |
-| Inference Comparison (PASS) | 205 | 56.9% | 89.9% |
+| IREE Compilation | 230 | 63.9% | 64.4% |
+| Gold Inference | 230 | 63.9% | 100.0% |
+| IREE Inference Invocation | 229 | 63.6% | 99.6% |
+| Inference Comparison (PASS) | 206 | 57.2% | 90.0% |
 ## Fail Summary
 
 **TOTAL TESTS = 360**
 |Stage|# Failed at Stage|% of Total|
 |--|--|--|
 | Setup | 3 | 0.8% |
-| IREE Compilation | 128 | 35.6% |
+| IREE Compilation | 127 | 35.3% |
 | Gold Inference | 0 | 0.0% |
 | IREE Inference Invocation | 1 | 0.3% |
 | Inference Comparison | 23 | 6.4% |
@@ -46,7 +46,7 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_vai-hf-cnn-fp32-shard1
 | coat_tiny | compilation | None | |
 | coatnet_0_rw_224.sw_in1k | PASS | None | |
 | coatnet_1_rw_224.sw_in1k | PASS | None | |
-| coatnet_2_rw_224.sw_in12k | compilation | None | |
+| coatnet_2_rw_224.sw_in12k | PASS | None | |
 | coatnet_2_rw_224.sw_in12k_ft_in1k | PASS | None | |
 | coatnet_3_rw_224.sw_in12k | compilation | None | |
 | coatnet_bn_0_rw_224.sw_in1k | PASS | None | |

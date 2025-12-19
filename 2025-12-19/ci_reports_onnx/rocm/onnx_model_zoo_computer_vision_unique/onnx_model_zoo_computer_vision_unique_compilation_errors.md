@@ -1,11 +1,11 @@
 
 # COMPILATION ERROR ANALYSIS
 
-**Total compilation failures: 224**
+**Total compilation failures: 223**
 
 | Status | Count |
 |---|---|
-| Timeouts | 111 |
+| Timeouts | 110 |
 | Errors | 113 |
 | No log | 0 |
 
@@ -284,7 +284,6 @@
 | res2net101_26w_4s_Opset16_timm | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/res2net101_26w_4s_Opset16_timm/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/res2net101_26w_4s_Opset16_timm/compiled_model.vmfb |
 | res2net50_14w_8s_Opset16_timm | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/res2net50_14w_8s_Opset16_timm/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/res2net50_14w_8s_Opset16_timm/compiled_model.vmfb |
 | res2net50_26w_6s_Opset17_timm | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/res2net50_26w_6s_Opset17_timm/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/res2net50_26w_6s_Opset17_timm/compiled_model.vmfb |
-| swin_base_patch4_window12_384_in22k_Opset17_timm | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/swin_base_patch4_window12_384_in22k_Opset17_timm/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/swin_base_patch4_window12_384_in22k_Opset17_timm/compiled_model.vmfb |
 | swin_base_patch4_window7_224_Opset17_timm | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/swin_base_patch4_window7_224_Opset17_timm/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/swin_base_patch4_window7_224_Opset17_timm/compiled_model.vmfb |
 | swin_s3_small_224_Opset17_timm | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/swin_s3_small_224_Opset17_timm/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/swin_s3_small_224_Opset17_timm/compiled_model.vmfb |
 | swin_tiny_patch4_window7_224_Opset17_timm | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/swin_tiny_patch4_window7_224_Opset17_timm/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/swin_tiny_patch4_window7_224_Opset17_timm/compiled_model.vmfb |

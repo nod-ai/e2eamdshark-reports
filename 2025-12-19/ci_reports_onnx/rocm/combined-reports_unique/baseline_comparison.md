@@ -8,49 +8,48 @@ progression tolerance: 10.0%
 
 |model name|exit_status|analysis|old_time_ms|new_time_ms|change_ms|percent_change|
 |---|---|---|---|---|---|---|
-|migraphx_ORT__bert_base_cased_1|PASS|regression|85.632|101.115|15.483|18.08%|
-|migraphx_ORT__bert_large_uncased_1|PASS|within tol|260.9527|285.1791|24.2264|9.28%|
-|migraphx_ORT__distilgpt2_1|PASS|regression|31.2671|57.7591|26.492|84.73%|
-|migraphx_ORT__onnx_models__bert_base_cased_1_fp16_gpu|Numerics|within tol|83.0977|75.5473|-7.5504|-9.09%|
-|migraphx_ORT__onnx_models__bert_large_uncased_1_fp16_gpu|Numerics|regression|244.0676|295.239|51.1714|20.97%|
-|migraphx_ORT__onnx_models__distilgpt2_1_fp16_gpu|Numerics|within tol|40.5572|40.1991|-0.3581|-0.88%|
-|migraphx_bert__bert-large-uncased|PASS|progression|410.0501|12.6086|-397.4415|-96.93%|
-|migraphx_cadene__dpn92i1|Numerics|progression|186.2736|10.0989|-176.1747|-94.58%|
-|migraphx_cadene__inceptionv4i16|Numerics|progression|7257.2016|21.9672|-7235.2344|-99.7%|
-|migraphx_cadene__resnext101_64x4di1|PASS|progression|330.1171|6.0458|-324.0712|-98.17%|
-|migraphx_huggingface-transformers__bert_mrpc8|PASS|progression|420.8|7.2165|-413.5835|-98.29%|
-|migraphx_mlperf__bert_large_mlperf|Numerics|progression|456.7549|19.6668|-437.0882|-95.69%|
-|migraphx_mlperf__resnet50_v1|PASS|progression|100.8666|15.0856|-85.781|-85.04%|
-|migraphx_models__whisper-tiny-decoder|PASS|progression|40.8811|26.0822|-14.7989|-36.2%|
-|migraphx_models__whisper-tiny-encoder|Numerics|progression|182.9736|112.9078|-70.0658|-38.29%|
-|migraphx_pytorch-examples__wlang_gru|PASS|progression|70.2852|14.5949|-55.6903|-79.23%|
-|migraphx_torchvision__densenet121i32|PASS|progression|1377.2882|17.7373|-1359.5509|-98.71%|
-|migraphx_torchvision__inceptioni1|Numerics|progression|258.7426|4.6584|-254.0841|-98.2%|
-|migraphx_torchvision__resnet50i1|PASS|progression|99.4756|3.6949|-95.7808|-96.29%|
-|migx_bench_bert-large-uncased_16_128|PASS|progression|2688.5782|20.2847|-2668.2935|-99.25%|
-|migx_bench_bert-large-uncased_16_256|PASS|progression|4097.8175|33.3187|-4064.4988|-99.19%|
-|migx_bench_bert-large-uncased_16_384|PASS|progression|6359.273|52.2661|-6307.0069|-99.18%|
-|migx_bench_bert-large-uncased_1_128|PASS|progression|188.254|11.795|-176.459|-93.73%|
-|migx_bench_bert-large-uncased_1_256|PASS|progression|380.8856|12.49|-368.3955|-96.72%|
-|migx_bench_bert-large-uncased_1_384|PASS|progression|392.6775|12.8445|-379.833|-96.73%|
-|migx_bench_bert-large-uncased_2_128|PASS|progression|464.1775|12.3902|-451.7873|-97.33%|
-|migx_bench_bert-large-uncased_2_256|PASS|progression|646.0645|12.8253|-633.2393|-98.01%|
-|migx_bench_bert-large-uncased_2_384|PASS|progression|845.906|14.4289|-831.477|-98.29%|
-|migx_bench_bert-large-uncased_32_128|PASS|progression|5134.5125|32.0723|-5102.4402|-99.38%|
-|migx_bench_bert-large-uncased_32_256|PASS|progression|8841.4288|62.1197|-8779.3091|-99.3%|
-|migx_bench_bert-large-uncased_32_384|Numerics|progression|11939.3575|96.1747|-11843.1828|-99.19%|
-|migx_bench_bert-large-uncased_4_128|PASS|progression|745.4025|12.7101|-732.6924|-98.29%|
-|migx_bench_bert-large-uncased_4_256|PASS|progression|1125.1086|14.4056|-1110.7031|-98.72%|
-|migx_bench_bert-large-uncased_4_384|PASS|progression|1749.2347|20.3113|-1728.9234|-98.84%|
-|migx_bench_bert-large-uncased_8_128|PASS|progression|1532.455|14.3746|-1518.0804|-99.06%|
-|migx_bench_bert-large-uncased_8_256|PASS|progression|2403.9663|20.5733|-2383.3929|-99.14%|
-|migx_bench_bert-large-uncased_8_384|PASS|progression|3127.1362|29.2104|-3097.9258|-99.07%|
+|migraphx_ORT__bert_base_cased_1|PASS|regression|85.632|101.9597|16.3276|19.07%|
+|migraphx_ORT__bert_large_uncased_1|PASS|within tol|260.9527|284.289|23.3363|8.94%|
+|migraphx_ORT__distilgpt2_1|PASS|regression|31.2671|57.4163|26.1492|83.63%|
+|migraphx_ORT__onnx_models__bert_base_cased_1_fp16_gpu|Numerics|within tol|83.0977|75.5444|-7.5534|-9.09%|
+|migraphx_ORT__onnx_models__bert_large_uncased_1_fp16_gpu|Numerics|regression|244.0676|294.7195|50.6519|20.75%|
+|migraphx_ORT__onnx_models__distilgpt2_1_fp16_gpu|Numerics|within tol|40.5572|40.3183|-0.239|-0.59%|
+|migraphx_bert__bert-large-uncased|PASS|progression|410.0501|12.6355|-397.4146|-96.92%|
+|migraphx_cadene__dpn92i1|Numerics|progression|186.2736|9.9095|-176.3641|-94.68%|
+|migraphx_cadene__inceptionv4i16|Numerics|progression|7257.2016|21.9033|-7235.2983|-99.7%|
+|migraphx_cadene__resnext101_64x4di1|PASS|progression|330.1171|6.0859|-324.0312|-98.16%|
+|migraphx_huggingface-transformers__bert_mrpc8|PASS|progression|420.8|7.2333|-413.5667|-98.28%|
+|migraphx_mlperf__bert_large_mlperf|Numerics|progression|456.7549|19.503|-437.2519|-95.73%|
+|migraphx_mlperf__resnet50_v1|PASS|progression|100.8666|15.0851|-85.7814|-85.04%|
+|migraphx_models__whisper-tiny-decoder|PASS|progression|40.8811|25.7492|-15.1319|-37.01%|
+|migraphx_models__whisper-tiny-encoder|Numerics|progression|182.9736|112.8573|-70.1164|-38.32%|
+|migraphx_pytorch-examples__wlang_gru|PASS|progression|70.2852|14.4334|-55.8518|-79.46%|
+|migraphx_torchvision__densenet121i32|PASS|progression|1377.2882|17.7455|-1359.5427|-98.71%|
+|migraphx_torchvision__inceptioni1|Numerics|progression|258.7426|4.6376|-254.105|-98.21%|
+|migraphx_torchvision__resnet50i1|PASS|progression|99.4756|3.6872|-95.7885|-96.29%|
+|migx_bench_bert-large-uncased_16_128|PASS|progression|2688.5782|20.2951|-2668.2831|-99.25%|
+|migx_bench_bert-large-uncased_16_256|PASS|progression|4097.8175|33.2121|-4064.6054|-99.19%|
+|migx_bench_bert-large-uncased_16_384|PASS|progression|6359.273|52.0397|-6307.2333|-99.18%|
+|migx_bench_bert-large-uncased_1_128|PASS|progression|188.254|11.7932|-176.4607|-93.74%|
+|migx_bench_bert-large-uncased_1_256|PASS|progression|380.8856|12.4719|-368.4137|-96.73%|
+|migx_bench_bert-large-uncased_1_384|PASS|progression|392.6775|12.8658|-379.8117|-96.72%|
+|migx_bench_bert-large-uncased_2_128|PASS|progression|464.1775|12.4083|-451.7692|-97.33%|
+|migx_bench_bert-large-uncased_2_256|PASS|progression|646.0645|12.7663|-633.2983|-98.02%|
+|migx_bench_bert-large-uncased_2_384|PASS|progression|845.906|14.3831|-831.5229|-98.3%|
+|migx_bench_bert-large-uncased_32_128|PASS|progression|5134.5125|31.9751|-5102.5374|-99.38%|
+|migx_bench_bert-large-uncased_32_256|PASS|progression|8841.4288|62.2351|-8779.1936|-99.3%|
+|migx_bench_bert-large-uncased_32_384|Numerics|progression|11939.3575|95.971|-11843.3865|-99.2%|
+|migx_bench_bert-large-uncased_4_128|PASS|progression|745.4025|12.7199|-732.6825|-98.29%|
+|migx_bench_bert-large-uncased_4_256|PASS|progression|1125.1086|14.3932|-1110.7155|-98.72%|
+|migx_bench_bert-large-uncased_4_384|PASS|progression|1749.2347|20.3007|-1728.934|-98.84%|
+|migx_bench_bert-large-uncased_8_128|PASS|progression|1532.455|14.3908|-1518.0641|-99.06%|
+|migx_bench_bert-large-uncased_8_256|PASS|progression|2403.9663|20.5852|-2383.381|-99.14%|
+|migx_bench_bert-large-uncased_8_384|PASS|progression|3127.1362|29.1944|-3097.9418|-99.07%|
 
-## 306 Regressions Found:
+## 302 Regressions Found:
 
 |model name|old_status|new_status|
 |---|---|---|
-|AlexNet_vaiq_int8|PASS|Numerics|
 |CSP-DarkNet_vaiq_int8|PASS|Numerics|
 |ConvNeXt_vaiq_int8|Numerics|compilation|
 |EfficientNet_v2_s_vaiq_int8|PASS|compilation|
@@ -61,8 +60,6 @@ progression tolerance: 10.0%
 |RRDB_ESRGAN_vaiq|Numerics|compilation|
 |RRDB_ESRGAN_vaiq_int8|Numerics|compilation|
 |RegNet_y_8gf_vaiq_int8|PASS|compilation|
-|ResNet18_vaiq|PASS|Numerics|
-|ResNet34_vaiq|PASS|Numerics|
 |SqueezeNet_1_0_vaiq|Numerics|compilation|
 |SqueezeNet_1_1_vaiq_int8|Numerics|compilation|
 |VideoResNet_vaiq_int8|PASS|Numerics|
@@ -81,7 +78,6 @@ progression tolerance: 10.0%
 |coat_lite_tiny|Numerics|compilation|
 |coat_mini|Numerics|compilation|
 |coat_tiny|Numerics|compilation|
-|coatnet_2_rw_224.sw_in12k|Numerics|compilation|
 |coatnet_3_rw_224.sw_in12k|Numerics|compilation|
 |coatnet_rmlp_1_rw2_224.sw_in12k|Numerics|compilation|
 |coatnet_rmlp_1_rw2_224.sw_in12k_ft_in1k|Numerics|compilation|
@@ -357,11 +353,12 @@ progression tolerance: 10.0%
 |xcit_tiny_24_p8_224|Numerics|compilation|
 |xcit_tiny_24_p8_384_dist|Numerics|compilation|
 
-## 168 Progressions Found:
+## 169 Progressions Found:
 
 |model name|old_status|new_status|
 |---|---|---|
 |ShuffleNet_v2_x2_0_vaiq_int8|Numerics|PASS|
+|coatnet_2_rw_224.sw_in12k|Numerics|PASS|
 |coatnet_2_rw_224.sw_in12k_ft_in1k|Numerics|PASS|
 |coatnet_nano_rw_224.sw_in1k|Numerics|PASS|
 |coatnet_rmlp_2_rw_384.sw_in12k_ft_in1k|Numerics|PASS|

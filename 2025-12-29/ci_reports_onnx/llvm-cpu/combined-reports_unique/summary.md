@@ -4,20 +4,20 @@
 |Stage|# Passing|% of Total|% of Attempted|
 |--|--|--|--|
 | Setup | 4103 | 99.9% | 99.9% |
-| IREE Compilation | 3841 | 93.5% | 93.6% |
-| Gold Inference | 3840 | 93.5% | 100.0% |
-| IREE Inference Invocation | 3824 | 93.1% | 99.6% |
-| Inference Comparison (PASS) | 3671 | 89.4% | 96.0% |
+| IREE Compilation | 3840 | 93.5% | 93.6% |
+| Gold Inference | 3839 | 93.5% | 100.0% |
+| IREE Inference Invocation | 3820 | 93.0% | 99.5% |
+| Inference Comparison (PASS) | 3668 | 89.3% | 96.0% |
 ## Fail Summary
 
 **TOTAL TESTS = 4107**
 |Stage|# Failed at Stage|% of Total|
 |--|--|--|
 | Setup | 4 | 0.1% |
-| IREE Compilation | 262 | 6.4% |
+| IREE Compilation | 263 | 6.4% |
 | Gold Inference | 1 | 0.0% |
-| IREE Inference Invocation | 16 | 0.4% |
-| Inference Comparison | 153 | 3.7% |
+| IREE Inference Invocation | 19 | 0.5% |
+| Inference Comparison | 152 | 3.7% |
 ## Test Run Detail
 Test was run with the following arguments:
 Namespace(sources=['./e2eamdshark-reports/vai-int8-p0p1_unique.json', './e2eamdshark-reports/vai-hf-cnn-fp32_unique.json', './e2eamdshark-reports/nlp_unique.json', './e2eamdshark-reports/onnx_model_zoo_computer_vision_unique.json', './e2eamdshark-reports/hf_onnx_model_zoo_non_legacy.json', './e2eamdshark-reports/ci_reports_llvm-cpu_amdshark-test-suite_unique_onnx_json/amdshark-test-suite_unique.json', './e2eamdshark-reports/ci_reports_llvm-cpu_vai-vision-int8_unique_onnx_json/vai-vision-int8_unique.json', './e2eamdshark-reports/ci_reports_llvm-cpu_migraphx_unique_onnx_json/migraphx_unique.json', './e2eamdshark-reports/ci_reports_llvm-cpu_onnx_model_zoo_gen_ai_unique_onnx_json/onnx_model_zoo_gen_ai_unique.json', './e2eamdshark-reports/ci_reports_llvm-cpu_onnx_model_zoo_graph_ml_unique_onnx_json/onnx_model_zoo_graph_ml_unique.json', './e2eamdshark-reports/ci_reports_llvm-cpu_onnx_model_zoo_nlp_unique_onnx_json/onnx_model_zoo_nlp_unique.json', './e2eamdshark-reports/ci_reports_llvm-cpu_onnx_model_zoo_validated_text_unique_onnx_json/onnx_model_zoo_validated_text_unique.json', './e2eamdshark-reports/ci_reports_llvm-cpu_onnx_model_zoo_validated_vision_unique_onnx_json/onnx_model_zoo_validated_vision_unique.json'], output='./e2eamdshark-reports/combined_reports_unique.json', report=True, report_file='./e2eamdshark-reports/combined_reports_unique.md')
@@ -1054,8 +1054,8 @@ Namespace(sources=['./e2eamdshark-reports/vai-int8-p0p1_unique.json', './e2eamds
 | beit_base_patch16_384_Opset17_timm | PASS | None | |
 | beit_large_patch16_224_Opset16_timm | PASS | None | |
 | beit_large_patch16_224_Opset17_timm | PASS | None | |
-| beit_large_patch16_384_Opset16_timm | PASS | None | |
-| beit_large_patch16_384_Opset17_timm | PASS | None | |
+| beit_large_patch16_384_Opset16_timm | compiled_inference | None | |
+| beit_large_patch16_384_Opset17_timm | compiled_inference | None | |
 | botnet26t_256_Opset16_timm | PASS | None | |
 | cait_m36_384_Opset16_timm | PASS | None | |
 | cait_m36_384_Opset17_timm | PASS | None | |
@@ -1766,7 +1766,7 @@ Namespace(sources=['./e2eamdshark-reports/vai-int8-p0p1_unique.json', './e2eamds
 | vit_large_patch16_224_in21k_Opset17_timm | PASS | None | |
 | vit_large_patch16_224_in21k_Opset18_timm | PASS | None | |
 | vit_large_patch16_384_Opset16_timm | PASS | None | |
-| vit_large_patch16_384_Opset17_timm | PASS | None | |
+| vit_large_patch16_384_Opset17_timm | compiled_inference | None | |
 | vit_large_patch32_384_Opset16_timm | PASS | None | |
 | vit_large_patch32_384_Opset17_timm | PASS | None | |
 | vit_relpos_base_patch16_224_Opset16_timm | PASS | None | |
@@ -3845,7 +3845,7 @@ Namespace(sources=['./e2eamdshark-reports/vai-int8-p0p1_unique.json', './e2eamds
 | MobileNetV3_small_vaiq_int8 | Numerics | None | |
 | RAFT_vaiq_int8 | Numerics | None | |
 | RDN_pytorch_vaiq_int8 | compiled_inference | None | |
-| RRDB_ESRGAN_vaiq_int8 | Numerics | None | |
+| RRDB_ESRGAN_vaiq_int8 | compilation | None | |
 | RegNet_y_8gf_vaiq_int8 | PASS | None | |
 | ResNet152_vaiq_int8 | PASS | None | |
 | ShuffleNet_v2_x2_0_vaiq_int8 | PASS | None | |
@@ -3898,36 +3898,36 @@ Namespace(sources=['./e2eamdshark-reports/vai-int8-p0p1_unique.json', './e2eamds
 | inception_v3.tf_in1k_vaiq | PASS | None | |
 | inception_v4.tf_in1k_vaiq | PASS | None | |
 | resnet50.a1_in1k_vaiq | PASS | None | |
-| migraphx_ORT__bert_base_cased_1 | PASS | 1427.415155001654 | |
-| migraphx_ORT__bert_base_uncased_1 | PASS | 1316.475448666703 | |
-| migraphx_ORT__bert_large_uncased_1 | PASS | 11827.041267667179 | |
-| migraphx_ORT__distilgpt2_1 | PASS | 588.5380080010993 | |
-| migraphx_ORT__onnx_models__bert_base_cased_1_fp16_gpu | Numerics | 2243.61945099857 | |
-| migraphx_ORT__onnx_models__bert_large_uncased_1_fp16_gpu | Numerics | 7647.368689667928 | |
-| migraphx_ORT__onnx_models__distilgpt2_1_fp16_gpu | Numerics | 515.7023839989657 | |
-| migraphx_bert__bert-large-uncased | PASS | 28739.212639001682 | |
-| migraphx_cadene__dpn92i1 | PASS | 392.1715536665336 | |
-| migraphx_cadene__inceptionv4i16 | PASS | 9292.790560666617 | |
-| migraphx_cadene__resnext101_64x4di1 | PASS | 810.5398653339458 | |
-| migraphx_huggingface-transformers__bert_mrpc8 | PASS | 7387.969490666971 | |
-| migraphx_mlperf__bert_large_mlperf | Numerics | 31244.180638333393 | |
-| migraphx_mlperf__resnet50_v1 | PASS | 251.23601522136596 | |
-| migraphx_models__whisper-tiny-decoder | PASS | 248.19311677775758 | |
-| migraphx_models__whisper-tiny-encoder | Numerics | 828.8641073316588 | |
-| migraphx_pytorch-examples__wlang_gru | PASS | 50.80173641004083 | |
+| migraphx_ORT__bert_base_cased_1 | PASS | 1356.8422966667033 | |
+| migraphx_ORT__bert_base_uncased_1 | PASS | 1338.076744333345 | |
+| migraphx_ORT__bert_large_uncased_1 | PASS | 10930.451642333233 | |
+| migraphx_ORT__distilgpt2_1 | PASS | 579.3080830000387 | |
+| migraphx_ORT__onnx_models__bert_base_cased_1_fp16_gpu | Numerics | 2299.523450666584 | |
+| migraphx_ORT__onnx_models__bert_large_uncased_1_fp16_gpu | Numerics | 8793.142538333086 | |
+| migraphx_ORT__onnx_models__distilgpt2_1_fp16_gpu | Numerics | 492.5134856666015 | |
+| migraphx_bert__bert-large-uncased | PASS | ERROR | |
+| migraphx_cadene__dpn92i1 | PASS | 468.52885599999655 | |
+| migraphx_cadene__inceptionv4i16 | PASS | 8774.24300866672 | |
+| migraphx_cadene__resnext101_64x4di1 | PASS | 1117.4154353331382 | |
+| migraphx_huggingface-transformers__bert_mrpc8 | PASS | 7605.805085666664 | |
+| migraphx_mlperf__bert_large_mlperf | Numerics | 32604.835136666832 | |
+| migraphx_mlperf__resnet50_v1 | PASS | 203.61526155551874 | |
+| migraphx_models__whisper-tiny-decoder | PASS | 260.93194133333475 | |
+| migraphx_models__whisper-tiny-encoder | Numerics | 1028.171291666543 | |
+| migraphx_pytorch-examples__wlang_gru | PASS | 49.40343673810535 | |
 | migraphx_pytorch-examples__wlang_lstm | compiled_inference | None | |
 | migraphx_sd__unet__model | import_model | None | |
 | migraphx_sdxl__unet__model | import_model | None | |
-| migraphx_torchvision__densenet121i32 | PASS | 5112.585189664969 | |
-| migraphx_torchvision__inceptioni1 | PASS | 348.8922336667504 | |
-| migraphx_torchvision__resnet50i1 | PASS | 197.42700091683218 | |
+| migraphx_torchvision__densenet121i32 | PASS | 4851.999702666641 | |
+| migraphx_torchvision__inceptioni1 | PASS | 355.22417883354746 | |
+| migraphx_torchvision__resnet50i1 | PASS | 196.51942566648964 | |
 | migx_bench_bert-large-uncased_16_128 | compiled_inference | None | |
 | migx_bench_bert-large-uncased_16_256 | compiled_inference | None | |
 | migx_bench_bert-large-uncased_16_384 | compiled_inference | None | |
-| migx_bench_bert-large-uncased_1_128 | PASS | 21107.30895700059 | |
+| migx_bench_bert-large-uncased_1_128 | PASS | 23584.793696333083 | |
 | migx_bench_bert-large-uncased_1_256 | PASS | ERROR | |
-| migx_bench_bert-large-uncased_1_384 | PASS | 33121.243047335156 | |
-| migx_bench_bert-large-uncased_2_128 | PASS | 20794.478417000693 | |
+| migx_bench_bert-large-uncased_1_384 | PASS | 32384.985682000053 | |
+| migx_bench_bert-large-uncased_2_128 | PASS | 23740.97096100013 | |
 | migx_bench_bert-large-uncased_2_256 | PASS | ERROR | |
 | migx_bench_bert-large-uncased_2_384 | PASS | ERROR | |
 | migx_bench_bert-large-uncased_32_128 | compiled_inference | None | |

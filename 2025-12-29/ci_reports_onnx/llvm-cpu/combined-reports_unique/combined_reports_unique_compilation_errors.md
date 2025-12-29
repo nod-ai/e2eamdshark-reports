@@ -1,11 +1,11 @@
 
 # COMPILATION ERROR ANALYSIS
 
-**Total compilation failures: 258**
+**Total compilation failures: 259**
 
 | Status | Count |
 |---|---|
-| Timeouts | 0 |
+| Timeouts | 1 |
 | Errors | 258 |
 | No log | 0 |
 
@@ -361,4 +361,10 @@
 | maskrcnn_resnet50_fpn_v2_Opset16 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/maskrcnn_resnet50_fpn_v2_Opset16/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/maskrcnn_resnet50_fpn_v2_Opset16/compiled_model.vmfb | failed to legalize unresolved materialization from ('!torch.vtensor<[25769803776],f32>') to ('!torch.vtensor<[?,?,?,?],f32>') that remained live after conversion |
 | maskrcnn_resnet50_fpn_v2_Opset17 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/maskrcnn_resnet50_fpn_v2_Opset17/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/maskrcnn_resnet50_fpn_v2_Opset17/compiled_model.vmfb | failed to legalize unresolved materialization from ('!torch.vtensor<[25769803776],f32>') to ('!torch.vtensor<[?,?,?,?],f32>') that remained live after conversion |
 | maskrcnn_resnet50_fpn_v2_Opset18 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/maskrcnn_resnet50_fpn_v2_Opset18/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/maskrcnn_resnet50_fpn_v2_Opset18/compiled_model.vmfb | failed to legalize unresolved materialization from ('!torch.vtensor<[25769803776],f32>') to ('!torch.vtensor<[?,?,?,?],f32>') that remained live after conversion |
+
+## TIMEOUT TESTS
+
+| test_name | command |
+|---|---|
+| RRDB_ESRGAN_vaiq_int8 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/RRDB_ESRGAN_vaiq_int8/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/RRDB_ESRGAN_vaiq_int8/compiled_model.vmfb |
 

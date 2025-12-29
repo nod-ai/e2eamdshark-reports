@@ -4,20 +4,20 @@
 |Stage|# Passing|% of Total|% of Attempted|
 |--|--|--|--|
 | Setup | 1954 | 99.8% | 99.8% |
-| IREE Compilation | 1325 | 67.7% | 67.8% |
-| Gold Inference | 1325 | 67.7% | 100.0% |
-| IREE Inference Invocation | 1284 | 65.6% | 96.9% |
-| Inference Comparison (PASS) | 1168 | 59.7% | 91.0% |
+| IREE Compilation | 1326 | 67.8% | 67.9% |
+| Gold Inference | 1326 | 67.8% | 100.0% |
+| IREE Inference Invocation | 1285 | 65.7% | 96.9% |
+| Inference Comparison (PASS) | 1168 | 59.7% | 90.9% |
 ## Fail Summary
 
 **TOTAL TESTS = 1957**
 |Stage|# Failed at Stage|% of Total|
 |--|--|--|
 | Setup | 3 | 0.2% |
-| IREE Compilation | 629 | 32.1% |
+| IREE Compilation | 628 | 32.1% |
 | Gold Inference | 0 | 0.0% |
 | IREE Inference Invocation | 41 | 2.1% |
-| Inference Comparison | 116 | 5.9% |
+| Inference Comparison | 117 | 6.0% |
 ## Test Run Detail
 Test was run with the following arguments:
 Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_hf_onnx_model_zoo_non_legacy_00_onnx_json/hf_onnx_model_zoo_non_legacy_00.json', './e2eamdshark-reports/ci_reports_rocm_hf_onnx_model_zoo_non_legacy_01_onnx_json/hf_onnx_model_zoo_non_legacy_01.json', './e2eamdshark-reports/ci_reports_rocm_hf_onnx_model_zoo_non_legacy_02_onnx_json/hf_onnx_model_zoo_non_legacy_02.json', './e2eamdshark-reports/ci_reports_rocm_hf_onnx_model_zoo_non_legacy_03_onnx_json/hf_onnx_model_zoo_non_legacy_03.json', './e2eamdshark-reports/ci_reports_rocm_hf_onnx_model_zoo_non_legacy_04_onnx_json/hf_onnx_model_zoo_non_legacy_04.json', './e2eamdshark-reports/ci_reports_rocm_hf_onnx_model_zoo_non_legacy_05_onnx_json/hf_onnx_model_zoo_non_legacy_05.json', './e2eamdshark-reports/ci_reports_rocm_hf_onnx_model_zoo_non_legacy_06_onnx_json/hf_onnx_model_zoo_non_legacy_06.json', './e2eamdshark-reports/ci_reports_rocm_hf_onnx_model_zoo_non_legacy_07_onnx_json/hf_onnx_model_zoo_non_legacy_07.json', './e2eamdshark-reports/ci_reports_rocm_hf_onnx_model_zoo_non_legacy_08_onnx_json/hf_onnx_model_zoo_non_legacy_08.json', './e2eamdshark-reports/ci_reports_rocm_hf_onnx_model_zoo_non_legacy_09_onnx_json/hf_onnx_model_zoo_non_legacy_09.json'], output='./e2eamdshark-reports/hf_onnx_model_zoo_non_legacy.json', report=True, report_file='./e2eamdshark-reports/hf_onnx_model_zoo_non_legacy.md')
@@ -33,7 +33,7 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_hf_onnx_model_zoo_non_
 | bat_resnext26ts_Opset17 | PASS | None | |
 | bat_resnext26ts_Opset18 | PASS | None | |
 | beit_base_patch16_384_Opset17 | PASS | None | |
-| beit_large_patch16_224_Opset17 | compilation | None | |
+| beit_large_patch16_224_Opset17 | PASS | None | |
 | botnet26t_256_Opset16 | PASS | None | |
 | botnet26t_256_Opset17 | PASS | None | |
 | botnet26t_256_Opset18 | PASS | None | |
@@ -999,9 +999,9 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_hf_onnx_model_zoo_non_
 | senet154_Opset16 | Numerics | None | |
 | senet154_Opset17 | Numerics | None | |
 | sequencer2d_l_Opset16 | Numerics | None | |
-| sequencer2d_l_Opset17 | Numerics | None | |
+| sequencer2d_l_Opset17 | PASS | None | |
 | sequencer2d_m_Opset16 | Numerics | None | |
-| sequencer2d_s_Opset17 | PASS | None | |
+| sequencer2d_s_Opset17 | Numerics | None | |
 | seresnet152d_Opset16 | PASS | None | |
 | seresnet152d_Opset17 | PASS | None | |
 | seresnet33ts_Opset16 | PASS | None | |
@@ -1203,7 +1203,7 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_hf_onnx_model_zoo_non_
 | resnext101_64x4d_Opset18 | PASS | None | |
 | rexnetr_200_Opset16 | PASS | None | |
 | rexnetr_200_Opset17 | PASS | None | |
-| sequencer2d_m_Opset17 | PASS | None | |
+| sequencer2d_m_Opset17 | Numerics | None | |
 | sequencer2d_s_Opset16 | Numerics | None | |
 | seresnext101d_32x8d_Opset16 | PASS | None | |
 | seresnext101d_32x8d_Opset17 | PASS | None | |

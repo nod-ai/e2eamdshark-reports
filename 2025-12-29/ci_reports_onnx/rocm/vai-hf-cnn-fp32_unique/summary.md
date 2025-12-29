@@ -4,17 +4,17 @@
 |Stage|# Passing|% of Total|% of Attempted|
 |--|--|--|--|
 | Setup | 357 | 99.2% | 99.2% |
-| IREE Compilation | 229 | 63.6% | 64.1% |
-| Gold Inference | 229 | 63.6% | 100.0% |
-| IREE Inference Invocation | 228 | 63.3% | 99.6% |
-| Inference Comparison (PASS) | 209 | 58.1% | 91.7% |
+| IREE Compilation | 235 | 65.3% | 65.8% |
+| Gold Inference | 235 | 65.3% | 100.0% |
+| IREE Inference Invocation | 234 | 65.0% | 99.6% |
+| Inference Comparison (PASS) | 215 | 59.7% | 91.9% |
 ## Fail Summary
 
 **TOTAL TESTS = 360**
 |Stage|# Failed at Stage|% of Total|
 |--|--|--|
 | Setup | 3 | 0.8% |
-| IREE Compilation | 128 | 35.6% |
+| IREE Compilation | 122 | 33.9% |
 | Gold Inference | 0 | 0.0% |
 | IREE Inference Invocation | 1 | 0.3% |
 | Inference Comparison | 19 | 5.3% |
@@ -46,16 +46,16 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_vai-hf-cnn-fp32-shard1
 | coat_tiny | compilation | None | |
 | coatnet_0_rw_224.sw_in1k | PASS | None | |
 | coatnet_1_rw_224.sw_in1k | PASS | None | |
-| coatnet_2_rw_224.sw_in12k | compilation | None | |
+| coatnet_2_rw_224.sw_in12k | PASS | None | |
 | coatnet_2_rw_224.sw_in12k_ft_in1k | PASS | None | |
 | coatnet_3_rw_224.sw_in12k | compilation | None | |
 | coatnet_bn_0_rw_224.sw_in1k | PASS | None | |
 | coatnet_nano_rw_224.sw_in1k | PASS | None | |
-| coatnet_rmlp_1_rw2_224.sw_in12k | compilation | None | |
-| coatnet_rmlp_1_rw2_224.sw_in12k_ft_in1k | compilation | None | |
-| coatnet_rmlp_1_rw_224.sw_in1k | compilation | None | |
-| coatnet_rmlp_2_rw_224.sw_in12k | compilation | None | |
-| coatnet_rmlp_2_rw_224.sw_in12k_ft_in1k | compilation | None | |
+| coatnet_rmlp_1_rw2_224.sw_in12k | PASS | None | |
+| coatnet_rmlp_1_rw2_224.sw_in12k_ft_in1k | PASS | None | |
+| coatnet_rmlp_1_rw_224.sw_in1k | PASS | None | |
+| coatnet_rmlp_2_rw_224.sw_in12k | PASS | None | |
+| coatnet_rmlp_2_rw_224.sw_in12k_ft_in1k | PASS | None | |
 | coatnet_rmlp_2_rw_384.sw_in12k_ft_in1k | PASS | None | |
 | coatnet_rmlp_nano_rw_224.sw_in1k | PASS | None | |
 | coatnext_nano_rw_224.sw_in1k | PASS | None | |

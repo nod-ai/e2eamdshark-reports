@@ -4,20 +4,20 @@
 |Stage|# Passing|% of Total|% of Attempted|
 |--|--|--|--|
 | Setup | 426 | 99.8% | 99.8% |
-| IREE Compilation | 353 | 82.7% | 82.9% |
-| Gold Inference | 353 | 82.7% | 100.0% |
-| IREE Inference Invocation | 353 | 82.7% | 100.0% |
-| Inference Comparison (PASS) | 275 | 64.4% | 77.9% |
+| IREE Compilation | 352 | 82.4% | 82.6% |
+| Gold Inference | 352 | 82.4% | 100.0% |
+| IREE Inference Invocation | 352 | 82.4% | 100.0% |
+| Inference Comparison (PASS) | 275 | 64.4% | 78.1% |
 ## Fail Summary
 
 **TOTAL TESTS = 427**
 |Stage|# Failed at Stage|% of Total|
 |--|--|--|
 | Setup | 1 | 0.2% |
-| IREE Compilation | 73 | 17.1% |
+| IREE Compilation | 74 | 17.3% |
 | Gold Inference | 0 | 0.0% |
 | IREE Inference Invocation | 0 | 0.0% |
-| Inference Comparison | 78 | 18.3% |
+| Inference Comparison | 77 | 18.0% |
 ## Test Run Detail
 Test was run with the following arguments:
 Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_vai-int8-p0p1-shard1_unique_onnx_json/vai-int8-p0p1-shard1_unique.json', './e2eamdshark-reports/ci_reports_rocm_vai-int8-p0p1-shard2_unique_onnx_json/vai-int8-p0p1-shard2_unique.json', './e2eamdshark-reports/ci_reports_rocm_vai-int8-p0p1-shard3_unique_onnx_json/vai-int8-p0p1-shard3_unique.json'], output='./e2eamdshark-reports/vai-int8-p0p1_unique.json', report=True, report_file='./e2eamdshark-reports/vai-int8-p0p1_unique.md')
@@ -381,7 +381,7 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_vai-int8-p0p1-shard1_u
 | semnasnet_075.rmsp_in1k_vaiq | PASS | None | |
 | semnasnet_100.rmsp_in1k_vaiq | PASS | None | |
 | sequencer2d_m_vaiq | compilation | None | |
-| sequencer2d_s_vaiq | Numerics | None | |
+| sequencer2d_s_vaiq | compilation | None | |
 | seresnet152d_train_vaiq | PASS | None | |
 | seresnet152d_vaiq | PASS | None | |
 | seresnet33ts.ra2_in1k_train_vaiq | PASS | None | |

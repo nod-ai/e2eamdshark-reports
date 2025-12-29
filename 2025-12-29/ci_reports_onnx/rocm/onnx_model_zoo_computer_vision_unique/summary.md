@@ -6,8 +6,8 @@
 | Setup | 824 | 99.8% | 99.8% |
 | IREE Compilation | 601 | 72.8% | 72.9% |
 | Gold Inference | 601 | 72.8% | 100.0% |
-| IREE Inference Invocation | 584 | 70.7% | 97.2% |
-| Inference Comparison (PASS) | 531 | 64.3% | 90.9% |
+| IREE Inference Invocation | 582 | 70.5% | 96.8% |
+| Inference Comparison (PASS) | 531 | 64.3% | 91.2% |
 ## Fail Summary
 
 **TOTAL TESTS = 826**
@@ -16,15 +16,15 @@
 | Setup | 2 | 0.2% |
 | IREE Compilation | 223 | 27.0% |
 | Gold Inference | 0 | 0.0% |
-| IREE Inference Invocation | 17 | 2.1% |
-| Inference Comparison | 53 | 6.4% |
+| IREE Inference Invocation | 19 | 2.3% |
+| Inference Comparison | 51 | 6.2% |
 ## Test Run Detail
 Test was run with the following arguments:
 Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_onnx_model_zoo_computer_vision_1_unique_onnx_json/onnx_model_zoo_computer_vision_1_unique.json', './e2eamdshark-reports/ci_reports_rocm_onnx_model_zoo_computer_vision_2_unique_onnx_json/onnx_model_zoo_computer_vision_2_unique.json', './e2eamdshark-reports/ci_reports_rocm_onnx_model_zoo_computer_vision_3_unique_onnx_json/onnx_model_zoo_computer_vision_3_unique.json', './e2eamdshark-reports/ci_reports_rocm_onnx_model_zoo_computer_vision_4_unique_onnx_json/onnx_model_zoo_computer_vision_4_unique.json', './e2eamdshark-reports/ci_reports_rocm_onnx_model_zoo_computer_vision_5_unique_onnx_json/onnx_model_zoo_computer_vision_5_unique.json'], output='./e2eamdshark-reports/onnx_model_zoo_computer_vision_unique.json', report=True, report_file='./e2eamdshark-reports/onnx_model_zoo_computer_vision_unique.md')
 
 | Test | Exit Status | Mean Benchmark Time (ms) | Notes |
 |--|--|--|--|
-| alexnet_Opset18_torch_hub | PASS | None | |
+| alexnet_Opset18_torch_hub | Numerics | None | |
 | beit_base_patch16_224_Opset16_timm | PASS | None | |
 | beit_large_patch16_224_Opset17_timm | PASS | None | |
 | beit_large_patch16_384_Opset16_timm | PASS | None | |
@@ -205,9 +205,9 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_onnx_model_zoo_compute
 | xcit_small_12_p16_224_dist_Opset16_timm | PASS | None | |
 | xcit_small_12_p16_384_dist_Opset16_timm | Numerics | None | |
 | xcit_small_12_p8_224_dist_Opset16_timm | PASS | None | |
-| xcit_small_12_p8_384_dist_Opset16_timm | Numerics | None | |
+| xcit_small_12_p8_384_dist_Opset16_timm | compiled_inference | None | |
 | xcit_small_12_p8_384_dist_Opset17_timm | compilation | None | |
-| xcit_small_24_p8_384_dist_Opset16_timm | Numerics | None | |
+| xcit_small_24_p8_384_dist_Opset16_timm | compiled_inference | None | |
 | xcit_small_24_p8_384_dist_Opset18_timm | compilation | None | |
 | xcit_tiny_12_p16_224_dist_Opset16_timm | Numerics | None | |
 | xcit_tiny_12_p8_384_dist_Opset16_timm | PASS | None | |
@@ -770,7 +770,7 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_onnx_model_zoo_compute
 | rexnet_200_Opset16_timm | PASS | None | |
 | sebotnet33ts_256_Opset16_timm | PASS | None | |
 | selecsls42b_Opset16_timm | PASS | None | |
-| sequencer2d_m_Opset17_timm | Numerics | None | |
+| sequencer2d_m_Opset17_timm | PASS | None | |
 | sequencer2d_s_Opset16_timm | Numerics | None | |
 | seresnext101_32x8d_Opset17_timm | PASS | None | |
 | seresnextaa101d_32x8d_Opset17_timm | PASS | None | |

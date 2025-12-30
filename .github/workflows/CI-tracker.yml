@@ -1,5 +1,3 @@
-name: Update Passing Summary CSV and Graph
-
 on:
   workflow_dispatch:
   pull_request:
@@ -56,6 +54,8 @@ jobs:
             "track_test_data/llvm_cpu_passing_summary_last_30_days.html"
 
       - name: Verify summary.md exists for gpu
+        run: |
+          SUMMARY_DIR="${{ steps.today.outputs.date }}/ci_reports_onnx/rocm/combined-reports_unique"
           if [ ! -f "$SUMMARY_DIR/summary.md" ]; then
             echo "summary.md not found at $SUMMARY_DIR"
             exit 1
@@ -74,20 +74,6 @@ jobs:
             "track_test_data/rocm_passing_summary_daily.csv" \
             "track_test_data/rocm_passing_summary_last_30_days.html"
 
-      #- name: Commit and push updated CSV & HTML
-      #  if: github.event_name == 'schedule'
-      #  run: |
-      #    git config user.name "github-actions[bot]"
-      #    git config user.email "github-actions[bot]@users.noreply.github.com"
-
-      #    git add track_test_data/
-
-      #    if git diff --cached --quiet; then
-      #     echo "No changes to commit"
-      #    else
-      #      git commit -m "Update passing summary CSV and graph ($(date +%Y-%m-%d))"
-      #      git push origin "${GITHUB_REF_NAME}"
-      #    fi
       - name: Commit and push updated CSV & HTML
         if: github.event_name == 'schedule'
         run: |

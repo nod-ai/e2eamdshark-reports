@@ -3,16 +3,23 @@ from pathlib import Path
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-CSV_PATH = Path("track_test_data/passing_summary_daily.csv")
-OUTPUT_HTML = Path("track_test_data/passing_summary_last_30_days.html")
+ROOT = Path(__file__).resolve().parents[1]
+CSV_PATH = ROOT / "track_test_data/passing_summary_daily.csv"
+OUTPUT_HTML = ROOT / "track_test_data/passing_summary_last_30_days.html"
 
-# Read CSV
 df = pd.read_csv(CSV_PATH, parse_dates=["date"])
 
-# Sort & take last 30 days
+numeric_cols = [
+    "setup",
+    "iree_compilation",
+    "gold_inference",
+    "iree_inference_invocation",
+    "inference_comparison_pass",
+]
+df[numeric_cols] = df[numeric_cols].apply(pd.to_numeric, errors="coerce")
+
 df = df.sort_values("date").tail(30)
 
-# Create 5-row subplot layout
 fig = make_subplots(
     rows=5,
     cols=1,
@@ -53,8 +60,7 @@ fig.update_layout(
     xaxis_title="Date",
 )
 
-# Write single self-contained HTML
-fig.write_html(OUTPUT_HTML, include_plotlyjs="cdn")
+fig.write_html(OUTPUT_HTML, include_plotlyjs=True)
 
 print(f"HTML report generated at: {OUTPUT_HTML}")
 

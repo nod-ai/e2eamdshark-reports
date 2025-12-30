@@ -47,10 +47,12 @@ jobs:
           ls -R
           SUMMARY_PATH="${{ steps.today.outputs.date }}/ci_reports_onnx/llvm-cpu/combined-reports_unique/summary.md"
           python github-actions/generate_csv.py "$SUMMARY_PATH"
+          cat track_test_data/passing_summary_daily.csv
 
       - name: Generate passing summary graph
         run: |
           python github-actions/generate_graph.py
+          cat track_test_data/passing_summary_last_30_days.html
 
       #- name: Commit and push updated CSV & HTML
       #  run: |
@@ -69,7 +71,7 @@ jobs:
       #
       #
       - name: Commit and push updated CSV & HTML to CI branch
-        if: github.event_name == 'pull_request'
+        if: github.event_name != 'pull_request'
         run: |
           TARGET_BRANCH=passing-summary-ci
 

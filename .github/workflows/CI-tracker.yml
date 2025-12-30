@@ -99,10 +99,7 @@ jobs:
           DEFAULT_BRANCH="main"
           git status
           git branch
-
-          #exit 1
-          #git checkout "$DEFAULT_BRANCH"
-
+          
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 

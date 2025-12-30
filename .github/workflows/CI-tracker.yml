@@ -85,7 +85,10 @@ jobs:
       - name: Commit and push updated CSV & HTML
         run: |
           DEFAULT_BRANCH="${{ github.event.repository.default_branch }}"
+          git status
+          git branch
 
+          exit 1
           git checkout "$DEFAULT_BRANCH"
 
           git config user.name "github-actions[bot]"

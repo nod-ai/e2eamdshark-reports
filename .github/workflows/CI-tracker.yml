@@ -58,7 +58,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
         with:
-          name: llama-logs
+          name: onnx-model-success-track
           path: |
             track_test_data/
 

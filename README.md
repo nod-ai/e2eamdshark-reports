@@ -11,3 +11,13 @@ You can find wether they pass each phase of the process (statusreport.md), times
 Both modes are compared to torch references for validation, which determines if the inference phase passes.
 
 The infra used to run all these models e2e can be found here with more details on implementation: https://github.com/nod-ai/AMD-SHARK-TestSuite/tree/main/e2eamdshark.
+
+
+## Regression Tracking:
+
+### llvm-cpu:
+[here](https://nod-ai.github.io/e2eamdshark-reports/track_test_data/llvm_cpu_passing_summary_last_30_days.html)
+
+
+### ROCm:
+[here](https://nod-ai.github.io/e2eamdshark-reports/track_test_data/rocm_passing_summary_last_30_days.html)

@@ -38,8 +38,7 @@ jobs:
       - name: Compute today's date
         id: today
         run: |
-          echo "date=2025-12-29" >> $GITHUB_OUTPUT
-          #echo "date=$(date +%Y-%m-%d)" >> $GITHUB_OUTPUT
+          echo "date=$(date +%Y-%m-%d)" >> $GITHUB_OUTPUT
 
       - name: Verify summary.md exists for llvm-cpu
         run: |
@@ -91,13 +90,13 @@ jobs:
             track_test_data/
 
       - name: Checkout default branch (schedule only)
-        #if: github.event_name == 'schedule'
+        if: github.event_name == 'schedule'
         run: |
           git fetch origin
           git checkout main
 
       - name: Commit and push updated CSV & HTML
-        #if: github.event_name == 'schedule'
+        if: github.event_name == 'schedule'
         run: |
           DEFAULT_BRANCH="main"
           git status

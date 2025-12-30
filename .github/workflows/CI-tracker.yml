@@ -12,16 +12,22 @@ on:
   pull_request:
   schedule:
     - cron: "18 22 * * *"
-
+permissions:
+  contents: write
 jobs:
   update-summary:
     runs-on: ubuntu-latest
-
+    
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          ref: ${{ github.ref_name }}
+    #  - name: Checkout repository
+    #    uses: actions/checkout@v4
+    #    with:
+    #      fetch-depth: 0
 
       - name: Set up Python
         uses: actions/setup-python@83679a892e2d95755f2dac6acb0bfd1e9ac5d548
@@ -88,9 +94,25 @@ jobs:
           path: |
             track_test_data/
 
-      - name: Commit and push updated CSV & HTML
+      #- name: Commit and push updated CSV & HTML
         #if: github.event_name == 'schedule'
+        #run: |
+        #  git config user.name "github-actions[bot]"
+        #  git config user.email "github-actions[bot]@users.noreply.github.com"
+
+        #  git add track_test_data/
+
+        #  if git diff --cached --quiet; then
+        #    echo "No changes to commit"
+        #  else
+        #    git commit -m "Update passing summary CSV and graph ($(date +%Y-%m-%d))"
+        #    git push
+        #  fi
+      - name: Commit and push updated CSV & HTML
+        if: github.event_name == 'schedule'
         run: |
+          git checkout "${GITHUB_REF_NAME}"
+
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
@@ -100,6 +122,6 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "Update passing summary CSV and graph ($(date +%Y-%m-%d))"
-            git push
+            git push origin "${GITHUB_REF_NAME}"
           fi
 

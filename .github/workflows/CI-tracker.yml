@@ -95,6 +95,7 @@ jobs:
           git checkout main
 
       - name: Commit and push updated CSV & HTML
+        if: github.event_name == 'schedule'
         run: |
           DEFAULT_BRANCH="main"
           git status

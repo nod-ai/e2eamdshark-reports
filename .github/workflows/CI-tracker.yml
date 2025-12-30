@@ -46,7 +46,6 @@ jobs:
           git branch
           SUMMARY_PATH="${{ steps.today.outputs.date }}/ci_reports_onnx/llvm-cpu/combined-reports_unique/summary.md"
           python github-actions/generate_csv.py "$SUMMARY_PATH" "track_test_data/llvm_cpu_passing_summary_daily.csv"
-          cat track_test_data/passing_summary_daily.csv
 
       - name: Generate passing summary graph for llvm-cpu
         run: |
@@ -67,7 +66,6 @@ jobs:
           git branch
           SUMMARY_PATH="${{ steps.today.outputs.date }}/ci_reports_onnx/rocm/combined-reports_unique/summary.md"
           python github-actions/generate_csv.py "$SUMMARY_PATH" "track_test_data/rocm_passing_summary_daily.csv"
-          cat track_test_data/passing_summary_daily.csv
 
       - name: Generate passing summary graph for gpu
         run: |

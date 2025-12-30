@@ -72,7 +72,7 @@ jobs:
             "track_test_data/rocm_passing_summary_daily.csv"
 
       - name: Generate Graph for both llvm-cpu and gpu
-        run: | 
+        run: |
           python github-actions/generate_graph.py \
             "track_test_data/rocm_passing_summary_daily.csv" \
             "track_test_data/llvm_cpu_passing_summary_daily.csv" \

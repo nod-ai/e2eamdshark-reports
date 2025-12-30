@@ -55,7 +55,7 @@ jobs:
 
       - name: Verify summary.md exists for gpu
         run: |
-          SUMMARY_DIR="${{ steps.today.outputs.date }}/ci_reports_onnx/gpu/combined-reports_unique"
+          SUMMARY_DIR="${{ steps.today.outputs.date }}/ci_reports_onnx/rocm/combined-reports_unique"
           if [ ! -f "$SUMMARY_DIR/summary.md" ]; then
             echo "summary.md not found at $SUMMARY_DIR"
             exit 1

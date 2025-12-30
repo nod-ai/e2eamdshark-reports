@@ -74,9 +74,15 @@ jobs:
           python github-actions/generate_graph.py \
             "track_test_data/rocm_passing_summary_daily.csv" \
             "track_test_data/rocm_passing_summary_last_30_days.html"
+      - name: Upload log files
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
+        with:
+          name: onnx-model-success-track
+          path: |
+            track_test_data/
 
       - name: Commit and push updated CSV & HTML
-        if: github.event_name == 'schedule'
         run: |
           DEFAULT_BRANCH="${{ github.event.repository.default_branch }}"
 

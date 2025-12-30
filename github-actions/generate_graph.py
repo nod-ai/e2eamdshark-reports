@@ -56,7 +56,7 @@ for column, row in plots:
 fig.update_layout(
     height=1400,
     title_text="Passing Summary – Last 30 Days",
-    showlegend=False,
+    showlegend=True,
     xaxis_title="Date",
 )
 

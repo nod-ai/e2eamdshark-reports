@@ -44,7 +44,6 @@ jobs:
         run: |
           pwd
           git branch
-          ls -R
           SUMMARY_PATH="${{ steps.today.outputs.date }}/ci_reports_onnx/llvm-cpu/combined-reports_unique/summary.md"
           python github-actions/generate_csv.py "$SUMMARY_PATH"
           cat track_test_data/passing_summary_daily.csv

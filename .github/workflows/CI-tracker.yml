@@ -52,7 +52,6 @@ jobs:
         run: |
           pwd
           python github-actions/generate_graph.py "track_test_data/llvm_cpu_passing_summary_daily.csv" "track_test_data/llvm_cpu_passing_summary_last_30_days.html"
-          cat track_test_data/passing_summary_last_30_days.html
 
       - name: Verify summary.md exists for gpu
         run: |
@@ -74,7 +73,6 @@ jobs:
         run: |
           pwd
           python github-actions/generate_graph.py "track_test_data/rocm_passing_summary_daily.csv" "track_test_data/rocm_passing_summary_last_30_days.html"
-          cat track_test_data/passing_summary_last_30_days.html
 
       - name: Upload log files
         if: always()

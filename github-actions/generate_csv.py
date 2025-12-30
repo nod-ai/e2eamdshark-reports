@@ -2,8 +2,8 @@ import csv
 from datetime import date
 from pathlib import Path
 import sys
-ROOT = Path(__file__).resolve().parents[1]
-csv_path = ROOT / "track_test_data/passing_summary_daily.csv"
+#ROOT = Path(__file__).resolve().parents[1]
+#csv_path = ROOT / "track_test_data/passing_summary_daily.csv"
 
 
 def extract_passing_summary(summary_text: str) -> dict:
@@ -74,8 +74,8 @@ def append_daily_csv(summary_text: str, csv_path: Path):
 
 if __name__ == "__main__":
     summary_path = Path(sys.argv[1])
-    csv_path = Path("track_test_data/passing_summary_daily.csv")
-
+    #csv_path = Path("track_test_data/passing_summary_daily.csv")
+    csv_path = Path(sys.argv[2])
     summary_text = summary_path.read_text()
     append_daily_csv(summary_text, csv_path)
 

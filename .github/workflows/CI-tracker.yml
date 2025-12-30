@@ -32,7 +32,7 @@ jobs:
           #echo "date=$(date +%Y-%m-%d)" >> $GITHUB_OUTPUT
           echo "date=2025-12-29" >> $GITHUB_OUTPUT
 
-      - name: Verify summary.md exists
+      - name: Verify summary.md exists for llvm-cpu
         run: |
           SUMMARY_DIR="${{ steps.today.outputs.date }}/ci_reports_onnx/llvm-cpu/combined-reports_unique"
           if [ ! -f "$SUMMARY_DIR/summary.md" ]; then
@@ -40,18 +40,40 @@ jobs:
             exit 1
           fi
 
-      - name: Update passing summary CSV
+      - name: Update passing summary CSV for llvm-cpu
         run: |
           pwd
           git branch
           SUMMARY_PATH="${{ steps.today.outputs.date }}/ci_reports_onnx/llvm-cpu/combined-reports_unique/summary.md"
-          python github-actions/generate_csv.py "$SUMMARY_PATH"
+          python github-actions/generate_csv.py "$SUMMARY_PATH" "track_test_data/llvm_cpu_passing_summary_daily.csv"
           cat track_test_data/passing_summary_daily.csv
 
-      - name: Generate passing summary graph
+      - name: Generate passing summary graph for llvm-cpu
         run: |
           pwd
-          python github-actions/generate_graph.py
+          python github-actions/generate_graph.py "track_test_data/llvm_cpu_passing_summary_daily.csv" "track_test_data/llvm_cpu_passing_summary_last_30_days.html"
+          cat track_test_data/passing_summary_last_30_days.html
+
+      - name: Verify summary.md exists for gpu
+        run: |
+          SUMMARY_DIR="${{ steps.today.outputs.date }}/ci_reports_onnx/gpu/combined-reports_unique"
+          if [ ! -f "$SUMMARY_DIR/summary.md" ]; then
+            echo "summary.md not found at $SUMMARY_DIR"
+            exit 1
+          fi
+
+      - name: Update passing summary CSV for gpu
+        run: |
+          pwd
+          git branch
+          SUMMARY_PATH="${{ steps.today.outputs.date }}/ci_reports_onnx/rocm/combined-reports_unique/summary.md"
+          python github-actions/generate_csv.py "$SUMMARY_PATH" "track_test_data/rocm_passing_summary_daily.csv"
+          cat track_test_data/passing_summary_daily.csv
+
+      - name: Generate passing summary graph for gpu
+        run: |
+          pwd
+          python github-actions/generate_graph.py "track_test_data/rocm_passing_summary_daily.csv" "track_test_data/rocm_passing_summary_last_30_days.html"
           cat track_test_data/passing_summary_last_30_days.html
 
       - name: Upload log files

@@ -9,8 +9,8 @@ if len(sys.argv) != 3:
         print("Usage: python generate_graph.py <csv_path> <output_html>")
         sys.exit(1)
 
-    CSV_PATH = Path(sys.argv[1])
-    OUTPUT_HTML = Path(sys.argv[2])
+CSV_PATH = Path(sys.argv[1])
+OUTPUT_HTML = Path(sys.argv[2])
 
 # Read CSV
 df = pd.read_csv(CSV_PATH, parse_dates=["date"])

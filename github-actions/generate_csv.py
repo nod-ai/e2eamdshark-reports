@@ -2,6 +2,8 @@ import csv
 from datetime import date
 from pathlib import Path
 import sys
+ROOT = Path(__file__).resolve().parents[1]
+csv_path = ROOT / "track_test_data/passing_summary_daily.csv"
 
 
 def extract_passing_summary(summary_text: str) -> dict:

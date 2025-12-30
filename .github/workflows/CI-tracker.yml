@@ -12,9 +12,8 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
+        uses: actions/checkout@v4
         with:
-          ref: main
           fetch-depth: 0
 
       - name: Set up Python
@@ -24,9 +23,6 @@ jobs:
 
       - name: Create Env & Install dependencies
         run: |
-          python -m venv v_tracker
-          source v_tracker/bin/activate
-          which pip
           python -m pip install --upgrade pip
           pip install pandas plotly
 

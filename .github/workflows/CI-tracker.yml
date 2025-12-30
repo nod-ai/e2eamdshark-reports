@@ -82,14 +82,20 @@ jobs:
           path: |
             track_test_data/
 
+      - name: Checkout default branch (schedule only)
+        if: github.event_name == 'schedule'
+        run: |
+          git fetch origin
+          git checkout main
+
       - name: Commit and push updated CSV & HTML
         run: |
-          DEFAULT_BRANCH="${{ github.event.repository.default_branch }}"
+          DEFAULT_BRANCH="main"
           git status
           git branch
 
-          exit 1
-          git checkout "$DEFAULT_BRANCH"
+          #exit 1
+          #git checkout "$DEFAULT_BRANCH"
 
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"

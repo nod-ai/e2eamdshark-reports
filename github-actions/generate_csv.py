@@ -1,9 +1,17 @@
+# Copyright 2025 Advanced Micro Devices, Inc.
+#
+# Licensed under the Apache License v2.0 with LLVM Exceptions.
+# See https://llvm.org/LICENSE.txt for license information.
+# SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
+
+'''
+Generates the csv file as a dataframe to track datewise pass status
+'''
+
 import csv
 from datetime import date
 from pathlib import Path
 import sys
-#ROOT = Path(__file__).resolve().parents[1]
-#csv_path = ROOT / "track_test_data/passing_summary_daily.csv"
 
 
 def extract_passing_summary(summary_text: str) -> dict:
@@ -24,7 +32,7 @@ def extract_passing_summary(summary_text: str) -> dict:
         passing_block = summary_text.split("## Passing Summary", 1)[1]
         passing_block = passing_block.split("## Fail Summary", 1)[0]
     except IndexError:
-        return results  # Passing Summary not found
+        return results
 
     for line in passing_block.splitlines():
         line = line.strip()
@@ -58,7 +66,6 @@ def append_daily_csv(summary_text: str, csv_path: Path):
         "inference_comparison_pass",
     ]
 
-    # Fill missing values explicitly
     for key in fieldnames:
         data.setdefault(key, "")
 
@@ -74,7 +81,6 @@ def append_daily_csv(summary_text: str, csv_path: Path):
 
 if __name__ == "__main__":
     summary_path = Path(sys.argv[1])
-    #csv_path = Path("track_test_data/passing_summary_daily.csv")
     csv_path = Path(sys.argv[2])
     summary_text = summary_path.read_text()
     append_daily_csv(summary_text, csv_path)

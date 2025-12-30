@@ -1,10 +1,17 @@
+# Copyright 2024 Advanced Micro Devices
+#
+# Licensed under the Apache License v2.0 with LLVM Exceptions.
+# See https://llvm.org/LICENSE.txt for license information.
+# SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
+
+
 name: Update Passing Summary CSV and Graph
 
 on:
   workflow_dispatch:
   pull_request:
   schedule:
-    - cron: "30 18 * * *"   # daily (adjust as needed)
+    - cron: "18 22 * * *"
 
 jobs:
   update-summary:
@@ -81,48 +88,18 @@ jobs:
           path: |
             track_test_data/
 
-      #- name: Commit and push updated CSV & HTML
-      #  run: |
-      #    git config user.name "github-actions[bot]"
-      #    git config user.email "github-actions[bot]@users.noreply.github.com"
-
-      #   git add track_test_data/passing_summary_daily.csv \
-      #            track_test_data/passing_summary_last_30_days.html
-
-      #   if git diff --cached --quiet; then
-      #      echo "No changes to commit"
-      #   else
-      #      git commit -m "Update passing summary CSV and graph ($(date +%Y-%m-%d))"
-      #      git push
-      #    fi
-      #
-      #
-      - name: Commit and push updated CSV & HTML to CI branch
-        if: github.event_name != 'pull_request'
+      - name: Commit and push updated CSV & HTML
+        if: github.event_name == 'schedule'
         run: |
-          TARGET_BRANCH=passing-summary-ci
-
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Fetch and switch to target branch (create if missing)
-          git fetch origin
+         git add track_test_data/
 
-          if git show-ref --verify --quiet refs/remotes/origin/$TARGET_BRANCH; then
-            git checkout $TARGET_BRANCH
-            git pull origin $TARGET_BRANCH
-          else
-            git checkout -b $TARGET_BRANCH
-          fi
-
-          git add track_test_data/passing_summary_daily.csv \
-                  track_test_data/passing_summary_last_30_days.html
-
-          if git diff --cached --quiet; then
+         if git diff --cached --quiet; then
             echo "No changes to commit"
-            exit 0
+         else
+            git commit -m "Update passing summary CSV and graph ($(date +%Y-%m-%d))"
+            git push
           fi
-
-          git commit -m "Update passing summary CSV and graph ($(date +%Y-%m-%d))"
-          git push origin $TARGET_BRANCH
 

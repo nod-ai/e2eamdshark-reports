@@ -54,12 +54,6 @@ jobs:
             "$SUMMARY_PATH" \
             "track_test_data/llvm_cpu_passing_summary_daily.csv"
 
-      - name: Generate passing summary graph for llvm-cpu
-        run: |
-          python github-actions/generate_graph.py \
-            "track_test_data/llvm_cpu_passing_summary_daily.csv" \
-            "track_test_data/llvm_cpu_passing_summary_last_30_days.html"
-
       - name: Verify summary.md exists for gpu
         run: |
           SUMMARY_DIR="${{ steps.today.outputs.date }}/ci_reports_onnx/rocm/combined-reports_unique"
@@ -75,11 +69,13 @@ jobs:
             "$SUMMARY_PATH" \
             "track_test_data/rocm_passing_summary_daily.csv"
 
-      - name: Generate passing summary graph for gpu
+      - name: Generate Graph for both llvm-cpu and gpu
         run: |
           python github-actions/generate_graph.py \
             "track_test_data/rocm_passing_summary_daily.csv" \
-            "track_test_data/rocm_passing_summary_last_30_days.html"
+            "track_test_data/llvm_cpu_passing_summary_daily.csv" \
+            "track_test_data/regression_comparison_graph.html"
+
       - name: Upload log files
         if: always()
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f

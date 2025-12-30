@@ -8,7 +8,6 @@ name: Data Tracker
 
 on:
   workflow_dispatch:
-  pull_request:
   schedule:
     - cron: "18 22 * * *"
 
@@ -38,8 +37,7 @@ jobs:
       - name: Compute today's date
         id: today
         run: |
-          echo "date=2025-12-29" >> $GITHUB_OUTPUT
-          #echo "date=$(date +%Y-%m-%d)" >> $GITHUB_OUTPUT
+          echo "date=$(date +%Y-%m-%d)" >> $GITHUB_OUTPUT
 
       - name: Verify summary.md exists for llvm-cpu
         run: |

@@ -6,8 +6,8 @@
 | Setup | 826 | 100.0% | 100.0% |
 | IREE Compilation | 826 | 100.0% | 100.0% |
 | Gold Inference | 826 | 100.0% | 100.0% |
-| IREE Inference Invocation | 826 | 100.0% | 100.0% |
-| Inference Comparison (PASS) | 821 | 99.4% | 99.4% |
+| IREE Inference Invocation | 825 | 99.9% | 99.9% |
+| Inference Comparison (PASS) | 820 | 99.3% | 99.4% |
 ## Fail Summary
 
 **TOTAL TESTS = 826**
@@ -16,7 +16,7 @@
 | Setup | 0 | 0.0% |
 | IREE Compilation | 0 | 0.0% |
 | Gold Inference | 0 | 0.0% |
-| IREE Inference Invocation | 0 | 0.0% |
+| IREE Inference Invocation | 1 | 0.1% |
 | Inference Comparison | 5 | 0.6% |
 ## Test Run Detail
 Test was run with the following arguments:
@@ -408,7 +408,7 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_llvm-cpu_onnx_model_zoo_com
 | cs3darknet_focus_l_Opset18_timm | PASS | None | |
 | cs3darknet_x_Opset17_timm | PASS | None | |
 | darknet53_Opset17_timm | PASS | None | |
-| deit3_large_patch16_384_Opset16_timm | PASS | None | |
+| deit3_large_patch16_384_Opset16_timm | compiled_inference | None | |
 | deit3_small_patch16_384_in21ft1k_Opset16_timm | PASS | None | |
 | densenet121_Opset16_timm | PASS | None | |
 | densenet161_Opset18_timm | PASS | None | |

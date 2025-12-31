@@ -8,34 +8,38 @@ progression tolerance: 5.0%
 
 |model name|exit_status|analysis|old_time_ms|new_time_ms|change_ms|percent_change|
 |---|---|---|---|---|---|---|
-|migraphx_ORT__bert_base_cased_1|PASS|regression|1427.4152|1733.8315|306.4163|21.47%|
-|migraphx_ORT__bert_base_uncased_1|PASS|regression|1316.4754|1802.707|486.2315|36.93%|
-|migraphx_ORT__bert_large_uncased_1|PASS|regression|11827.0413|20220.7967|8393.7554|70.97%|
-|migraphx_ORT__distilgpt2_1|PASS|regression|588.538|837.5323|248.9943|42.31%|
-|migraphx_ORT__onnx_models__bert_base_cased_1_fp16_gpu|Numerics|regression|2243.6195|2602.156|358.5365|15.98%|
-|migraphx_ORT__onnx_models__bert_large_uncased_1_fp16_gpu|Numerics|regression|7647.3687|14050.3798|6403.0111|83.73%|
-|migraphx_ORT__onnx_models__distilgpt2_1_fp16_gpu|Numerics|regression|515.7024|643.2586|127.5562|24.73%|
-|migraphx_cadene__dpn92i1|PASS|regression|392.1716|829.3449|437.1734|111.48%|
-|migraphx_cadene__inceptionv4i16|PASS|regression|9292.7906|11626.0211|2333.2306|25.11%|
-|migraphx_cadene__resnext101_64x4di1|PASS|regression|810.5399|1018.1655|207.6256|25.62%|
-|migraphx_huggingface-transformers__bert_mrpc8|PASS|regression|7387.9695|14321.5804|6933.6109|93.85%|
-|migraphx_mlperf__resnet50_v1|PASS|regression|251.236|390.896|139.66|55.59%|
-|migraphx_models__whisper-tiny-decoder|PASS|regression|248.1931|552.3243|304.1312|122.54%|
-|migraphx_models__whisper-tiny-encoder|Numerics|regression|828.8641|2219.1718|1390.3077|167.74%|
-|migraphx_pytorch-examples__wlang_gru|PASS|regression|50.8017|61.3407|10.539|20.75%|
-|migraphx_torchvision__densenet121i32|PASS|within tol|5112.5852|5156.6269|44.0417|0.86%|
-|migraphx_torchvision__inceptioni1|PASS|regression|348.8922|376.9046|28.0124|8.03%|
-|migraphx_torchvision__resnet50i1|PASS|regression|197.427|216.9176|19.4906|9.87%|
+|migraphx_ORT__bert_base_cased_1|PASS|progression|1733.8315|1531.9502|-201.8813|-11.64%|
+|migraphx_ORT__bert_base_uncased_1|PASS|progression|1802.707|1510.7496|-291.9574|-16.2%|
+|migraphx_ORT__bert_large_uncased_1|PASS|progression|20220.7967|11030.7395|-9190.0572|-45.45%|
+|migraphx_ORT__distilgpt2_1|PASS|progression|837.5323|620.794|-216.7383|-25.88%|
+|migraphx_ORT__onnx_models__bert_base_cased_1_fp16_gpu|Numerics|progression|2602.156|2230.0949|-372.061|-14.3%|
+|migraphx_ORT__onnx_models__bert_large_uncased_1_fp16_gpu|Numerics|progression|14050.3798|8577.7588|-5472.621|-38.95%|
+|migraphx_ORT__onnx_models__distilgpt2_1_fp16_gpu|Numerics|progression|643.2586|567.0965|-76.1621|-11.84%|
+|migraphx_cadene__dpn92i1|PASS|progression|829.3449|402.325|-427.0199|-51.49%|
+|migraphx_cadene__inceptionv4i16|PASS|progression|11626.0211|10126.4232|-1499.5979|-12.9%|
+|migraphx_cadene__resnext101_64x4di1|PASS|progression|1018.1655|804.2262|-213.9393|-21.01%|
+|migraphx_huggingface-transformers__bert_mrpc8|PASS|progression|14321.5804|7004.073|-7317.5073|-51.09%|
+|migraphx_mlperf__resnet50_v1|PASS|progression|390.896|205.1754|-185.7206|-47.51%|
+|migraphx_models__whisper-tiny-decoder|PASS|progression|552.3243|245.3015|-307.0229|-55.59%|
+|migraphx_models__whisper-tiny-encoder|Numerics|progression|2219.1718|732.6408|-1486.531|-66.99%|
+|migraphx_pytorch-examples__wlang_gru|PASS|progression|61.3407|50.0598|-11.2809|-18.39%|
+|migraphx_torchvision__densenet121i32|PASS|regression|5156.6269|5479.223|322.5961|6.26%|
+|migraphx_torchvision__inceptioni1|PASS|within tol|376.9046|368.0628|-8.8418|-2.35%|
+|migraphx_torchvision__resnet50i1|PASS|within tol|216.9176|219.7854|2.8678|1.32%|
 
-## 5 Regressions Found:
+## One Regression Found:
 
 |model name|old_status|new_status|
 |---|---|---|
-|migx_bench_bert-large-uncased_1_256|PASS|compiled_inference|
-|migx_bench_bert-large-uncased_1_384|PASS|compiled_inference|
-|migx_bench_bert-large-uncased_2_128|PASS|compiled_inference|
-|migx_bench_bert-large-uncased_2_256|PASS|compiled_inference|
-|migx_bench_bert-large-uncased_2_384|PASS|compiled_inference|
+|deit3_large_patch16_384_Opset16_timm|PASS|compiled_inference|
 
-## No Progressions Found
+## 5 Progressions Found:
+
+|model name|old_status|new_status|
+|---|---|---|
+|migx_bench_bert-large-uncased_1_256|compiled_inference|PASS|
+|migx_bench_bert-large-uncased_1_384|compiled_inference|PASS|
+|migx_bench_bert-large-uncased_2_128|compiled_inference|PASS|
+|migx_bench_bert-large-uncased_2_256|compiled_inference|PASS|
+|migx_bench_bert-large-uncased_2_384|compiled_inference|PASS|
 

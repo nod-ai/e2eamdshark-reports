@@ -5,9 +5,9 @@
 |--|--|--|--|
 | Setup | 4 | 80.0% | 80.0% |
 | IREE Compilation | 3 | 60.0% | 75.0% |
-| Gold Inference | 3 | 60.0% | 100.0% |
-| IREE Inference Invocation | 3 | 60.0% | 100.0% |
-| Inference Comparison (PASS) | 3 | 60.0% | 100.0% |
+| Gold Inference | 2 | 40.0% | 66.7% |
+| IREE Inference Invocation | 2 | 40.0% | 100.0% |
+| Inference Comparison (PASS) | 2 | 40.0% | 100.0% |
 ## Fail Summary
 
 **TOTAL TESTS = 5**
@@ -15,7 +15,7 @@
 |--|--|--|
 | Setup | 1 | 20.0% |
 | IREE Compilation | 1 | 20.0% |
-| Gold Inference | 0 | 0.0% |
+| Gold Inference | 1 | 20.0% |
 | IREE Inference Invocation | 0 | 0.0% |
 | Inference Comparison | 0 | 0.0% |
 ## Test Run Detail
@@ -27,5 +27,5 @@ Namespace(device='hip', backend='rocm', target_chip='gfx942', iree_compile_args=
 | gpt2-lm-head-10 | compilation | None | |
 | roberta-base-11 | PASS | None | |
 | roberta-sequence-classification-9 | setup | None | |
-| t5-decoder-with-lm-head-12 | PASS | None | |
+| t5-decoder-with-lm-head-12 | native_inference | None | |
 | t5-encoder-12 | PASS | None | |

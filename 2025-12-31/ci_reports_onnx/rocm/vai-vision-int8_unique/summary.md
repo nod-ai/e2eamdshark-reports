@@ -7,7 +7,7 @@
 | IREE Compilation | 65 | 89.0% | 89.0% |
 | Gold Inference | 65 | 89.0% | 100.0% |
 | IREE Inference Invocation | 65 | 89.0% | 100.0% |
-| Inference Comparison (PASS) | 38 | 52.1% | 58.5% |
+| Inference Comparison (PASS) | 39 | 53.4% | 60.0% |
 ## Fail Summary
 
 **TOTAL TESTS = 73**
@@ -17,7 +17,7 @@
 | IREE Compilation | 8 | 11.0% |
 | Gold Inference | 0 | 0.0% |
 | IREE Inference Invocation | 0 | 0.0% |
-| Inference Comparison | 27 | 37.0% |
+| Inference Comparison | 26 | 35.6% |
 ## Test Run Detail
 Test was run with the following arguments:
 Namespace(device='hip', backend='rocm', target_chip='gfx942', iree_compile_args=None, mode='cl-onnx-iree', torchtolinalg=False, stages=None, skip_stages=None, benchmark=False, load_inputs=False, groups='all', test_filter=None, testsfile='onnx_tests/models/external_lists/vai-vision-int8_unique.txt', tolerance=None, verbose=True, rundirectory='./test-onnx', no_artifacts=False, cleanup='3', report=True, report_file='reports/vai-vision-int8_unique.md', get_metadata=True, dump_data_as_npy=False)
@@ -54,7 +54,7 @@ Namespace(device='hip', backend='rocm', target_chip='gfx942', iree_compile_args=
 | gernet_m.idstcv_in1k_vaiq | PASS | None | |
 | gernet_s.idstcv_in1k_vaiq | compilation | None | |
 | GoogLeNet_vaiq | compilation | None | |
-| inception_v3.tf_in1k_vaiq | Numerics | None | |
+| inception_v3.tf_in1k_vaiq | PASS | None | |
 | Inception_v3_vaiq | Numerics | None | |
 | inception_v4.tf_in1k_vaiq | PASS | None | |
 | lcnet_050.ra2_in1k_vaiq | Numerics | None | |

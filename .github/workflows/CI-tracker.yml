@@ -72,8 +72,8 @@ jobs:
       - name: Generate Graph for both llvm-cpu and gpu
         run: |
           python github-actions/generate_graph.py \
-            "track_test_data/rocm_passing_summary_daily.csv" \
             "track_test_data/llvm_cpu_passing_summary_daily.csv" \
+            "track_test_data/rocm_passing_summary_daily.csv" \
             "track_test_data/regression_comparison_graph.html"
 
       - name: Upload log files

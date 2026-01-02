@@ -1,26 +1,26 @@
 ## Passing Summary
 
-**TOTAL TESTS = 539**
+**TOTAL TESTS = 507**
 |Stage|# Passing|% of Total|% of Attempted|
 |--|--|--|--|
-| Setup | 524 | 97.2% | 97.2% |
-| IREE Compilation | 415 | 77.0% | 79.2% |
-| Gold Inference | 413 | 76.6% | 99.5% |
-| IREE Inference Invocation | 410 | 76.1% | 99.3% |
-| Inference Comparison (PASS) | 389 | 72.2% | 94.9% |
+| Setup | 497 | 98.0% | 98.0% |
+| IREE Compilation | 401 | 79.1% | 80.7% |
+| Gold Inference | 399 | 78.7% | 99.5% |
+| IREE Inference Invocation | 397 | 78.3% | 99.5% |
+| Inference Comparison (PASS) | 376 | 74.2% | 94.7% |
 ## Fail Summary
 
-**TOTAL TESTS = 539**
+**TOTAL TESTS = 507**
 |Stage|# Failed at Stage|% of Total|
 |--|--|--|
-| Setup | 15 | 2.8% |
-| IREE Compilation | 109 | 20.2% |
+| Setup | 10 | 2.0% |
+| IREE Compilation | 96 | 18.9% |
 | Gold Inference | 2 | 0.4% |
-| IREE Inference Invocation | 3 | 0.6% |
-| Inference Comparison | 21 | 3.9% |
+| IREE Inference Invocation | 2 | 0.4% |
+| Inference Comparison | 21 | 4.1% |
 ## Test Run Detail
 Test was run with the following arguments:
-Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_hf-feature-extraction-shard_onnx_json/hf-feature-extraction-shard.json', './e2eamdshark-reports/ci_reports_rocm_hf-fill-mask-shard_onnx_json/hf-fill-mask-shard.json', './e2eamdshark-reports/ci_reports_rocm_hf-image-classification-shard_onnx_json/hf-image-classification-shard.json', './e2eamdshark-reports/ci_reports_rocm_hf-image-segmentation-shard_onnx_json/hf-image-segmentation-shard.json', './e2eamdshark-reports/ci_reports_rocm_hf-multiple-choice-shard_onnx_json/hf-multiple-choice-shard.json', './e2eamdshark-reports/ci_reports_rocm_hf-object-detection-shard_onnx_json/hf-object-detection-shard.json', './e2eamdshark-reports/ci_reports_rocm_hf-question-answering-shard_onnx_json/hf-question-answering-shard.json', './e2eamdshark-reports/ci_reports_rocm_hf-semantic-segmentation-shard_onnx_json/hf-semantic-segmentation-shard.json', './e2eamdshark-reports/ci_reports_rocm_hf-text-classification-shard_onnx_json/hf-text-classification-shard.json', './e2eamdshark-reports/ci_reports_rocm_hf-text-generation-shard_onnx_json/hf-text-generation-shard.json', './e2eamdshark-reports/ci_reports_rocm_hf-token-classification-shard_onnx_json/hf-token-classification-shard.json'], output='./e2eamdshark-reports/combined_reports_unique.json', report=True, report_file='./e2eamdshark-reports/combined_reports_unique.md')
+Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_hf-feature-extraction-shard_onnx_json/hf-feature-extraction-shard.json', './e2eamdshark-reports/ci_reports_rocm_hf-fill-mask-shard_onnx_json/hf-fill-mask-shard.json', './e2eamdshark-reports/ci_reports_rocm_hf-image-classification-shard_onnx_json/hf-image-classification-shard.json', './e2eamdshark-reports/ci_reports_rocm_hf-image-segmentation-shard_onnx_json/hf-image-segmentation-shard.json', './e2eamdshark-reports/ci_reports_rocm_hf-multiple-choice-shard_onnx_json/hf-multiple-choice-shard.json', './e2eamdshark-reports/ci_reports_rocm_hf-object-detection-shard_onnx_json/hf-object-detection-shard.json', './e2eamdshark-reports/ci_reports_rocm_hf-question-answering-shard_onnx_json/hf-question-answering-shard.json', './e2eamdshark-reports/ci_reports_rocm_hf-semantic-segmentation-shard_onnx_json/hf-semantic-segmentation-shard.json', './e2eamdshark-reports/ci_reports_rocm_hf-text-classification-shard_onnx_json/hf-text-classification-shard.json', './e2eamdshark-reports/ci_reports_rocm_hf-token-classification-shard_onnx_json/hf-token-classification-shard.json'], output='./e2eamdshark-reports/combined_reports_unique.json', report=True, report_file='./e2eamdshark-reports/combined_reports_unique.md')
 
 | Test | Exit Status | Mean Benchmark Time (ms) | Notes |
 |--|--|--|--|
@@ -204,8 +204,8 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_hf-feature-extraction-
 | hf_resnet101.a1h_in1k | PASS | None | |
 | hf_resnet18.a1_in1k | PASS | None | |
 | hf_resnet34.a1_in1k | PASS | None | |
-| hf_resnet50.a1_in1k | PASS | None | |
-| hf_resnext50_32x4d.fb_swsl_ig1b_ft_in1k | Numerics | None | |
+| hf_resnet50.a1_in1k | Numerics | None | |
+| hf_resnext50_32x4d.fb_swsl_ig1b_ft_in1k | PASS | None | |
 | hf_roramdshark-vit-base | setup | None | |
 | hf_swin-tiny-patch4-window7-224 | compilation | None | |
 | hf_swin_base_patch4_window7_224.ms_in22k_ft_in1k | compilation | None | |
@@ -469,38 +469,6 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_hf-feature-extraction-
 | hf_twitter-xlm-roberta-base-sentiment-multilingual | PASS | None | |
 | hf_unbiased-toxic-roberta | PASS | None | |
 | hf_xlm-roberta-base-language-detection | PASS | None | |
-| hf_Llama3-8B-1.58-100B-tokens-GGUF | setup | None | |
-| hf_Meta-Llama-3.1-8B-Instruct-AWQ-INT4 | setup | None | |
-| hf_Meta-Llama-3.1-8B-Instruct-bnb-4bit | setup | None | |
-| hf_Midnight-Miqu-70B-v1.5-4bit | setup | None | |
-| hf_Mistral-7B-Instruct-v0.2-GPTQ | setup | None | |
-| hf_Phi-3-mini-128k-instruct | PASS | None | |
-| hf_Phi-3-mini-4k-instruct | PASS | None | |
-| hf_Phi-3.5-mini-instruct | PASS | None | |
-| hf_Qwen1.5-0.5B-Chat | compilation | None | |
-| hf_Qwen2-0.5B | compilation | None | |
-| hf_Qwen2-7B-Instruct | compilation | None | |
-| hf_Qwen2.5-0.5B-Instruct | compilation | None | |
-| hf_Qwen2.5-1.5B-Instruct | compilation | None | |
-| hf_Qwen2.5-7B-Instruct | compilation | None | |
-| hf_StableBeluga2 | import_model | None | |
-| hf_TinyLlama-1.1B-Chat-v1.0 | compilation | None | |
-| hf_distilgpt2 | PASS | None | |
-| hf_gpt2 | PASS | None | |
-| hf_gpt2-small-spanish | PASS | None | |
-| hf_llama-68m | compilation | None | |
-| hf_llama-7b | compilation | None | |
-| hf_oasst-sft-4-pythia-12b-epoch-3.5 | compilation | None | |
-| hf_opt-125m | PASS | None | |
-| hf_really-tiny-falcon-testing | PASS | None | |
-| hf_tiny-Qwen2ForCausalLM-2.5 | PASS | None | |
-| hf_tiny-dummy-qwen2 | PASS | None | |
-| hf_tiny-random-GemmaForCausalLM | compiled_inference | None | |
-| hf_tiny-random-LlamaForCausalLM | PASS | None | |
-| hf_tiny-random-Phi3ForCausalLM | PASS | None | |
-| hf_tiny-random-mistral | PASS | None | |
-| hf_vicuna-7b-v1.5 | compilation | None | |
-| hf_zephyr-7b-beta | compilation | None | |
 | hf_IndicNER | setup | None | |
 | hf_KoELECTRA-small-v3-modu-ner | PASS | None | |
 | hf_Medical-NER | compilation | None | |

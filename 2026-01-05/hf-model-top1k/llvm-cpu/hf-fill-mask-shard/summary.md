@@ -4,17 +4,17 @@
 |Stage|# Passing|% of Total|% of Attempted|
 |--|--|--|--|
 | Setup | 63 | 90.0% | 90.0% |
-| IREE Compilation | 54 | 77.1% | 85.7% |
-| Gold Inference | 54 | 77.1% | 100.0% |
-| IREE Inference Invocation | 54 | 77.1% | 100.0% |
-| Inference Comparison (PASS) | 54 | 77.1% | 100.0% |
+| IREE Compilation | 55 | 78.6% | 87.3% |
+| Gold Inference | 55 | 78.6% | 100.0% |
+| IREE Inference Invocation | 55 | 78.6% | 100.0% |
+| Inference Comparison (PASS) | 55 | 78.6% | 100.0% |
 ## Fail Summary
 
 **TOTAL TESTS = 70**
 |Stage|# Failed at Stage|% of Total|
 |--|--|--|
 | Setup | 7 | 10.0% |
-| IREE Compilation | 9 | 12.9% |
+| IREE Compilation | 8 | 11.4% |
 | Gold Inference | 0 | 0.0% |
 | IREE Inference Invocation | 0 | 0.0% |
 | Inference Comparison | 0 | 0.0% |
@@ -75,7 +75,7 @@ Namespace(device='local-task', backend='llvm-cpu', target_chip='x86_64-linux-gnu
 | hf_efficient-splade-VI-BT-large-query | setup | None | |
 | hf_esm2_t12_35M_UR50D | PASS | None | |
 | hf_esm2_t30_150M_UR50D | PASS | None | |
-| hf_esm2_t36_3B_UR50D | import_model | None | |
+| hf_esm2_t36_3B_UR50D | PASS | None | |
 | hf_esm2_t6_8M_UR50D | PASS | None | |
 | hf_IndicBERTv2-MLM-only | PASS | None | |
 | hf_legal-bert-base-uncased | setup | None | |

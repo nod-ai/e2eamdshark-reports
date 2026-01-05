@@ -4,17 +4,17 @@
 |Stage|# Passing|% of Total|% of Attempted|
 |--|--|--|--|
 | Setup | 496 | 97.8% | 97.8% |
-| IREE Compilation | 405 | 79.9% | 81.7% |
-| Gold Inference | 403 | 79.5% | 99.5% |
-| IREE Inference Invocation | 399 | 78.7% | 99.0% |
-| Inference Comparison (PASS) | 382 | 75.3% | 95.7% |
+| IREE Compilation | 406 | 80.1% | 81.9% |
+| Gold Inference | 404 | 79.7% | 99.5% |
+| IREE Inference Invocation | 400 | 78.9% | 99.0% |
+| Inference Comparison (PASS) | 383 | 75.5% | 95.8% |
 ## Fail Summary
 
 **TOTAL TESTS = 507**
 |Stage|# Failed at Stage|% of Total|
 |--|--|--|
 | Setup | 11 | 2.2% |
-| IREE Compilation | 91 | 17.9% |
+| IREE Compilation | 90 | 17.8% |
 | Gold Inference | 2 | 0.4% |
 | IREE Inference Invocation | 4 | 0.8% |
 | Inference Comparison | 17 | 3.4% |
@@ -144,7 +144,7 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_llvm-cpu_hf-feature-extract
 | hf_efficient-splade-VI-BT-large-query | setup | None | |
 | hf_esm2_t12_35M_UR50D | PASS | None | |
 | hf_esm2_t30_150M_UR50D | PASS | None | |
-| hf_esm2_t36_3B_UR50D | import_model | None | |
+| hf_esm2_t36_3B_UR50D | PASS | None | |
 | hf_esm2_t6_8M_UR50D | PASS | None | |
 | hf_legal-bert-base-uncased | setup | None | |
 | hf_legal-bert-small-uncased | PASS | None | |

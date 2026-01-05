@@ -7,7 +7,7 @@
 | IREE Compilation | 59 | 83.1% | 84.3% |
 | Gold Inference | 57 | 80.3% | 96.6% |
 | IREE Inference Invocation | 57 | 80.3% | 100.0% |
-| Inference Comparison (PASS) | 51 | 71.8% | 89.5% |
+| Inference Comparison (PASS) | 52 | 73.2% | 91.2% |
 ## Fail Summary
 
 **TOTAL TESTS = 71**
@@ -17,7 +17,7 @@
 | IREE Compilation | 11 | 15.5% |
 | Gold Inference | 2 | 2.8% |
 | IREE Inference Invocation | 0 | 0.0% |
-| Inference Comparison | 6 | 8.5% |
+| Inference Comparison | 5 | 7.0% |
 ## Test Run Detail
 Test was run with the following arguments:
 Namespace(device='hip', backend='rocm', target_chip='gfx942', iree_compile_args=None, mode='cl-onnx-iree', torchtolinalg=False, stages=None, skip_stages=None, benchmark=False, load_inputs=False, groups='all', test_filter=None, testsfile='onnx_tests/models/external_lists/hf-model-shards/hf-image-classification-shard.txt', tolerance=None, verbose=True, rundirectory='./test-onnx', no_artifacts=False, cleanup='3', report=True, report_file='reports/hf-image-classification-shard.md', get_metadata=True, dump_data_as_npy=False)
@@ -93,5 +93,5 @@ Namespace(device='hip', backend='rocm', target_chip='gfx942', iree_compile_args=
 | hf_vit_small_patch16_224.augreg_in21k_ft_in1k | PASS | None | |
 | hf_vit_tiny_patch16_224.augreg_in21k_ft_in1k | PASS | None | |
 | hf_watermark_detector | PASS | None | |
-| hf_wide_resnet50_2.racm_in1k | Numerics | None | |
+| hf_wide_resnet50_2.racm_in1k | PASS | None | |
 | hf_xcit_tiny_24_p8_384.fb_dist_in1k | compilation | None | |

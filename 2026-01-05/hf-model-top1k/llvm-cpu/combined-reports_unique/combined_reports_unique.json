@@ -1,0 +1,2390 @@
+{
+    "hf_1_microsoft_deberta_V1.0": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_1_microsoft_deberta_V1.0/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_1_microsoft_deberta_V1.0/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_1_microsoft_deberta_V1.1": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_1_microsoft_deberta_V1.1/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_1_microsoft_deberta_V1.1/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_51-languages-classifier": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_ARBERTv2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_BioLinkBERT-base": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_BioLinkBERT-large": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_Bio_ClinicalBERT": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_BiomedNLP-BiomedBERT-base-uncased-abstract": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_BiomedNLP-BiomedBERT-base-uncased-abstract-fulltext": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_COPA_10_shot": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_COPA_Bert_Base_Uncased_Finetuned": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_COPA_albert_base_finetuned": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_CRAB_bert_base_uncased_finetuned": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_CentralBankRoBERTa-sentiment-classifier": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_ChemBERTa-77M-MLM": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_DeBERTa-v3-base-mnli-fever-anli": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_DeBERTa-v3-base-mnli-fever-anli/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_DeBERTa-v3-base-mnli-fever-anli/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_Debertalarg_model_multichoice_Version2": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_Debertalarg_model_multichoice_Version2/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_Debertalarg_model_multichoice_Version2/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_GIST-Embedding-v0": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_GIST-large-Embedding-v0": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_GIST-small-Embedding-v0": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_Gender-Classification": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_IndicBERTv2-MLM-only": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_IndicNER": {
+        "exit_status": "setup",
+        "time_ms": null
+    },
+    "hf_Indobert-QA": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_KUCI_Bert_Base_Finetuned": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_KUCI_albert_base_Finetuned": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_KoELECTRA-small-v3-modu-ner": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_LLM": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_LaBSE": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_LaBSE-en-ru": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_LinkBERT-large": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_MeaningBERT": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_Medical-NER": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_Medical-NER/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_Medical-NER/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_Multiple_Choice_swag": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_Multiple_Choice_swag_lr": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_NER-Indian-xlm-roberta": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_NLP_HW3": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_NSFW_text_classifier": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_SapBERT-UMLS-2020AB-all-lang-from-XLMR": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_SapBERT-from-PubMedBERT-fulltext": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_Sentimental-Analysis": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_Splade_PP_en_v1": {
+        "exit_status": "setup",
+        "time_ms": null
+    },
+    "hf_UAE-Large-V1": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_UL_base_classification": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_WSPAlign-ft-kftt": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_ZeroShotBioNER": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_albert-base-v2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_albert-base-v2-squad2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_albert-japanese-v2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_albert-tiny-chinese-ws": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_albert-xlarge-vitaminc-mnli": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_all-MiniLM-L12-v2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_all-MiniLM-L6-v2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_all-distilroberta-v1": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_all-mpnet-base-v2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_all-roberta-large-v1": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_astroBERT": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_autonlp-Gibberish-Detector-492513457": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bart-base": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bart-large-mnli": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_bart-large-mnli/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_bart-large-mnli/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "expected sizes to be non-negative, but got -1",
+        "error_signature": "expected sizes to be non-negative, but got -1",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_bcms-bertic-ner": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_beit-base-patch16-224-pt22k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_beit-base-patch16-224-pt22k-ft22k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_beit_base_patch16_224.in22k_ft_in22k_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_beitv2_base_patch16_224.in1k_ft_in22k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-5lang-cased": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-NER": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-NER-uncased": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-arabertv02": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-arabic-camelbert-mix-ner": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-cased": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-cased-squad-v1.1-portuguese": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-cased-squad2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-chinese": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-chinese-ner": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-chinese-pos": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-chinese-ws": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-german-cased": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-indonesian-1.5G": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-indonesian-NER": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-italian-xxl-cased": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-italian-xxl-uncased": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-japanese": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-japanese-char": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-japanese-char-v2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-japanese-v3-jcommonsenseqa": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-japanese-v3-ner-wikipedia-dataset": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-japanese-whole-word-masking": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-multilingual-cased": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-multilingual-cased-ner-hrl": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-multilingual-uncased": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-multilingual-uncased-sentiment": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-nli-mean-tokens": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-parsbert-ner-uncased": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-personality": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-portuguese-cased": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-romanian-ner": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-spanish-wwm-cased-finetuned-spa-squad2-es": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-spanish-wwm-uncased": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-swedish-cased-ner": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-thai-upos": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-turkish-cased-mean-nli-stsb-tr": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-turkish-cased-ner": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-turkish-squad": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-uncased": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-uncased-Figurative_Language": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-uncased-Vitamin_C_Fact_Verification": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-uncased-e_CARE": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-uncased-emotion": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-uncased-finetune-kggpu": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-uncased-finetuned-swag": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-uncased-hatexplain": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-uncased-snli": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-uncased-squad-v1": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-base-uncased-squad2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-english-uncased-finetuned-pos": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-extractive-qa-large-project": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-fa-base-uncased-ner-peyma": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-japanese-finetuned-sentiment": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-kor-base": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-large-NER": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-large-cased": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-large-cased-finetuned-conll03-english": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-large-cased-squad-v1.1-portuguese": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-large-cased-whole-word-masking-finetuned-squad": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-large-finetuned-squad2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-large-portuguese-cased": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-large-uncased": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-large-uncased-whole-word-masking-finetuned-squad": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-large-uncased-whole-word-masking-squad2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-large-uncased_med-ner": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-spanish-cased-finetuned-ner": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-tiny-finetuned-sms-spam-detection": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-tiny-finetuned-squadv2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert-toxic-comment-classification": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert_base_swag_model": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert_cased_ner": {
+        "exit_status": "setup",
+        "time_ms": null
+    },
+    "hf_bert_multiple_choice": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert_science_multiple_choice": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bert_turkish_sentiment": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bertserini-bert-base-squad": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bertweet-base": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bertweet-base-sentiment-analysis": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_beto-sentiment-analysis": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bge-base-en-v1.5": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bge-large-en": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bge-large-en-v1.5": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bge-large-zh-v1.5": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bge-reranker-base": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bge-small-en": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bge-small-en-v1.5": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_biobert-base-cased-v1.1-squad": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_biobert-base-cased-v1.2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_biobert-large-cased-v1.1-squad": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_biobert-v1.1": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_biobert-v1.1-biomedicalQuestionAnswering": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_biomedical-ner-all": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_bpmn-information-extraction-v2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_camembert-base": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_camembert-base-squadFR-fquad-piaf": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_camembert-keyword-extractor": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_camembert-ner": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_camembert-ner-with-dates": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_checkpoints_10_1_microsoft_deberta_V1.1_384": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_checkpoints_10_1_microsoft_deberta_V1.1_384/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_checkpoints_10_1_microsoft_deberta_V1.1_384/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_checkpoints_1_16": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_checkpoints_1_16/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_checkpoints_1_16/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_checkpoints_26_9_microsoft_deberta_21_9": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_checkpoints_26_9_microsoft_deberta_21_9/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_checkpoints_26_9_microsoft_deberta_21_9/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_checkpoints_28_9_microsoft_deberta_V2": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_checkpoints_28_9_microsoft_deberta_V2/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_checkpoints_28_9_microsoft_deberta_V2/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_checkpoints_28_9_microsoft_deberta_V4": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_checkpoints_28_9_microsoft_deberta_V4/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_checkpoints_28_9_microsoft_deberta_V4/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_checkpoints_28_9_microsoft_deberta_V5": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_checkpoints_28_9_microsoft_deberta_V5/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_checkpoints_28_9_microsoft_deberta_V5/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_checkpoints_29_9_microsoft_deberta_V1": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_checkpoints_29_9_microsoft_deberta_V1/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_checkpoints_29_9_microsoft_deberta_V1/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_checkpoints_30_9_microsoft_deberta_V1.0_384": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_checkpoints_30_9_microsoft_deberta_V1.0_384/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_checkpoints_30_9_microsoft_deberta_V1.0_384/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_checkpoints_3_14": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_checkpoints_3_14/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_checkpoints_3_14/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_chinese-roberta-wwm-ext": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_chinese_paragraph_bert-ext": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_codebert-base": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_codebert-base-mlm": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_codebert-java": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_codebert-python": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_content": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_content/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_content/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_conv-bert-base": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_convnext_base.fb_in22k_ft_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_convnext_large_mlp.clip_laion2b_soup_ft_in12k_in1k_320": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_convnextv2_base.fcmae_ft_in22k_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_cross-en-de-roberta-sentence-transformer": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_cspdarknet53.ra_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_deberta-base": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-base/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-base/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_deberta-large-mnli": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-large-mnli/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-large-mnli/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_deberta-v2-base-japanese": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-v2-base-japanese/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-v2-base-japanese/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_deberta-v2-base-japanese-char-wwm": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-v2-base-japanese-char-wwm/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-v2-base-japanese-char-wwm/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_deberta-v3-base": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-v3-base/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-v3-base/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_deberta-v3-base-absa-v1.1": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-v3-base-absa-v1.1/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-v3-base-absa-v1.1/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_deberta-v3-base-injection": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-v3-base-injection/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-v3-base-injection/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_deberta-v3-base-squad2": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-v3-base-squad2/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-v3-base-squad2/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_deberta-v3-base-zeroshot-v1.1-all-33": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-v3-base-zeroshot-v1.1-all-33/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-v3-base-zeroshot-v1.1-all-33/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_deberta-v3-base_finetuned_ai4privacy_v2": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-v3-base_finetuned_ai4privacy_v2/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-v3-base_finetuned_ai4privacy_v2/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_deberta-v3-large": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-v3-large/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-v3-large/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_deberta-v3-large-squad2": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-v3-large-squad2/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-v3-large-squad2/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_deberta-v3-large_boolq": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-v3-large_boolq/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-v3-large_boolq/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_deberta-v3-large_test": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-v3-large_test/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-v3-large_test/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_deberta-v3-large_test_9e-6": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-v3-large_test_9e-6/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-v3-large_test_9e-6/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_deberta-v3-small": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-v3-small/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-v3-small/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_deberta-v3-xsmall": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-v3-xsmall/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta-v3-xsmall/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_deberta_finetuned_pii": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta_finetuned_pii/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deberta_finetuned_pii/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_deeplabv3-mobilevit-small": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deeplabv3-mobilevit-small/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deeplabv3-mobilevit-small/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "'iree_codegen.workgroup_count_hint' op failed to resolve workgroup count hint in terms of workload ordinals",
+        "error_signature": "'OP' op failed to resolve workgroup count hint in terms of workload ordinals",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_deeplabv3-mobilevit-xx-small": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deeplabv3-mobilevit-xx-small/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_deeplabv3-mobilevit-xx-small/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "'iree_codegen.workgroup_count_hint' op failed to resolve workgroup count hint in terms of workload ordinals",
+        "error_signature": "'OP' op failed to resolve workgroup count hint in terms of workload ordinals",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_dehatebert-mono-english": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_dehatebert-mono-portugese": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_deid_roberta_i2b2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_deit-base-patch16-224": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_deit-tiny-patch16-224": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_deit_base_distilled_patch16_224.fb_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_densenet121.ra_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_detr-doc-table-detection": {
+        "exit_status": "Numerics",
+        "time_ms": null
+    },
+    "hf_detr-layout-detection": {
+        "exit_status": "Numerics",
+        "time_ms": null
+    },
+    "hf_detr-resnet-101": {
+        "exit_status": "Numerics",
+        "time_ms": null
+    },
+    "hf_detr-resnet-101-dc5": {
+        "exit_status": "Numerics",
+        "time_ms": null
+    },
+    "hf_detr-resnet-50": {
+        "exit_status": "Numerics",
+        "time_ms": null
+    },
+    "hf_detr-resnet-50-dc5": {
+        "exit_status": "Numerics",
+        "time_ms": null
+    },
+    "hf_detr-resnet-50-finetuned-10k-cppe5": {
+        "exit_status": "Numerics",
+        "time_ms": null
+    },
+    "hf_detr-resnet-50-panoptic": {
+        "exit_status": "Numerics",
+        "time_ms": null
+    },
+    "hf_detr-resnet-50-sku110k": {
+        "exit_status": "Numerics",
+        "time_ms": null
+    },
+    "hf_diagram_detr_r50_finetuned": {
+        "exit_status": "Numerics",
+        "time_ms": null
+    },
+    "hf_distilbert-NER": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_distilbert-SBD-en-judgements-laws": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_distilbert-base-cased": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_distilbert-base-cased-distilled-squad": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_distilbert-base-cased-finetuned-conll03-english": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_distilbert-base-multilingual-cased": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_distilbert-base-multilingual-cased-ner-hrl": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_distilbert-base-multilingual-cased-sentiments-student": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_distilbert-base-nli-mean-tokens": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_distilbert-base-nli-stsb-mean-tokens": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_distilbert-base-uncased": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_distilbert-base-uncased-distilled-squad": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_distilbert-base-uncased-finetuned-sst-2-english": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_distilbert-extractive-qa-large-project": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_distilbert-extractive-qa-project": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_distilbert_distilbert-base-uncased-15-epoch": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_distilbert_multiple_choice": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_distilbert_science_multiple_choice": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_distilcamembert-base-ner": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_distill-bert-base-spanish-wwm-cased-finetuned-spa-squad2-es": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_distilroberta-base": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_distilroberta-finetuned-financial-news-sentiment-analysis": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_distiluse-base-multilingual-cased-v1": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_distiluse-base-multilingual-cased-v2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_ditr-e15": {
+        "exit_status": "Numerics",
+        "time_ms": null
+    },
+    "hf_dpt-large-ade": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_dpt-large-ade/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_dpt-large-ade/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_dragon-multiturn-context-encoder": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_dragon-multiturn-query-encoder": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_dynamic_tinybert": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_e_care_albert_base_finetuned": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_e_care_bert_base_uncased_finetuned": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_efficient-splade-VI-BT-large-doc": {
+        "exit_status": "setup",
+        "time_ms": null
+    },
+    "hf_efficient-splade-VI-BT-large-query": {
+        "exit_status": "setup",
+        "time_ms": null
+    },
+    "hf_efficientnet_b0.ra_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_efficientnet_b3.ra2_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_efficientnet_b4.ra2_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_electra-base-fp16": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_electra-base-multiple-choice-v2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_electra_large_discriminator_squad2_512": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_electra_multiple_choice": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_emotion-english-distilroberta-base": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_emotion_text_classifier": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_english-abusive-MuRIL": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_ese_vovnet19b_dw.ra_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_esm2_t12_35M_UR50D": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_esm2_t30_150M_UR50D": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_esm2_t36_3B_UR50D": {
+        "exit_status": "import_model",
+        "time_ms": null
+    },
+    "hf_esm2_t6_8M_UR50D": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_eva_large_patch14_196.in22k_ft_in22k_in1k": {
+        "exit_status": "native_inference",
+        "time_ms": null
+    },
+    "hf_face-parsing": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_face-parsing/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_face-parsing/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_finbert": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_finbert-tone": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_fine-tuned-MoritzLaurer-deberta-v3-large-zeroshot-v2.0-arceasy": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_fine-tuned-MoritzLaurer-deberta-v3-large-zeroshot-v2.0-arceasy/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_fine-tuned-MoritzLaurer-deberta-v3-large-zeroshot-v2.0-arceasy/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_finetuned-bert-piqa": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_french-camembert-postag-model": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_gelectra-base-germanquad": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_gelectra-large-germanquad": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_gender-classification": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_german-sentiment-bert": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_gte-small": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_hrnet_w18.ms_aug_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_inception_resnet_v2.tf_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_inception_v3.tf_adv_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_inception_v3.tv_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_indobert-base-p1": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_indobert-lite-squad": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_indobert-model-ner": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_indonesian-roberta-base-posp-tagger": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_indonesian-roberta-base-sentiment-classifier": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_instructor-large": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_ivila-row-layoutlm-finetuned-s2vl-v2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_jina-embeddings-v2-small-en": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_kda-albert-xxlarge-v2-race": {
+        "exit_status": "compiled_inference",
+        "time_ms": null
+    },
+    "hf_keyphrase-extraction-distilbert-inspec": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_keyphrase-extraction-kbir-inspec": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_ko-sroberta-multitask": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_kobert": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_koelectra-small-v2-distilled-korquad-384": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_koelectra-small-v3-nsmc": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_lcnet_050.ra2_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_legal-bert-base-uncased": {
+        "exit_status": "setup",
+        "time_ms": null
+    },
+    "hf_legal-bert-small-uncased": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_llm-embedder": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_llm-mdeberta-v3-swag": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_llm-mdeberta-v3-swag/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_llm-mdeberta-v3-swag/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_llmlingua-2-bert-base-multilingual-cased-meetingbank": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_mDeBERTa-v3-base-mnli-xnli": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_mDeBERTa-v3-base-mnli-xnli/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_mDeBERTa-v3-base-mnli-xnli/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_mDeBERTa-v3-xnli-ft-bs-multiple-choice": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_mDeBERTa-v3-xnli-ft-bs-multiple-choice/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_mDeBERTa-v3-xnli-ft-bs-multiple-choice/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_mbert-base-parsinlu-multiple-choice": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_mcQA_model_bert": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_mdeberta-v3-base": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_mdeberta-v3-base/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_mdeberta-v3-base/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_mdeberta-v3-base-squad2": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_mdeberta-v3-base-squad2/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_mdeberta-v3-base-squad2/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_minilm-uncased-squad2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_mit-b0": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_mit-b0/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_mit-b0/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_mit-b5": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_mit-b5/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_mit-b5/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_mobilebert-uncased-squad-v2": {
+        "exit_status": "compiled_inference",
+        "time_ms": null
+    },
+    "hf_mobilenet_v1_0.75_192": {
+        "exit_status": "native_inference",
+        "time_ms": null
+    },
+    "hf_mobilenet_v2_1.0_224": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_mobilenetv2_100.ra_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_mobilenetv3_large_100.miil_in21k_ft_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_mobilenetv3_large_100.ra_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_mobilevit-small": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_mobilevit-small/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_mobilevit-small/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "'iree_codegen.workgroup_count_hint' op failed to resolve workgroup count hint in terms of workload ordinals",
+        "error_signature": "'OP' op failed to resolve workgroup count hint in terms of workload ordinals",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_ms-marco-MiniLM-L-12-v2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_ms-marco-MiniLM-L-2-v2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_ms-marco-MiniLM-L-4-v2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_ms-marco-MiniLM-L-6-v2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_ms-marco-TinyBERT-L-2-v2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_ms-marco-electra-base": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_msmarco-MiniLM-L6-cos-v5": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_msmarco-distilbert-base-tas-b": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_msmarco-distilbert-base-v4": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_msmarco-distilbert-cos-v5": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_msmarco-distilbert-dot-v5": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_multi-qa-MiniLM-L6-cos-v1": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_multi-qa-distilbert-cos-v1": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_multi-qa-mpnet-base-dot-v1": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_mxbai-embed-large-v1": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_mxbai-rerank-base-v1": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_mxbai-rerank-base-v1/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_mxbai-rerank-base-v1/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_mxbai-rerank-xsmall-v1": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_mxbai-rerank-xsmall-v1/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_mxbai-rerank-xsmall-v1/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_my_awesome_model": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_my_awesome_swag_model": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_nbailab-base-ner-scandi": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_ner-bert-base-cased-pt-lenerbr": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_ner-vietnamese-electra-base": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_nerkor-cars-onpp-hubert": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_nfnet_l0.ra2_in1k": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_nfnet_l0.ra2_in1k/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_nfnet_l0.ra2_in1k/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_nli-deberta-v3-base": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_nli-deberta-v3-base/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_nli-deberta-v3-base/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_nsfw-classifier": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_nsfw_image_detection": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_opensearch-neural-sparse-encoding-doc-v2-distill": {
+        "exit_status": "setup",
+        "time_ms": null
+    },
+    "hf_output": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_output/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_output/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_paraphrase-MiniLM-L3-v2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_paraphrase-MiniLM-L6-v2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_paraphrase-mpnet-base-v2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_paraphrase-multilingual-MiniLM-L12-v2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_paraphrase-multilingual-mpnet-base-v2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_paraphrase-xlm-r-multilingual-v1": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_parsbert-base-parsinlu-multiple-choice": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_pedestrian_gender_recognition": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_phobert-base": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_phobert-base-finetuned": {
+        "exit_status": "compiled_inference",
+        "time_ms": null
+    },
+    "hf_phobert-base-v2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_phobert-large-finetuned": {
+        "exit_status": "compiled_inference",
+        "time_ms": null
+    },
+    "hf_piiranha-v1-detect-personal-information": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_piiranha-v1-detect-personal-information/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_piiranha-v1-detect-personal-information/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_pix2text-table-rec": {
+        "exit_status": "Numerics",
+        "time_ms": null
+    },
+    "hf_pnasnet5large.tf_in1k": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_pnasnet5large.tf_in1k/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_pnasnet5large.tf_in1k/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "expected offsets to be non-negative, but got -1",
+        "error_signature": "expected offsets to be non-negative, but got -1",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_prot_bert": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_punctuate-all": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_query_wellformedness_score": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_question-answering-qa-may-12-tablang-LOCAL": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_question-answering-roberta-base-s-v2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_raceBERT-ethnicity": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_regnety_002.pycls_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_resnet-18": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_resnet-50": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_resnet101.a1h_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_resnet18.a1_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_resnet34.a1_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_resnet50.a1_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_resnext50_32x4d.fb_swsl_ig1b_ft_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_robbert-v2-dutch-base": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_robbert-v2-dutch-ner": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_robeczech-base": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_roberta-base": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_roberta-base-chinese-extractive-qa": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_roberta-base-go_emotions": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_roberta-base-nli-mean-tokens": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_roberta-base-on-cuad": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_roberta-base-squad2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_roberta-base-squad2-distilled": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_roberta-base-suicide-prediction-phr": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_roberta-hate-speech-dynabench-r4-target": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_roberta-large": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_roberta-large-mnli": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_roberta-large-ner-english": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_roberta-large-ontonotes5": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_roberta-large-squad2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_robertuito-sentiment-analysis": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_roramdshark-vit-base": {
+        "exit_status": "setup",
+        "time_ms": null
+    },
+    "hf_ruRoPEBert-e5-base-2k": {
+        "exit_status": "setup",
+        "time_ms": null
+    },
+    "hf_rubert-base-cased": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_rubert-base-cased-nli-threeway": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_rubert-tiny": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_rubert-tiny2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_rubert-tiny2-russian-sentiment": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_rubert_large_squad_2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_sapbert-from-pubmedbert-squad2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_sbert_large_nlu_ru": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_segformer-b0-finetuned-ade-512-512": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b0-finetuned-ade-512-512/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b0-finetuned-ade-512-512/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_segformer-b0-finetuned-cityscapes-1024-1024": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b0-finetuned-cityscapes-1024-1024/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b0-finetuned-cityscapes-1024-1024/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_segformer-b0-finetuned-cityscapes-512-1024": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b0-finetuned-cityscapes-512-1024/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b0-finetuned-cityscapes-512-1024/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_segformer-b0-finetuned-segments-sidewalk-2": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b0-finetuned-segments-sidewalk-2/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b0-finetuned-segments-sidewalk-2/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_segformer-b1-finetuned-ade-512-512": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b1-finetuned-ade-512-512/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b1-finetuned-ade-512-512/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_segformer-b1-finetuned-cityscapes-1024-1024": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b1-finetuned-cityscapes-1024-1024/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b1-finetuned-cityscapes-1024-1024/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_segformer-b2-fashion": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b2-fashion/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b2-fashion/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_segformer-b2-finetuned-ade-512-512": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b2-finetuned-ade-512-512/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b2-finetuned-ade-512-512/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_segformer-b2-finetuned-cityscapes-1024-1024": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b2-finetuned-cityscapes-1024-1024/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b2-finetuned-cityscapes-1024-1024/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_segformer-b3-fashion": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b3-fashion/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b3-fashion/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_segformer-b3-finetuned-ade-512-512": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b3-finetuned-ade-512-512/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b3-finetuned-ade-512-512/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_segformer-b3-finetuned-cityscapes-1024-1024": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b3-finetuned-cityscapes-1024-1024/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b3-finetuned-cityscapes-1024-1024/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_segformer-b4-finetuned-ade-512-512": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b4-finetuned-ade-512-512/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b4-finetuned-ade-512-512/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_segformer-b4-finetuned-cityscapes-1024-1024": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b4-finetuned-cityscapes-1024-1024/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b4-finetuned-cityscapes-1024-1024/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_segformer-b4-finetuned-segments-sidewalk": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b4-finetuned-segments-sidewalk/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b4-finetuned-segments-sidewalk/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_segformer-b5-finetuned-ade-640-640": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b5-finetuned-ade-640-640/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b5-finetuned-ade-640-640/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_segformer-b5-finetuned-cityscapes-1024-1024": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b5-finetuned-cityscapes-1024-1024/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer-b5-finetuned-cityscapes-1024-1024/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_segformer_b2_clothes": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer_b2_clothes/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer_b2_clothes/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_segformer_b3_clothes": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer_b3_clothes/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer_b3_clothes/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_segformer_for_optic_disc_cup_segmentation": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer_for_optic_disc_cup_segmentation/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_segformer_for_optic_disc_cup_segmentation/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_sentence-bert-base-ja-mean-tokens-v2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_snowflake-arctic-embed-m": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_specter2_aug2023refresh_base": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_splade-cocondenser-ensembledistil": {
+        "exit_status": "setup",
+        "time_ms": null
+    },
+    "hf_splade-cocondenser-selfdistil": {
+        "exit_status": "setup",
+        "time_ms": null
+    },
+    "hf_splinter-base": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_splinter-base/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_splinter-base/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_splinter-base-qass": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_splinter-base-qass/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_splinter-base-qass/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "failed to legalize operation 'torch.operator' that was explicitly marked illegal",
+        "error_signature": "failed to legalize operation 'OP' that was explicitly marked illegal",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_stanford-deidentifier-base": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_stsb-TinyBERT-L-4": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_stsb-roberta-base": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_stsb-xlm-r-multilingual": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_suicidality": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_sup-simcse-roberta-large": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_swin-tiny-patch4-window7-224": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_swin-tiny-patch4-window7-224/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_swin-tiny-patch4-window7-224/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "'iree_codegen.workgroup_count_hint' op failed to resolve workgroup count hint in terms of workload ordinals",
+        "error_signature": "'OP' op failed to resolve workgroup count hint in terms of workload ordinals",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_swin_base_patch4_window7_224.ms_in22k_ft_in1k": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_swin_base_patch4_window7_224.ms_in22k_ft_in1k/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_swin_base_patch4_window7_224.ms_in22k_ft_in1k/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "'iree_codegen.workgroup_count_hint' op failed to resolve workgroup count hint in terms of workload ordinals",
+        "error_signature": "'OP' op failed to resolve workgroup count hint in terms of workload ordinals",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_table-transformer-detection": {
+        "exit_status": "Numerics",
+        "time_ms": null
+    },
+    "hf_table-transformer-detection-custom-ale": {
+        "exit_status": "Numerics",
+        "time_ms": null
+    },
+    "hf_table-transformer-structure-recognition": {
+        "exit_status": "Numerics",
+        "time_ms": null
+    },
+    "hf_table-transformer-structure-recognition-v1.1-all": {
+        "exit_status": "Numerics",
+        "time_ms": null
+    },
+    "hf_table-transformer-structure-recognition-v1.1-pub": {
+        "exit_status": "Numerics",
+        "time_ms": null
+    },
+    "hf_tamil-codemixed-abusive-MuRIL": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_tcd-segformer-mit-b0": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_tcd-segformer-mit-b0/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_tcd-segformer-mit-b0/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_tcd-segformer-mit-b1": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_tcd-segformer-mit-b1/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_tcd-segformer-mit-b1/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_tcd-segformer-mit-b2": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_tcd-segformer-mit-b2/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_tcd-segformer-mit-b2/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_tcd-segformer-mit-b3": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_tcd-segformer-mit-b3/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_tcd-segformer-mit-b3/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_tcd-segformer-mit-b4": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_tcd-segformer-mit-b4/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_tcd-segformer-mit-b4/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_test-demo-qa": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_test-demo-qa-with-roberta": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_tf_efficientnet_b0.ns_jft_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_tf_efficientnetv2_s.in21k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_tf_mobilenetv3_large_minimal_100.in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_tf_mobilenetv3_small_minimal_100.in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_tiny-distilbert-base-cased-distilled-squad": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_tiny-random-mt5": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_tinyroberta-squad2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_tner-xlm-roberta-base-ontonotes5": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_toxic-bert": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_toxic-comment-model": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_twitter-roberta-base-irony": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_twitter-roberta-base-sentiment": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_twitter-roberta-base-sentiment-latest": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_twitter-xlm-roberta-base-sentiment": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_twitter-xlm-roberta-base-sentiment-multilingual": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_unbiased-toxic-roberta": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_vgg16.tv_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_vgg19.tv_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_vit-age-classifier": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_vit-base-patch16-224": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_vit-base-uppercase-english-characters": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_vit-face-expression": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_vit-large-patch16-224": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_vit-small-patch16-224": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_vit-tiny-patch16-224": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_vit_base_patch16_224.augreg2_in21k_ft_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_vit_base_patch16_224.augreg_in21k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_vit_base_patch32_224.augreg_in21k_ft_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_vit_base_patch8_224.augreg2_in21k_ft_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_vit_large_patch16_224.augreg_in21k_ft_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_vit_small_patch16_224.augreg_in21k_ft_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_vit_tiny_patch16_224.augreg_in21k_ft_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_wangchanberta-base-att-spm-uncased": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_watermark_detector": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_wide_resnet50_2.racm_in1k": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_wikibert-base-parsinlu-multiple-choice": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_wikineural-multilingual-ner": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_xcit_tiny_24_p8_384.fb_dist_in1k": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_xcit_tiny_24_p8_384.fb_dist_in1k/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_xcit_tiny_24_p8_384.fb_dist_in1k/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "'memref.alloca' op dimension operand count does not equal memref dynamic dimension count",
+        "error_signature": "'OP' op dimension operand count does not equal memref dynamic dimension count",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_xlm-roberta-base": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_xlm-roberta-base-language-detection": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_xlm-roberta-base-ner-silvanus": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_xlm-roberta-base-squad2": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_xlm-roberta-base-squad2-distilled": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_xlm-roberta-ner-japanese": {
+        "exit_status": "PASS",
+        "time_ms": null
+    },
+    "hf_yolos-base": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_yolos-base/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_yolos-base/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "expected sizes to be non-negative, but got -1",
+        "error_signature": "expected sizes to be non-negative, but got -1",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_yolos-fashionpedia": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_yolos-fashionpedia/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_yolos-fashionpedia/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "expected sizes to be non-negative, but got -1",
+        "error_signature": "expected sizes to be non-negative, but got -1",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_yolos-small": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_yolos-small/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_yolos-small/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "expected sizes to be non-negative, but got -1",
+        "error_signature": "expected sizes to be non-negative, but got -1",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_yolos-small-finetuned-license-plate-detection": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_yolos-small-finetuned-license-plate-detection/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_yolos-small-finetuned-license-plate-detection/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "expected sizes to be non-negative, but got -1",
+        "error_signature": "expected sizes to be non-negative, but got -1",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_yolos-small-rego-plates-detection": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_yolos-small-rego-plates-detection/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_yolos-small-rego-plates-detection/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "expected sizes to be non-negative, but got -1",
+        "error_signature": "expected sizes to be non-negative, but got -1",
+        "exit_status": "compilation",
+        "time_ms": null
+    },
+    "hf_yolos-tiny": {
+        "command": "iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_yolos-tiny/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/hf_yolos-tiny/compiled_model.vmfb",
+        "compilation_status": "error",
+        "error": "",
+        "error_signature": "",
+        "exit_status": "compilation",
+        "time_ms": null
+    }
+}

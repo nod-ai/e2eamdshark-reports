@@ -7,7 +7,7 @@
 | IREE Compilation | 401 | 79.1% | 80.7% |
 | Gold Inference | 399 | 78.7% | 99.5% |
 | IREE Inference Invocation | 397 | 78.3% | 99.5% |
-| Inference Comparison (PASS) | 376 | 74.2% | 94.7% |
+| Inference Comparison (PASS) | 377 | 74.4% | 95.0% |
 ## Fail Summary
 
 **TOTAL TESTS = 507**
@@ -17,7 +17,7 @@
 | IREE Compilation | 96 | 18.9% |
 | Gold Inference | 2 | 0.4% |
 | IREE Inference Invocation | 2 | 0.4% |
-| Inference Comparison | 21 | 4.1% |
+| Inference Comparison | 20 | 3.9% |
 ## Test Run Detail
 Test was run with the following arguments:
 Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_hf-feature-extraction-shard_onnx_json/hf-feature-extraction-shard.json', './e2eamdshark-reports/ci_reports_rocm_hf-fill-mask-shard_onnx_json/hf-fill-mask-shard.json', './e2eamdshark-reports/ci_reports_rocm_hf-image-classification-shard_onnx_json/hf-image-classification-shard.json', './e2eamdshark-reports/ci_reports_rocm_hf-image-segmentation-shard_onnx_json/hf-image-segmentation-shard.json', './e2eamdshark-reports/ci_reports_rocm_hf-multiple-choice-shard_onnx_json/hf-multiple-choice-shard.json', './e2eamdshark-reports/ci_reports_rocm_hf-object-detection-shard_onnx_json/hf-object-detection-shard.json', './e2eamdshark-reports/ci_reports_rocm_hf-question-answering-shard_onnx_json/hf-question-answering-shard.json', './e2eamdshark-reports/ci_reports_rocm_hf-semantic-segmentation-shard_onnx_json/hf-semantic-segmentation-shard.json', './e2eamdshark-reports/ci_reports_rocm_hf-text-classification-shard_onnx_json/hf-text-classification-shard.json', './e2eamdshark-reports/ci_reports_rocm_hf-token-classification-shard_onnx_json/hf-token-classification-shard.json'], output='./e2eamdshark-reports/combined_reports_unique.json', report=True, report_file='./e2eamdshark-reports/combined_reports_unique.md')
@@ -230,7 +230,7 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_hf-feature-extraction-
 | hf_vit_small_patch16_224.augreg_in21k_ft_in1k | PASS | None | |
 | hf_vit_tiny_patch16_224.augreg_in21k_ft_in1k | PASS | None | |
 | hf_watermark_detector | PASS | None | |
-| hf_wide_resnet50_2.racm_in1k | Numerics | None | |
+| hf_wide_resnet50_2.racm_in1k | PASS | None | |
 | hf_xcit_tiny_24_p8_384.fb_dist_in1k | compilation | None | |
 | hf_deeplabv3-mobilevit-small | compilation | None | |
 | hf_deeplabv3-mobilevit-xx-small | compilation | None | |

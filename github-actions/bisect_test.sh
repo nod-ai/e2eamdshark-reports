@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-echo "=================---------------- in ../github-actions/bisect_test.sh ---------------------================================-------------------------------------"
+echo "================= in ../github-actions/bisect_test.sh ================================"
 
 
 MODEL="$1"
+DEVICE="$2"
+
 rm -rf iree-build/ || true
 rm -f "../AMD-SHARK-TestSuite/alt_e2eamdshark/X2_regression_bisect.json" || true
 BASELINE_JSON="../model_old_new_status.json"
@@ -22,7 +24,7 @@ pip install numpy
 #pip install -r alt_e2eamdshark/base_requirements.txt
 #pip install -r alt_e2eamdshark/iree_requirements.txt
 #pip install --no-deps -r alt_e2eamdshark/torch_mlir_requirements.txt
-git branch
+#git branch
 # Install THIS commit's IREE
 # ### TODO:Need To Replace this as we do iree build in amd-shark-ai
 git submodule update --init
@@ -49,18 +51,44 @@ pip install -r ./base_requirements.txt
 
 export CACHE_DIR=/home/yrathore/yv/cache2
 
+if [[ "$DEVICE" == "GPU" ]]; then
+  python run.py \
+    -r ./test-onnx \
+    -t "$MODEL" \
+    -b rocm \
+    -d hip \
+    --mode=cl-onnx-iree \
+    --report-file "X2_regression_bisect.md" \
+    --cleanup=3 \
+    -v \
+    --report
+else
+  python run.py \
+    -r ./test-onnx \
+    --report \
+    -t "$MODEL" \
+    -b llvm-cpu \
+    -d local-task \
+    -c x86_64-linux-gnu \
+    --report-file "X2_regression_bisect.md" \
+    --mode=cl-onnx-iree \
+    --cleanup=3 \
+    --get-metadata \
+    -v
+fi
+
 # Run model (always exits 0)
 # for gpu
-python run.py \
-  -r ./test-onnx \
-  -t "$MODEL" \
-  -b rocm \
-  -d hip \
-  --mode=cl-onnx-iree \
-  --report-file "X2_regression_bisect.md" \
-  --cleanup=3 \
-  -v \
-  --report
+#python run.py \
+#  -r ./test-onnx \
+#  -t "$MODEL" \
+#  -b rocm \
+#  -d hip \
+#  --mode=cl-onnx-iree \
+#  --report-file "X2_regression_bisect.md" \
+#  --cleanup=3 \
+#  -v \
+#  --report
 
 # for cpu
 #python ./run.py \
@@ -79,7 +107,7 @@ python run.py \
 cd ../../iree
 rm -rf iree-build
 
-echo "=================---------------- out ../github-actions/bisect_test.sh  ---> ran run.py ---------------------================================-------------------------------------"
+echo "===================== out ../github-actions/bisect_test.sh  ---> ran run.py ====================="
 
 # Validate result via JSON
 python ../github-actions/check_model_status.py \

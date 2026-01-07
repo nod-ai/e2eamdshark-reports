@@ -13,10 +13,23 @@ on:
 
 
 jobs:
-  find_regression_commit:
+  find_regression_commit_cpu:
     if: ${{ github.repository_owner == 'nod-ai' || github.event_name != 'schedule' }}
     name: "Find Regression Commit"
-    runs-on: linux-mi325-1gpu-ossci-nod-ai
+    strategy:
+      matrix:
+        config: [{
+                  DEVICE: "GPU",
+                  BACKEND: "rocm",
+                  runs-on: "linux-mi325-1gpu-ossci-nod-ai"
+                },
+                {
+                  DEVICE: "CPU",
+                  BACKEND: "llvm-cpu",
+                  runs-on: "nodai-cpu-x86-64"
+                }]
+      fail-fast: false
+    runs-on: ${{matrix.config.runs-on}}
     defaults:
       run:
         shell: bash
@@ -24,7 +37,6 @@ jobs:
       E2E_VENV_DIR: ${{ github.workspace }}/test-suite_venv
       ALT_E2E_VENV_DIR: ${{ github.workspace }}/alt-test-suite_venv
       HF_TOKEN: ${{ secrets.HF_TOKEN }}
-      AZ_PRIVATE_CONNECTION: ${{ secrets.ONNXPRIVATESTORAGE_AZ_PRIVATE_CONNECTION }}
       CACHE_DIR: ${{ matrix.cache-dir }}
     steps:
       - name: "Setting up Python"
@@ -55,7 +67,7 @@ jobs:
       - name: "Extract regression models"
         run: |
           TODAY=$(date +%Y-%m-%d)
-          REPORT="e2eamdshark-reports/${TODAY}/ci_reports_onnx/rocm/combined-reports_unique/yesterday_comparison.md"
+          REPORT="e2eamdshark-reports/${TODAY}/ci_reports_onnx/${{ matrix.config.BACKEND }}/combined-reports_unique/yesterday_comparison.md"
           STATUS_JSON="model_old_new_status.json"
 
           python github-actions/extract_model_old_new_status_from_md.py $REPORT
@@ -78,13 +90,13 @@ jobs:
           #GOOD_COMMIT="d6cb40ab4a53612a0e0a720069ddbcc7e56c80a1"
           BAD_COMMIT=$(git rev-parse HEAD)
           #BAD_COMMIT="2775a61d76f3ee80cd20c4bdadc090baafb9f8e4"
-          PWD="$(pwd)/../"
+          GIT_DIR="$(pwd)/../"
           while read -r model; do
             echo "==============================="
             echo "Bisecting $model"
             echo "==============================="
-            $PWD/github-actions/runbisect_for_model.sh "$model" "$GOOD_COMMIT" "$BAD_COMMIT"
-          done < $PWD../regression_models.txt
+            $GIT_DIR/github-actions/runbisect_for_model.sh "$model" "$GOOD_COMMIT" "$BAD_COMMIT" "${{ matrix.config.DEVICE }}"
+          done < $GIT_DIR../regression_models.txt
           cd ..
 
           echo "============================== exiting bisect.sh ================================="

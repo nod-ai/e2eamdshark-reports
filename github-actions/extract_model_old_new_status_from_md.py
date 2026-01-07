@@ -8,37 +8,38 @@ md_path = Path(sys.argv[1])
 text = md_path.read_text()
 
 match = re.search(
-    r"##\s+\d+\s+Regressions Found:\n"
-    r"\|model name\|old_status\|new_status\|\n"
-    r"\|---\|---\|---\|\n"
-    r"((?:\|.*\|\n)+)",
+    r"##\s+\d+\s+Regressions Found:\s*\n+"
+    r"(.*?)"
+    r"\n##\s+\d+\s+Progressions Found:",
     text,
+    re.DOTALL,
 )
 
 if not match:
     print("No regressions found section")
     sys.exit(0)
 
-rows = match.group(1).strip().splitlines()
+section = match.group(1)
 
-# Dictionary: model -> {old_status, new_status}
+rows = re.findall(r"^\|([^|\n]+)\|([^|\n]+)\|([^|\n]+)\|$", section, re.MULTILINE)
+
 regressions = {}
 
-for row in rows:
-    cols = [c.strip() for c in row.strip("|").split("|")]
-    if len(cols) != 3:
+for model, old_status, new_status in rows:
+    model = model.strip()
+    old_status = old_status.strip()
+    new_status = new_status.strip()
+
+    if model.lower() == "model name" or model == "---":
         continue
 
-    model, old_status, new_status = cols
     regressions[model] = {
         "old_status": old_status,
         "new_status": new_status,
     }
+
 with out_path.open("w") as f:
     json.dump(regressions, f, indent=2)
 
 print(f"Wrote {len(regressions)} regressions to {out_path}")
-
-for model, statuses in regressions.items():
-    print(f"{model}: {statuses}")
 

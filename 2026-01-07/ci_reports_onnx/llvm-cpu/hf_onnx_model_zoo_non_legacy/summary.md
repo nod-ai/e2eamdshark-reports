@@ -6,8 +6,8 @@
 | Setup | 1954 | 99.8% | 99.8% |
 | IREE Compilation | 1703 | 87.0% | 87.2% |
 | Gold Inference | 1703 | 87.0% | 100.0% |
-| IREE Inference Invocation | 1697 | 86.7% | 99.6% |
-| Inference Comparison (PASS) | 1654 | 84.5% | 97.5% |
+| IREE Inference Invocation | 1693 | 86.5% | 99.4% |
+| Inference Comparison (PASS) | 1650 | 84.3% | 97.5% |
 ## Fail Summary
 
 **TOTAL TESTS = 1957**
@@ -16,7 +16,7 @@
 | Setup | 3 | 0.2% |
 | IREE Compilation | 251 | 12.8% |
 | Gold Inference | 0 | 0.0% |
-| IREE Inference Invocation | 6 | 0.3% |
+| IREE Inference Invocation | 10 | 0.5% |
 | Inference Comparison | 43 | 2.2% |
 ## Test Run Detail
 Test was run with the following arguments:
@@ -1043,8 +1043,8 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_llvm-cpu_hf_onnx_model_zoo_
 | deit3_base_patch16_224_Opset16 | PASS | None | |
 | deit3_base_patch16_384_Opset17 | PASS | None | |
 | deit3_large_patch16_224_Opset16 | PASS | None | |
-| deit3_large_patch16_384_Opset17 | PASS | None | |
-| deit3_large_patch16_384_Opset18 | PASS | None | |
+| deit3_large_patch16_384_Opset17 | compiled_inference | None | |
+| deit3_large_patch16_384_Opset18 | compiled_inference | None | |
 | deit3_small_patch16_384_Opset16 | PASS | None | |
 | deit3_small_patch16_384_Opset17 | PASS | None | |
 | deit3_small_patch16_384_Opset18 | PASS | None | |
@@ -1887,8 +1887,8 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_llvm-cpu_hf_onnx_model_zoo_
 | longformer_Opset16 | compilation | None | |
 | longformer_Opset17 | compilation | None | |
 | longformer_Opset18 | compilation | None | |
-| longt5_Opset16 | PASS | None | |
-| longt5_Opset17 | PASS | None | |
+| longt5_Opset16 | compiled_inference | None | |
+| longt5_Opset17 | compiled_inference | None | |
 | longt5encoder_Opset16 | PASS | None | |
 | longt5encoder_Opset17 | PASS | None | |
 | luke_Opset16 | PASS | None | |

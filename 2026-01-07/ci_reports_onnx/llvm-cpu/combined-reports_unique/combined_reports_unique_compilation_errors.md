@@ -5,15 +5,15 @@
 
 | Status | Count |
 |---|---|
-| Timeouts | 0 |
-| Errors | 252 |
+| Timeouts | 1 |
+| Errors | 251 |
 | No log | 0 |
 
 ## ERRORS (grouped by error)
 
 | Error | Count |
 |---|---|
-| 'OP' op is marked as immutable but the global is mutable | 137 |
+| 'OP' op is marked as immutable but the global is mutable | 136 |
 | failed to legalize operation 'OP' that was explicitly marked illegal | 21 |
 | 'OP' op unexpected result less than 0 at expression #1 in (d0, d1, d2) -> (d0, d1, d2) | 13 |
 | 'OP' op unexpected result less than 0 at expression #0 in (d0, d1, d2, d3) -> (d0, d3, d2) | 12 |
@@ -33,7 +33,7 @@
 
 ### Error: 'OP' op is marked as immutable but the global is mutable
 
-**Count: 137**
+**Count: 136**
 
 | test_name | command | error |
 |---|---|---|
@@ -47,7 +47,6 @@
 | dm_nfnet_f4_Opset16 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/dm_nfnet_f4_Opset16/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/dm_nfnet_f4_Opset16/compiled_model.vmfb | 'vm.global.load.i64' op is marked as immutable but the global is mutable |
 | dm_nfnet_f4_Opset17 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/dm_nfnet_f4_Opset17/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/dm_nfnet_f4_Opset17/compiled_model.vmfb | 'vm.global.load.i64' op is marked as immutable but the global is mutable |
 | longformer_Opset16 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/longformer_Opset16/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/longformer_Opset16/compiled_model.vmfb | 'vm.global.load.i64' op is marked as immutable but the global is mutable |
-| longformer_Opset17 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/longformer_Opset17/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/longformer_Opset17/compiled_model.vmfb | 'vm.global.load.i64' op is marked as immutable but the global is mutable |
 | longformer_Opset18 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/longformer_Opset18/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/longformer_Opset18/compiled_model.vmfb | 'vm.global.load.i64' op is marked as immutable but the global is mutable |
 | tf_efficientnet_b0_Opset16 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/tf_efficientnet_b0_Opset16/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/tf_efficientnet_b0_Opset16/compiled_model.vmfb | 'vm.global.load.i64' op is marked as immutable but the global is mutable |
 | tf_efficientnet_b0_Opset17 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/tf_efficientnet_b0_Opset17/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/tf_efficientnet_b0_Opset17/compiled_model.vmfb | 'vm.global.load.i64' op is marked as immutable but the global is mutable |
@@ -365,7 +364,7 @@
 | test_name | command | error |
 |---|---|---|
 | maskrcnn_resnet50_fpn_v2_Opset16 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/maskrcnn_resnet50_fpn_v2_Opset16/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/maskrcnn_resnet50_fpn_v2_Opset16/compiled_model.vmfb | failed to legalize unresolved materialization from ('!torch.vtensor<[0,224,224],f32>') to ('!torch.vtensor<[],f32>') that remained live after conversion |
-| maskrcnn_resnet50_fpn_v2_Opset17 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/maskrcnn_resnet50_fpn_v2_Opset17/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/maskrcnn_resnet50_fpn_v2_Opset17/compiled_model.vmfb | failed to legalize unresolved materialization from ('!torch.vtensor<[0,224,224],f32>') to ('!torch.vtensor<[],f32>') that remained live after conversion |
+| maskrcnn_resnet50_fpn_v2_Opset17 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/maskrcnn_resnet50_fpn_v2_Opset17/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/maskrcnn_resnet50_fpn_v2_Opset17/compiled_model.vmfb | failed to legalize unresolved materialization from ('!torch.vtensor<[25769803776],f32>') to ('!torch.vtensor<[?,?,?,?],f32>') that remained live after conversion |
 | maskrcnn_resnet50_fpn_v2_Opset18 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/maskrcnn_resnet50_fpn_v2_Opset18/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/maskrcnn_resnet50_fpn_v2_Opset18/compiled_model.vmfb | failed to legalize unresolved materialization from ('!torch.vtensor<[25769803776],f32>') to ('!torch.vtensor<[?,?,?,?],f32>') that remained live after conversion |
 
 ### Error: 'OP' op has invalid Read access range [0 to -393216 for -393216] of resource %18 with size -393216
@@ -387,4 +386,10 @@
 | xlnetlmhead_Opset16 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/xlnetlmhead_Opset16/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/xlnetlmhead_Opset16/compiled_model.vmfb | 'stream.async.dispatch' op has invalid Read access range [0 to -524288 for -524288] of resource %18 with size -524288 |
 | xlnetlmhead_Opset17 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/xlnetlmhead_Opset17/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/xlnetlmhead_Opset17/compiled_model.vmfb | 'stream.async.dispatch' op has invalid Read access range [0 to -524288 for -524288] of resource %18 with size -524288 |
 | xlnetlmhead_Opset18 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/xlnetlmhead_Opset18/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/xlnetlmhead_Opset18/compiled_model.vmfb | 'stream.async.dispatch' op has invalid Read access range [0 to -524288 for -524288] of resource %18 with size -524288 |
+
+## TIMEOUT TESTS
+
+| test_name | command |
+|---|---|
+| longformer_Opset17 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/longformer_Opset17/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/longformer_Opset17/compiled_model.vmfb |
 

@@ -6,8 +6,8 @@
 | Setup | 359 | 99.7% | 99.7% |
 | IREE Compilation | 359 | 99.7% | 100.0% |
 | Gold Inference | 359 | 99.7% | 100.0% |
-| IREE Inference Invocation | 359 | 99.7% | 100.0% |
-| Inference Comparison (PASS) | 357 | 99.2% | 99.4% |
+| IREE Inference Invocation | 357 | 99.2% | 99.4% |
+| Inference Comparison (PASS) | 355 | 98.6% | 99.4% |
 ## Fail Summary
 
 **TOTAL TESTS = 360**
@@ -16,7 +16,7 @@
 | Setup | 1 | 0.3% |
 | IREE Compilation | 0 | 0.0% |
 | Gold Inference | 0 | 0.0% |
-| IREE Inference Invocation | 0 | 0.0% |
+| IREE Inference Invocation | 2 | 0.6% |
 | Inference Comparison | 2 | 0.6% |
 ## Test Run Detail
 Test was run with the following arguments:
@@ -329,9 +329,9 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_llvm-cpu_vai-hf-cnn-fp32-sh
 | vit_large_patch14_clip_224.laion2b | PASS | None | |
 | vit_large_patch14_clip_224.laion2b_ft_in12k | PASS | None | |
 | vit_large_patch14_clip_224.laion2b_ft_in12k_in1k | PASS | None | |
-| vit_large_patch14_clip_336.laion2b_ft_in12k_in1k | PASS | None | |
+| vit_large_patch14_clip_336.laion2b_ft_in12k_in1k | compiled_inference | None | |
 | vit_large_patch16_224.augreg_in21k_ft_in1k | PASS | None | |
-| vit_large_patch16_384.augreg_in21k_ft_in1k | PASS | None | |
+| vit_large_patch16_384.augreg_in21k_ft_in1k | compiled_inference | None | |
 | vit_large_patch32_384.orig_in21k_ft_in1k | PASS | None | |
 | vit_large_r50_s32_224.augreg_in21k_ft_in1k | PASS | None | |
 | vit_large_r50_s32_384.augreg_in21k_ft_in1k | PASS | None | |

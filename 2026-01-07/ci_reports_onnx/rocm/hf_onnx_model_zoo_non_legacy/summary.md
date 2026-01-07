@@ -7,7 +7,7 @@
 | IREE Compilation | 1332 | 68.1% | 68.2% |
 | Gold Inference | 1332 | 68.1% | 100.0% |
 | IREE Inference Invocation | 1282 | 65.5% | 96.2% |
-| Inference Comparison (PASS) | 1169 | 59.7% | 91.2% |
+| Inference Comparison (PASS) | 1170 | 59.8% | 91.3% |
 ## Fail Summary
 
 **TOTAL TESTS = 1957**
@@ -17,7 +17,7 @@
 | IREE Compilation | 622 | 31.8% |
 | Gold Inference | 0 | 0.0% |
 | IREE Inference Invocation | 50 | 2.6% |
-| Inference Comparison | 113 | 5.8% |
+| Inference Comparison | 112 | 5.7% |
 ## Test Run Detail
 Test was run with the following arguments:
 Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_hf_onnx_model_zoo_non_legacy_00_onnx_json/hf_onnx_model_zoo_non_legacy_00.json', './e2eamdshark-reports/ci_reports_rocm_hf_onnx_model_zoo_non_legacy_01_onnx_json/hf_onnx_model_zoo_non_legacy_01.json', './e2eamdshark-reports/ci_reports_rocm_hf_onnx_model_zoo_non_legacy_02_onnx_json/hf_onnx_model_zoo_non_legacy_02.json', './e2eamdshark-reports/ci_reports_rocm_hf_onnx_model_zoo_non_legacy_03_onnx_json/hf_onnx_model_zoo_non_legacy_03.json', './e2eamdshark-reports/ci_reports_rocm_hf_onnx_model_zoo_non_legacy_04_onnx_json/hf_onnx_model_zoo_non_legacy_04.json', './e2eamdshark-reports/ci_reports_rocm_hf_onnx_model_zoo_non_legacy_05_onnx_json/hf_onnx_model_zoo_non_legacy_05.json', './e2eamdshark-reports/ci_reports_rocm_hf_onnx_model_zoo_non_legacy_06_onnx_json/hf_onnx_model_zoo_non_legacy_06.json', './e2eamdshark-reports/ci_reports_rocm_hf_onnx_model_zoo_non_legacy_07_onnx_json/hf_onnx_model_zoo_non_legacy_07.json', './e2eamdshark-reports/ci_reports_rocm_hf_onnx_model_zoo_non_legacy_08_onnx_json/hf_onnx_model_zoo_non_legacy_08.json', './e2eamdshark-reports/ci_reports_rocm_hf_onnx_model_zoo_non_legacy_09_onnx_json/hf_onnx_model_zoo_non_legacy_09.json'], output='./e2eamdshark-reports/hf_onnx_model_zoo_non_legacy.json', report=True, report_file='./e2eamdshark-reports/hf_onnx_model_zoo_non_legacy.md')
@@ -824,7 +824,7 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_hf_onnx_model_zoo_non_
 | resnet18d_Opset17 | compiled_inference | None | |
 | resnet18d_Opset18 | compiled_inference | None | |
 | resnet200d_Opset16 | PASS | None | |
-| alexnet_Opset18 | Numerics | None | |
+| alexnet_Opset18 | PASS | None | |
 | beit_base_patch16_224_Opset16 | PASS | None | |
 | beit_base_patch16_224_Opset17 | PASS | None | |
 | beit_base_patch16_384_Opset16 | PASS | None | |
@@ -998,7 +998,7 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_hf_onnx_model_zoo_non_
 | semnasnet_100_Opset17 | PASS | None | |
 | senet154_Opset16 | Numerics | None | |
 | senet154_Opset17 | Numerics | None | |
-| sequencer2d_l_Opset16 | Numerics | None | |
+| sequencer2d_l_Opset16 | PASS | None | |
 | sequencer2d_l_Opset17 | Numerics | None | |
 | sequencer2d_m_Opset16 | PASS | None | |
 | sequencer2d_s_Opset17 | Numerics | None | |
@@ -1428,7 +1428,7 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_hf_onnx_model_zoo_non_
 | squeezenet1_0_Opset17 | PASS | None | |
 | squeezenet1_0_Opset18 | PASS | None | |
 | squeezenet1_1_Opset16 | Numerics | None | |
-| squeezenet1_1_Opset17 | PASS | None | |
+| squeezenet1_1_Opset17 | Numerics | None | |
 | squeezenet1_1_Opset18 | Numerics | None | |
 | ssl_resnet18_Opset16 | compiled_inference | None | |
 | ssl_resnet18_Opset17 | compiled_inference | None | |

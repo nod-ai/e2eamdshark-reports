@@ -89,8 +89,9 @@ jobs:
 
           echo "============================== exiting bisect.sh ================================="
 
-      - name "Push Artifacts"
+      - name: "Push Artifacts"
         # if: github.event_name == 'schedule'
+        run: |
           git fetch origin
           git checkout main
           DEFAULT_BRANCH="main"

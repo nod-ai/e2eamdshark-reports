@@ -103,7 +103,7 @@ jobs:
             echo "Bisecting $model"
             echo "==============================="
             $REPORT_DIR/github-actions/runbisect_for_model.sh "$model" "$GOOD_COMMIT" "$BAD_COMMIT" "${{ matrix.config.DEVICE }}"
-          done < $REPORT_DIR../github-actions/regression_models.txt
+          done < $REPORT_DIR/github-actions/regression_models.txt
           cd ..
 
           echo "============================== exiting bisect.sh ================================="

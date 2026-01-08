@@ -97,13 +97,13 @@ jobs:
           #GOOD_COMMIT="d6cb40ab4a53612a0e0a720069ddbcc7e56c80a1"
           BAD_COMMIT=$(git rev-parse HEAD)
           #BAD_COMMIT="2775a61d76f3ee80cd20c4bdadc090baafb9f8e4"
-          GIT_DIR="$(pwd)/../"
+          REPORT_DIR="$(pwd)/../"
           while read -r model; do
             echo "==============================="
             echo "Bisecting $model"
             echo "==============================="
-            $GIT_DIR/github-actions/runbisect_for_model.sh "$model" "$GOOD_COMMIT" "$BAD_COMMIT" "${{ matrix.config.DEVICE }}"
-          done < $GIT_DIR../regression_models.txt
+            $REPORT_DIR/github-actions/runbisect_for_model.sh "$model" "$GOOD_COMMIT" "$BAD_COMMIT" "${{ matrix.config.DEVICE }}"
+          done < $REPORT_DIR../github-actions/regression_models.txt
           cd ..
 
           echo "============================== exiting bisect.sh ================================="

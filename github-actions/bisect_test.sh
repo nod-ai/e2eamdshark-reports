@@ -8,9 +8,9 @@ MODEL="$1"
 DEVICE="$2"
 
 rm -rf iree-build/ || true
-rm -f "$PWD/../AMD-SHARK-TestSuite/alt_e2eamdshark/X2_regression_bisect.json" || true
-BASELINE_JSON="$PWD/../model_old_new_status.json"
-CURRENT_JSON="$PWD/../AMD-SHARK-TestSuite/alt_e2eamdshark/X2_regression_bisect.json"
+rm -f "$PWD/../../test-suite/alt_e2eamdshark/X2_regression_bisect.json" || true
+BASELINE_JSON="$PWD/../github-actions/model_old_new_status.json"
+CURRENT_JSON="$PWD/../../test-suite/alt_e2eamdshark/X2_regression_bisect.json"
 
 echo "Bisect testing model: $MODEL"
 
@@ -45,7 +45,7 @@ export PATH=$PWD/iree-build/tools/:$PATH
 export PYTHONPATH=$PWD/iree-build/compiler/bindings/python:$PWD/iree-build/runtime/bindings/python
 source iree-build/.env && export PYTHONPATH
 
-cd $PWD/../AMD-SHARK-TestSuite/alt_e2eamdshark
+cd $PWD/../../test-suite/alt_e2eamdshark
 pip install --upgrade pip
 pip install -r ./base_requirements.txt
 
@@ -104,7 +104,7 @@ fi
 #            --get-metadata \
 #            -v
 #
-cd ../../iree
+cd $PWD/../../e2eamdshark-reports/iree
 rm -rf iree-build
 
 echo "===================== out ../github-actions/bisect_test.sh  ---> ran run.py ====================="

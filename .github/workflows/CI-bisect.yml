@@ -14,7 +14,7 @@ on:
 
 
 jobs:
-  find_regression_commit_cpu:
+  find_regression_commit:
     if: ${{ github.repository_owner == 'nod-ai' || github.event_name != 'schedule' }}
     name: "Find Regression Commit"
     strategy:
@@ -22,12 +22,14 @@ jobs:
         config: [{
                   DEVICE: "GPU",
                   BACKEND: "rocm",
-                  runs-on: "linux-mi325-1gpu-ossci-nod-ai"
+                  runs-on: "linux-mi325-1gpu-ossci-nod-ai",
+                  cache_dir: "/home/runner/data/e2eamdshark/amdshark-test-suite-models-cache"
                 },
                 {
                   DEVICE: "CPU",
                   BACKEND: "llvm-cpu",
-                  runs-on: "nodai-cpu-x86-64"
+                  runs-on: "nodai-cpu-x86-64",
+                  cache_dir: "/home/runner/groups/aig_amdsharks/test-suite-ci-cache"
                 }]
       fail-fast: false
     runs-on: ${{matrix.config.runs-on}}

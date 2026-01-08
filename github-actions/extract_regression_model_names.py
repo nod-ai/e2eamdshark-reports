@@ -3,7 +3,7 @@ import json
 import sys
 
 json_path = Path(sys.argv[1])
-out_path = Path("regression_models.txt")
+out_path = Path("github-actions/regression_models.txt")
 
 data = json.loads(json_path.read_text())
 

@@ -8,9 +8,9 @@ MODEL="$1"
 DEVICE="$2"
 
 rm -rf iree-build/ || true
-rm -f "../AMD-SHARK-TestSuite/alt_e2eamdshark/X2_regression_bisect.json" || true
-BASELINE_JSON="../model_old_new_status.json"
-CURRENT_JSON="../AMD-SHARK-TestSuite/alt_e2eamdshark/X2_regression_bisect.json"
+rm -f "$PWD/../AMD-SHARK-TestSuite/alt_e2eamdshark/X2_regression_bisect.json" || true
+BASELINE_JSON="$PWD/../model_old_new_status.json"
+CURRENT_JSON="$PWD/../AMD-SHARK-TestSuite/alt_e2eamdshark/X2_regression_bisect.json"
 
 echo "Bisect testing model: $MODEL"
 
@@ -45,11 +45,11 @@ export PATH=$PWD/iree-build/tools/:$PATH
 export PYTHONPATH=$PWD/iree-build/compiler/bindings/python:$PWD/iree-build/runtime/bindings/python
 source iree-build/.env && export PYTHONPATH
 
-cd ../AMD-SHARK-TestSuite/alt_e2eamdshark
+cd $PWD/../AMD-SHARK-TestSuite/alt_e2eamdshark
 pip install --upgrade pip
 pip install -r ./base_requirements.txt
 
-export CACHE_DIR=/home/yrathore/yv/cache2
+#export CACHE_DIR=/home/yrathore/yv/cache2
 
 if [[ "$DEVICE" == "GPU" ]]; then
   python run.py \
@@ -110,7 +110,7 @@ rm -rf iree-build
 echo "===================== out ../github-actions/bisect_test.sh  ---> ran run.py ====================="
 
 # Validate result via JSON
-python ../github-actions/check_model_status.py \
+python $PWD/../github-actions/check_model_status.py \
   "$MODEL" \
   "$BASELINE_JSON" \
   "$CURRENT_JSON"

@@ -3,7 +3,7 @@ import re
 import sys
 import json
 
-out_path = Path("model_old_new_status.json")
+out_path = Path("github-actions/model_old_new_status.json")
 md_path = Path(sys.argv[1])
 text = md_path.read_text()
 

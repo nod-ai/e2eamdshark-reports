@@ -16,9 +16,9 @@ echo "Bisect testing model: $MODEL"
 
 # Clean venv per commit
 rm -rf .venv
-python -m venv .venv
+python3 -m venv .venv
 source .venv/bin/activate
-pip install numpy
+pip install numpy==2.1.2
 
 #pip install --upgrade pip
 #pip install -r alt_e2eamdshark/base_requirements.txt
@@ -52,7 +52,7 @@ pip install -r ./base_requirements.txt
 #export CACHE_DIR=/home/yrathore/yv/cache2
 
 if [[ "$DEVICE" == "GPU" ]]; then
-  python run.py \
+  python3 run.py \
     -r ./test-onnx \
     -t "$MODEL" \
     -b rocm \
@@ -63,7 +63,7 @@ if [[ "$DEVICE" == "GPU" ]]; then
     -v \
     --report
 else
-  python run.py \
+  python3 run.py \
     -r ./test-onnx \
     --report \
     -t "$MODEL" \
@@ -110,7 +110,7 @@ rm -rf iree-build
 echo "===================== out ../github-actions/bisect_test.sh  ---> ran run.py ====================="
 
 # Validate result via JSON
-python $PWD/../github-actions/check_model_status.py \
+python3 $PWD/../github-actions/check_model_status.py \
   "$MODEL" \
   "$BASELINE_JSON" \
   "$CURRENT_JSON"

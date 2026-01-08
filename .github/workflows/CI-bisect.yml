@@ -71,7 +71,7 @@ jobs:
       - name: "Extract regression models"
         run: |
           #TODAY=$(date +%Y-%m-%d)
-          TODAY="2026-01-07"
+          TODAY="2026-01-06"
           pwd
           ls
           REPORT="${TODAY}/ci_reports_onnx/${{ matrix.config.BACKEND }}/combined-reports_unique/yesterday_comparison.md"

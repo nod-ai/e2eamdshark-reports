@@ -82,7 +82,7 @@ jobs:
           echo "JSON status"
           cat $JSON_STATUS
           echo "Regression models:"
-          cat regression_models.txt
+          cat "github-actions/regression_models.txt"
 
       - name: "Bisect Regression"
         run: |

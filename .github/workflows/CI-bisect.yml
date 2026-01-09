@@ -71,6 +71,23 @@ jobs:
       - name: "Extract regression models"
         run: |
           #TODAY=$(date +%Y-%m-%d)
+          git clone https://github.com/iree-org/iree.git
+          cd iree
+          git submodule update --init
+          cmake -G Ninja -B ../iree-build/ -S . \
+            -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+            -DIREE_ENABLE_ASSERTIONS=ON \
+            -DIREE_ENABLE_SPLIT_DWARF=ON \
+            -DIREE_ENABLE_THIN_ARCHIVES=ON \
+            -DCMAKE_C_COMPILER=clang \
+            -DIREE_HIP_TEST_TARGET_CHIP= \
+            -DCMAKE_CXX_COMPILER=clang++ \
+            -DIREE_BUILD_PYTHON_BINDINGS=ON \
+            -DIREE_HAL_DRIVER_HIP=ON -DIREE_TARGET_BACKEND_ROCM=ON \
+            -DIREE_ENABLE_LLD=ON \
+            -DPYTHON3_EXECUTABLE=$(which python3) ; cmake --build ../iree-build/
+
+          exit 1
           TODAY="2026-01-06"
           pwd
           ls

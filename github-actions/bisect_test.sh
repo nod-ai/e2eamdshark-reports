@@ -44,7 +44,7 @@ cmake -G Ninja -B iree-build/ -S . \
        -DIREE_BUILD_PYTHON_BINDINGS=ON \
        -DIREE_HAL_DRIVER_HIP=ON -DIREE_TARGET_BACKEND_ROCM=ON \
        -DIREE_ENABLE_LLD=ON \
-       -DPython3_EXECUTABLE=$(which python3) ; cmake --build ../iree-build/
+       -DPython3_EXECUTABLE=$(which python3) ; cmake --build iree-build/
 
 export PATH=$PWD/iree-build/tools/:$PATH
 export PYTHONPATH=$PWD/iree-build/compiler/bindings/python:$PWD/iree-build/runtime/bindings/python

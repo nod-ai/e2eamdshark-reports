@@ -74,6 +74,7 @@ jobs:
       - name: "Extract regression models"
         run: |
           #TODAY=$(date +%Y-%m-%d)
+          source ${ALT_E2E_VENV_DIR}/bin/activate
           git clone https://github.com/iree-org/iree.git
           cd iree
           git submodule update --init

@@ -59,7 +59,7 @@ jobs:
           rm -rf ${ALT_E2E_VENV_DIR}
           sudo apt update
           sudo apt install wget
-          python3 -m venv ${ALT_E2E_VENV_DIR}
+          python3.11 -m venv ${ALT_E2E_VENV_DIR}
           source ${ALT_E2E_VENV_DIR}/bin/activate
           ls
           which python
@@ -73,8 +73,11 @@ jobs:
 
       - name: "Extract regression models"
         run: |
+          which python
           #TODAY=$(date +%Y-%m-%d)
           source ${ALT_E2E_VENV_DIR}/bin/activate
+          which python 
+          which python3
           git clone https://github.com/iree-org/iree.git
           cd iree
           git submodule update --init
@@ -89,7 +92,7 @@ jobs:
             -DIREE_BUILD_PYTHON_BINDINGS=ON \
             -DIREE_HAL_DRIVER_HIP=ON -DIREE_TARGET_BACKEND_ROCM=ON \
             -DIREE_ENABLE_LLD=ON \
-            -DPYTHON3_EXECUTABLE=$(which python3) ; cmake --build ../iree-build/
+            -DPYTHON3_EXECUTABLE=$(which python) ; cmake --build ../iree-build/
 
           exit 1
           TODAY="2026-01-06"

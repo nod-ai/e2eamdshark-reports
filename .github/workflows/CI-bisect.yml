@@ -121,6 +121,7 @@ jobs:
 
       - name: "Bisect Regression"
         run: |
+          source ${ALT_E2E_VENV_DIR}/bin/activate
           echo "================================ in bisect.sh ===================================="
           git clone https://github.com/iree-org/iree.git
           cd iree

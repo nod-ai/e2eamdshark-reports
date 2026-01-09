@@ -64,12 +64,13 @@ jobs:
           source ${ALT_E2E_VENV_DIR}/bin/activate
           ls
           which python
-          python -m pip install --upgrade pip
-          python -m pip install -r ./alt_e2eamdshark/base_requirements.txt
-          python -m pip install -r ./alt_e2eamdshark/iree_requirements.txt
-          python -m pip install --no-deps -r ./alt_e2eamdshark/torch_mlir_requirements.txt
-          python -m pip install cmake ninja
-          #python -m pip install --pre --upgrade iree-base-compiler iree-base-runtime -f https://iree.dev/pip-release-links.html
+          python3 -m pip install --upgrade pip
+          python3 -m pip install --upgrade pip
+          python3 -m pip install -r ./alt_e2eamdshark/base_requirements.txt
+          # python -m pip install -r ./alt_e2eamdshark/iree_requirements.txt
+          # python -m pip install --no-deps -r ./alt_e2eamdshark/torch_mlir_requirements.txt
+          # python -m pip install cmake ninja
+          # python -m pip install --pre --upgrade iree-base-compiler iree-base-runtime -f https://iree.dev/pip-release-links.html
         working-directory: ./test-suite
 
       - name: "Extract regression models"

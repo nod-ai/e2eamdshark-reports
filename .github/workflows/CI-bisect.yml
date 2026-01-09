@@ -78,6 +78,9 @@ jobs:
           source ${ALT_E2E_VENV_DIR}/bin/activate
           which python 
           which python3
+          which pip
+          pip freeze
+          which pip3
           git clone https://github.com/iree-org/iree.git
           cd iree
           git submodule update --init
@@ -92,7 +95,7 @@ jobs:
             -DIREE_BUILD_PYTHON_BINDINGS=ON \
             -DIREE_HAL_DRIVER_HIP=ON -DIREE_TARGET_BACKEND_ROCM=ON \
             -DIREE_ENABLE_LLD=ON \
-            -DPYTHON3_EXECUTABLE=$(which python) ; cmake --build ../iree-build/
+            -DPYTHON3_EXECUTABLE=$(which python3) ; cmake --build ../iree-build/
 
           exit 1
           TODAY="2026-01-06"

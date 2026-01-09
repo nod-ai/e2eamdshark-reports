@@ -27,6 +27,7 @@ echo "Bisect testing model: $MODEL"
 #git branch
 # Install THIS commit's IREE
 # ### TODO:Need To Replace this as we do iree build in amd-shark-ai
+source ${ALT_E2E_VENV_DIR}/bin/activate
 which python
 which pip
 pip freeze

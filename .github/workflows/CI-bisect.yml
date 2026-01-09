@@ -75,6 +75,7 @@ jobs:
 
       - name: "Extract regression models"
         run: |
+          rm -rf ../iree-build
           which python
           #TODAY=$(date +%Y-%m-%d)
           source ${ALT_E2E_VENV_DIR}/bin/activate
@@ -83,6 +84,11 @@ jobs:
           which pip
           pip freeze
           which pip3
+          python3 - <<'EOF'
+          import numpy
+          print(numpy.__version__)
+          print(numpy.get_include())
+          EOF
           git clone https://github.com/iree-org/iree.git
           cd iree
           git submodule update --init
@@ -97,7 +103,7 @@ jobs:
             -DIREE_BUILD_PYTHON_BINDINGS=ON \
             -DIREE_HAL_DRIVER_HIP=ON -DIREE_TARGET_BACKEND_ROCM=ON \
             -DIREE_ENABLE_LLD=ON \
-            -DPYTHON3_EXECUTABLE=$(which python3) ; cmake --build ../iree-build/
+            -DPython3_EXECUTABLE=$(which python3) ; cmake --build ../iree-build/
 
           exit 1
           TODAY="2026-01-06"

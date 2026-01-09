@@ -15,10 +15,10 @@ CURRENT_JSON="$PWD/../../test-suite/alt_e2eamdshark/X2_regression_bisect.json"
 echo "Bisect testing model: $MODEL"
 
 # Clean venv per commit
-rm -rf .venv
-python3 -m venv .venv
-source .venv/bin/activate
-pip install numpy
+# rm -rf .venv
+# python3 -m venv .venv
+# source .venv/bin/activate
+# pip install numpy
 
 #pip install --upgrade pip
 #pip install -r alt_e2eamdshark/base_requirements.txt
@@ -39,7 +39,7 @@ cmake -G Ninja -B iree-build/ -S . \
        -DIREE_BUILD_PYTHON_BINDINGS=ON \
        -DIREE_HAL_DRIVER_HIP=ON -DIREE_TARGET_BACKEND_ROCM=ON \
        -DIREE_ENABLE_LLD=ON \
-       -DPYTHON3_EXECUTABLE=$(which python3) ; cmake --build iree-build/
+       -DPython3_EXECUTABLE=$(which python3) ; cmake --build ../iree-build/
 
 export PATH=$PWD/iree-build/tools/:$PATH
 export PYTHONPATH=$PWD/iree-build/compiler/bindings/python:$PWD/iree-build/runtime/bindings/python

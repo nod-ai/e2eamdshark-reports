@@ -27,6 +27,10 @@ echo "Bisect testing model: $MODEL"
 #git branch
 # Install THIS commit's IREE
 # ### TODO:Need To Replace this as we do iree build in amd-shark-ai
+which python
+which pip
+pip freeze
+
 git submodule update --init
 cmake -G Ninja -B iree-build/ -S . \
        -DCMAKE_BUILD_TYPE=RelWithDebInfo \

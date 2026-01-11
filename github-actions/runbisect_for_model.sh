@@ -1,3 +1,4 @@
+#!/bin/bash
 # Copyright 2025 Advanced Micro Devices
 #
 # Licensed under the Apache License v2.0 with LLVM Exceptions.
@@ -7,7 +8,6 @@
 '''
 Bisecting Starts Here.
 '''
-
 
 MODEL="$1"
 GOOD_COMMIT="$2"

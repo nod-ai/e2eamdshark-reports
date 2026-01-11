@@ -4,6 +4,8 @@
 # See https://llvm.org/LICENSE.txt for license information.
 # SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 
+# Workflow for Bisecting Regression.
+
 name: CI - Regression Tracker
 
 on:
@@ -99,7 +101,7 @@ jobs:
       - name: "Bisect Regression"
         run: |
           source ${ALT_E2E_VENV_DIR}/bin/activate
-          echo "================================ starting to bisect models.. ===================================="
+          echo "================================ starting to bisect regression commits... ===================================="
           git clone https://github.com/iree-org/iree.git
           cd iree
 
@@ -118,7 +120,7 @@ jobs:
           done < $REPORT_DIR/github-actions/regression_models.txt
           cd ..
 
-          echo "============================== exiting bisect.sh ================================="
+          echo "==================================== done with bisecting regression. ===================================="
 
       - name: "Push Artifacts"
         if: github.event_name == 'schedule'
@@ -140,4 +142,3 @@ jobs:
             git commit -m "Update Regression CSV for ($(date +%Y-%m-%d))"
             git push origin "$DEFAULT_BRANCH"
           fi
-

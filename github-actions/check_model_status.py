@@ -40,4 +40,3 @@ if actual_status == expected_status:
 else:
     print(f"========= Status Did Not Match With Old Status for model: {MODEL} =========")
     sys.exit(1)
-

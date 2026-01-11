@@ -1,36 +1,26 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-echo "================= in ../github-actions/bisect_test.sh ================================"
-
+echo "********** main logic **********"
 
 MODEL="$1"
 DEVICE="$2"
 
 rm -rf iree-build/ || true
-rm -f "$PWD/../../test-suite/alt_e2eamdshark/X2_regression_bisect.json" || true
+rm -f "$PWD/../test-suite/alt_e2eamdshark/X_regression_bisect.json" || true
 BASELINE_JSON="$PWD/../github-actions/model_old_new_status.json"
-CURRENT_JSON="$PWD/../../test-suite/alt_e2eamdshark/X2_regression_bisect.json"
+CURRENT_JSON="$PWD/../test-suite/alt_e2eamdshark/X_regression_bisect.json"
 
-echo "Bisect testing model: $MODEL"
+echo "Bisect testing model: $MODEL on $DEVICE"
 
-# Clean venv per commit
-# rm -rf .venv
-# python3 -m venv .venv
-# source .venv/bin/activate
-# pip install numpy
-
-#pip install --upgrade pip
-#pip install -r alt_e2eamdshark/base_requirements.txt
-#pip install -r alt_e2eamdshark/iree_requirements.txt
-#pip install --no-deps -r alt_e2eamdshark/torch_mlir_requirements.txt
-#git branch
-# Install THIS commit's IREE
-# ### TODO:Need To Replace this as we do iree build in amd-shark-ai
 source ${ALT_E2E_VENV_DIR}/bin/activate
 which python
-which pip
-pip freeze
+
+pip install -f https://iree.dev/pip-release-links.html --upgrade --pre iree-base-compiler iree-base-runtime iree-turbine
+pip install -f https://iree.dev/pip-release-links.html --upgrade --pre \
+       iree-base-compiler iree-base-runtime --src deps \
+       -e "git+https://github.com/iree-org/iree-turbine.git#egg=iree-turbine"
+pip uninstall -y iree-base-compiler iree-base-runtime
 
 git submodule update --init
 cmake -G Ninja -B iree-build/ -S . \
@@ -50,11 +40,8 @@ export PATH=$PWD/iree-build/tools/:$PATH
 export PYTHONPATH=$PWD/iree-build/compiler/bindings/python:$PWD/iree-build/runtime/bindings/python
 source iree-build/.env && export PYTHONPATH
 
-cd $PWD/../../test-suite/alt_e2eamdshark
-pip install --upgrade pip
+cd $PWD/../test-suite/alt_e2eamdshark
 pip install -r ./base_requirements.txt
-
-#export CACHE_DIR=/home/yrathore/yv/cache2
 
 if [[ "$DEVICE" == "GPU" ]]; then
   python3 run.py \
@@ -63,7 +50,7 @@ if [[ "$DEVICE" == "GPU" ]]; then
     -b rocm \
     -d hip \
     --mode=cl-onnx-iree \
-    --report-file "X2_regression_bisect.md" \
+    --report-file "X_regression_bisect.md" \
     --cleanup=3 \
     -v \
     --report
@@ -75,48 +62,20 @@ else
     -b llvm-cpu \
     -d local-task \
     -c x86_64-linux-gnu \
-    --report-file "X2_regression_bisect.md" \
+    --report-file "X_regression_bisect.md" \
     --mode=cl-onnx-iree \
     --cleanup=3 \
     --get-metadata \
     -v
 fi
 
-# Run model (always exits 0)
-# for gpu
-#python run.py \
-#  -r ./test-onnx \
-#  -t "$MODEL" \
-#  -b rocm \
-#  -d hip \
-#  --mode=cl-onnx-iree \
-#  --report-file "X2_regression_bisect.md" \
-#  --cleanup=3 \
-#  -v \
-#  --report
-
-# for cpu
-#python ./run.py \
-#            -r ./test-onnx \
-#            --report \
-#            -t "$MODEL" \
-#            -b " llvm-cpu" \
-#            -d "local-task" \
-#            -c "x86_64-linux-gnu" \
-#            --report-file "X2_regression_bisect.md" \
-#            --mode=cl-onnx-iree \
-#            --cleanup=3 \
-#            --get-metadata \
-#            -v
-#
-cd $PWD/../../e2eamdshark-reports/iree
+cd $PWD/../../iree
 rm -rf iree-build
 
-echo "===================== out ../github-actions/bisect_test.sh  ---> ran run.py ====================="
+echo "********** Completed running run.py, now checking the current status with the old status **********"
 
 # Validate result via JSON
 python3 $PWD/../github-actions/check_model_status.py \
   "$MODEL" \
   "$BASELINE_JSON" \
   "$CURRENT_JSON"
-

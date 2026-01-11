@@ -1,3 +1,14 @@
+# Copyright 2025 Advanced Micro Devices
+#
+# Licensed under the Apache License v2.0 with LLVM Exceptions.
+# See https://llvm.org/LICENSE.txt for license information.
+# SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
+
+'''
+Bisecting Starts Here.
+'''
+
+
 MODEL="$1"
 GOOD_COMMIT="$2"
 BAD_COMMIT="$3"
@@ -23,5 +34,6 @@ if [ ! -f "$CSV_FILE" ]; then
 fi
 
 echo "$DATE,$MODEL,$BAD_COMMIT_HASH" >> "$CSV_FILE"
+cat "$CSV_FILE"
 
 git bisect visualize --oneline || true

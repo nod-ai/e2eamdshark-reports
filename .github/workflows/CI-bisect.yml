@@ -50,17 +50,17 @@ jobs:
         with:
           python-version: "3.11"
 
-      # - name: Checkout Test Suite
-      #   uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-      #   with:
-      #     repository: nod-ai/AMD-SHARK-TestSuite
-      #     path: test-suite
-      - name: Checkout AMD-Shark-TestSuite
-        uses: actions/checkout@v4
+      - name: Checkout Test Suite
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
-          ref: main
-          fetch-depth: 1
+          repository: nod-ai/AMD-SHARK-TestSuite
           path: test-suite
+      # - name: Checkout AMD-Shark-TestSuite
+      #   uses: actions/checkout@v4
+      #   with:
+      #     ref: main
+      #     fetch-depth: 1
+      #     path: test-suite
 
       - name: "Setup alt e2eamdshark python venv"
         run: |

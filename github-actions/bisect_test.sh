@@ -4,10 +4,7 @@
 # See https://llvm.org/LICENSE.txt for license information.
 # SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 
-'''
-Main Logic for Verifying Regression Commit
-'''
-
+# Main Logic for Verifying Regression Commit
 #!/usr/bin/env bash
 set -euo pipefail
 

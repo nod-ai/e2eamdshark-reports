@@ -1,3 +1,13 @@
+# Copyright 2025 Advanced Micro Devices
+#
+# Licensed under the Apache License v2.0 with LLVM Exceptions.
+# See https://llvm.org/LICENSE.txt for license information.
+# SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
+
+'''
+Extracts the Model Name, Old Status, and New Status in a .json file
+'''
+
 from pathlib import Path
 import re
 import sys

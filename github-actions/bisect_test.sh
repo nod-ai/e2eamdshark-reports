@@ -1,3 +1,4 @@
+#!/bin/bash
 # Copyright 2025 Advanced Micro Devices
 #
 # Licensed under the Apache License v2.0 with LLVM Exceptions.
@@ -5,9 +6,8 @@
 # SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 
 # Main Logic for Verifying Regression Commit
-#!/usr/bin/env bash
-set -euo pipefail
 
+set -euo pipefail
 echo "********** main logic **********"
 
 MODEL="$1"
@@ -50,6 +50,7 @@ source iree-build/.env && export PYTHONPATH
 cd $PWD/../test-suite/alt_e2eamdshark
 pip install -r ./base_requirements.txt
 
+# run run.py
 if [[ "$DEVICE" == "GPU" ]]; then
   python3 run.py \
     -r ./test-onnx \

@@ -1,3 +1,14 @@
+# Copyright 2025 Advanced Micro Devices
+#
+# Licensed under the Apache License v2.0 with LLVM Exceptions.
+# See https://llvm.org/LICENSE.txt for license information.
+# SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
+
+'''
+Checks if the old status of the
+model matches with the current status
+'''
+
 import json
 import sys
 from pathlib import Path
@@ -25,9 +36,8 @@ print(f"Expected (old) status: {expected_status}")
 print(f"Actual status:         {actual_status}")
 
 if actual_status == expected_status:
-    print("STATUS MATCH → GOOD")
-    sys.exit(0)
+    print(f"========= Status Mathces With Old Status for model: {MODEL} =========")
 else:
-    print("STATUS MISMATCH → BAD")
+    print(f"========= Status Did Not Match With Old Status for model: {MODEL} =========")
     sys.exit(1)
 

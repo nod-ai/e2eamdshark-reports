@@ -44,31 +44,21 @@ jobs:
     steps:
       - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
     
-      - name: "Setting up Python"
+      - name: Setting up Python
         uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
         id: setup_python
         with:
           python-version: "3.11"
 
-      - name: Checkout Test Suite
-        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-        with:
-          repository: nod-ai/AMD-SHARK-TestSuite
-          path: test-suite
-      # - name: Checkout AMD-Shark-TestSuite
-      #   uses: actions/checkout@v4
-      #   with:
-      #     ref: main
-      #     fetch-depth: 1
-      #     path: test-suite
+      - name: Clone AMD-Shark-TestSuite
+        run: | 
+          git clone --depth 1 https://github.com/nod-ai/AMD-SHARK-TestSuite.git test-suite
 
-      - name: "Setup alt e2eamdshark python venv"
+      - name: Setup alt e2eamdshark python venv
         run: |
           ls 
-          exit 1
           rm -rf ${ALT_E2E_VENV_DIR}
           sudo apt update
-          sudo apt install wget
           python3.11 -m venv ${ALT_E2E_VENV_DIR}
           source ${ALT_E2E_VENV_DIR}/bin/activate
           ls
@@ -76,19 +66,18 @@ jobs:
           python3 -m pip install --upgrade pip
           python3 -m pip install --upgrade pip
           python3 -m pip install -r ./alt_e2eamdshark/base_requirements.txt
-          # python -m pip install -r ./alt_e2eamdshark/iree_requirements.txt
-          # python -m pip install --no-deps -r ./alt_e2eamdshark/torch_mlir_requirements.txt
-          # python -m pip install cmake ninja
-          # python -m pip install --pre --upgrade iree-base-compiler iree-base-runtime -f https://iree.dev/pip-release-links.html
         working-directory: ./test-suite
 
       - name: "Extract regression models"
         run: |
-          rm -rf ../iree-build
-          # which python
-          # #TODAY=$(date +%Y-%m-%d)
           source ${ALT_E2E_VENV_DIR}/bin/activate
           which python
+          ls
+          # exit 1
+          rm -rf iree/iree-build
+          # which python
+          # #TODAY=$(date +%Y-%m-%d)
+          
           # which python3
           # which pip
           # pip freeze
@@ -119,6 +108,8 @@ jobs:
           pwd
           ls
           REPORT="${TODAY}/ci_reports_onnx/${{ matrix.config.BACKEND }}/combined-reports_unique/yesterday_comparison.md"
+          cat $REPORT
+          exit 1
           JSON_STATUS="github-actions/model_old_new_status.json"
 
           python3 github-actions/extract_model_old_new_status_from_md.py $REPORT

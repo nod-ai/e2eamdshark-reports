@@ -1,0 +1,148 @@
+# Copyright 2025 Advanced Micro Devices, Inc.
+#
+# Licensed under the Apache License v2.0 with LLVM Exceptions.
+# See https://llvm.org/LICENSE.txt for license information.
+# SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
+
+# Workflow for Bisecting Regression.
+
+name: CI - Regression Tracker
+
+on:
+  workflow_dispatch:
+  # pull_request:
+  schedule:
+    - cron: "27 22 * * *"
+
+
+jobs:
+  find_regression_commit:
+    if: ${{ github.repository_owner == 'nod-ai' || github.event_name != 'schedule' }}
+    name: "Find Regression Commit"
+    strategy:
+      matrix:
+        config: [{
+                  DEVICE: "GPU",
+                  BACKEND: "rocm",
+                  runs-on: "linux-mi325-1gpu-ossci-nod-ai",
+                  cache_dir: "/home/runner/data/e2eamdshark/amdshark-test-suite-models-cache"
+                },
+                {
+                  DEVICE: "CPU",
+                  BACKEND: "llvm-cpu",
+                  runs-on: "nodai-cpu-x86-64",
+                  cache_dir: "/home/runner/groups/aig_amdsharks/test-suite-ci-cache"
+                }]
+      fail-fast: false
+    runs-on: ${{matrix.config.runs-on}}
+    defaults:
+      run:
+        shell: bash
+    env:
+      E2E_VENV_DIR: ${{ github.workspace }}/test-suite_venv
+      ALT_E2E_VENV_DIR: ${{ github.workspace }}/alt-test-suite_venv
+      HF_TOKEN: ${{ secrets.HF_TOKEN }}
+      CACHE_DIR: ${{ matrix.cache-dir }}
+    steps:
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+    
+      - name: Setting up Python
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        id: setup_python
+        with:
+          python-version: "3.11"
+
+      - name: Clone AMD-Shark-TestSuite
+        run: | 
+          git clone --depth 1 https://github.com/nod-ai/AMD-SHARK-TestSuite.git test-suite
+
+      - name: Setup alt e2eamdshark python venv
+        run: |
+          ls 
+          rm -rf ${ALT_E2E_VENV_DIR}
+          sudo apt update
+          python3.11 -m venv ${ALT_E2E_VENV_DIR}
+          source ${ALT_E2E_VENV_DIR}/bin/activate
+          ls
+          which python
+          python3 -m pip install --upgrade pip
+          python3 -m pip install --upgrade pip
+          python3 -m pip install -r ./alt_e2eamdshark/base_requirements.txt
+        working-directory: ./test-suite
+
+      - name: "Extract regression models"
+        run: |
+          date
+          pwd
+          source ${ALT_E2E_VENV_DIR}/bin/activate
+          which python
+          pip freeze
+          ls
+          rm -rf iree/iree-build
+          #TODAY=$(date +%Y-%m-%d)
+          TODAY="2026-01-10"
+
+          REPORT="${TODAY}/ci_reports_onnx/${{ matrix.config.BACKEND }}/combined-reports_unique/yesterday_comparison.md"
+          JSON_STATUS="github-actions/model_old_new_status.json"
+
+          cat $REPORT
+
+          # extract model name, old and new status in a json file from the yesterday_comparison.md file
+          python3 github-actions/extract_model_old_new_status_from_md.py "$REPORT"
+
+          # extract model names in a .txt file
+          python3 github-actions/extract_regression_model_names.py "$JSON_STATUS"
+
+          echo "JSON status"
+          cat "$JSON_STATUS"
+          echo "Regression models:"
+          cat "github-actions/regression_models.txt"
+
+      - name: "Bisect Regression"
+        run: |
+          source ${ALT_E2E_VENV_DIR}/bin/activate
+          echo "================================ starting to bisect regression commits... ===================================="
+          git clone https://github.com/iree-org/iree.git
+          cd iree
+
+          GOOD_COMMIT=$(git tag \
+              | grep '^iree-3\.[0-9]\+\.0rc' \
+              | sort -V -r \
+              | sed -n '5p')
+          BAD_COMMIT=$(git rev-parse HEAD)
+
+          REPORT_DIR="$(pwd)/../"
+          while read -r model; do
+            echo "==============================="
+            echo "Bisecting $model"
+            echo "==============================="
+            $REPORT_DIR/github-actions/runbisect_for_model.sh "$model" "$GOOD_COMMIT" "$BAD_COMMIT" "${{ matrix.config.DEVICE }}"
+          done < $REPORT_DIR/github-actions/regression_models.txt
+          cd ..
+
+          echo "==================================== done with bisecting regression. ===================================="
+
+      - name: "Push Artifacts"
+        # if: github.event_name == 'schedule'
+        run: |
+          rm "github-actions/regression_models.txt"
+          rm "github-actions/model_old_new_status.json"
+          rm -rf test-suite
+          rm -rf iree
+          
+          git fetch origin
+          git checkout main
+          DEFAULT_BRANCH="main"
+          git status
+          git branch
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add regression_model_and_commit_causing_regression.csv
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 1
+          else
+            git commit -m "Update Regression CSV for ($(date +%Y-%m-%d))"
+            git push origin "$DEFAULT_BRANCH"
+          fi

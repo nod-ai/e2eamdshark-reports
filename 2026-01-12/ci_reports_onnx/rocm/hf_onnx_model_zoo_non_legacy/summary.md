@@ -6,8 +6,8 @@
 | Setup | 1954 | 99.8% | 99.8% |
 | IREE Compilation | 1434 | 73.3% | 73.4% |
 | Gold Inference | 1434 | 73.3% | 100.0% |
-| IREE Inference Invocation | 1422 | 72.7% | 99.2% |
-| Inference Comparison (PASS) | 1333 | 68.1% | 93.7% |
+| IREE Inference Invocation | 1423 | 72.7% | 99.2% |
+| Inference Comparison (PASS) | 1334 | 68.2% | 93.7% |
 ## Fail Summary
 
 **TOTAL TESTS = 1957**
@@ -16,7 +16,7 @@
 | Setup | 3 | 0.2% |
 | IREE Compilation | 520 | 26.6% |
 | Gold Inference | 0 | 0.0% |
-| IREE Inference Invocation | 12 | 0.6% |
+| IREE Inference Invocation | 11 | 0.6% |
 | Inference Comparison | 89 | 4.5% |
 ## Test Run Detail
 Test was run with the following arguments:
@@ -1233,7 +1233,7 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_hf_onnx_model_zoo_non_
 | spnasnet_100_Opset16 | PASS | None | |
 | spnasnet_100_Opset17 | PASS | None | |
 | spnasnet_100_Opset18 | PASS | None | |
-| swinv2_base_window12_192_22k_Opset17 | compiled_inference | None | |
+| swinv2_base_window12_192_22k_Opset17 | PASS | None | |
 | swinv2_base_window12to16_192to256_22kft1k_Opset16 | PASS | None | |
 | swinv2_base_window12to16_192to256_22kft1k_Opset17 | PASS | None | |
 | swinv2_base_window12to24_192to384_22kft1k_Opset16 | PASS | None | |

@@ -7,7 +7,7 @@
 | IREE Compilation | 380 | 89.0% | 89.2% |
 | Gold Inference | 380 | 89.0% | 100.0% |
 | IREE Inference Invocation | 380 | 89.0% | 100.0% |
-| Inference Comparison (PASS) | 310 | 72.6% | 81.6% |
+| Inference Comparison (PASS) | 308 | 72.1% | 81.1% |
 ## Fail Summary
 
 **TOTAL TESTS = 427**
@@ -17,7 +17,7 @@
 | IREE Compilation | 46 | 10.8% |
 | Gold Inference | 0 | 0.0% |
 | IREE Inference Invocation | 0 | 0.0% |
-| Inference Comparison | 70 | 16.4% |
+| Inference Comparison | 72 | 16.9% |
 ## Test Run Detail
 Test was run with the following arguments:
 Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_vai-int8-p0p1-shard1_unique_onnx_json/vai-int8-p0p1-shard1_unique.json', './e2eamdshark-reports/ci_reports_rocm_vai-int8-p0p1-shard2_unique_onnx_json/vai-int8-p0p1-shard2_unique.json', './e2eamdshark-reports/ci_reports_rocm_vai-int8-p0p1-shard3_unique_onnx_json/vai-int8-p0p1-shard3_unique.json'], output='./e2eamdshark-reports/vai-int8-p0p1_unique.json', report=True, report_file='./e2eamdshark-reports/vai-int8-p0p1_unique.md')
@@ -417,10 +417,10 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_vai-int8-p0p1-shard1_u
 | tf_efficientnetv2_b0.in1k_train_vaiq | PASS | None | |
 | tf_efficientnetv2_b0.in1k_vaiq | PASS | None | |
 | tf_efficientnetv2_b1.in1k_train_vaiq | PASS | None | |
-| tf_efficientnetv2_b1.in1k_vaiq | PASS | None | |
+| tf_efficientnetv2_b1.in1k_vaiq | Numerics | None | |
 | tf_efficientnetv2_b2.in1k_train_vaiq | PASS | None | |
 | tf_efficientnetv2_b2.in1k_vaiq | PASS | None | |
-| tf_efficientnetv2_b3.in1k_train_vaiq | PASS | None | |
+| tf_efficientnetv2_b3.in1k_train_vaiq | Numerics | None | |
 | tf_efficientnetv2_b3.in1k_vaiq | PASS | None | |
 | tf_inception_v3_vaiq | PASS | None | |
 | tf_mobilenetv3_large_minimal_100.in1k_vaiq | PASS | None | |

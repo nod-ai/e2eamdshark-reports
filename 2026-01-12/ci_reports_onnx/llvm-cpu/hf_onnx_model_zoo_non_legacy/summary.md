@@ -6,8 +6,8 @@
 | Setup | 1954 | 99.8% | 99.8% |
 | IREE Compilation | 1703 | 87.0% | 87.2% |
 | Gold Inference | 1703 | 87.0% | 100.0% |
-| IREE Inference Invocation | 1696 | 86.7% | 99.6% |
-| Inference Comparison (PASS) | 1653 | 84.5% | 97.5% |
+| IREE Inference Invocation | 1697 | 86.7% | 99.6% |
+| Inference Comparison (PASS) | 1654 | 84.5% | 97.5% |
 ## Fail Summary
 
 **TOTAL TESTS = 1957**
@@ -16,7 +16,7 @@
 | Setup | 3 | 0.2% |
 | IREE Compilation | 251 | 12.8% |
 | Gold Inference | 0 | 0.0% |
-| IREE Inference Invocation | 7 | 0.4% |
+| IREE Inference Invocation | 6 | 0.3% |
 | Inference Comparison | 43 | 2.2% |
 ## Test Run Detail
 Test was run with the following arguments:
@@ -225,7 +225,7 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_llvm-cpu_hf_onnx_model_zoo_
 | dla60x_c_Opset17 | PASS | None | |
 | dla60x_c_Opset18 | PASS | None | |
 | convit_tiny_Opset16 | PASS | None | |
-| convnext_xlarge_384_in22ft1k_Opset18 | compiled_inference | None | |
+| convnext_xlarge_384_in22ft1k_Opset18 | PASS | None | |
 | dm_nfnet_f0_Opset16 | compilation | None | |
 | dm_nfnet_f0_Opset17 | compilation | None | |
 | dm_nfnet_f1_Opset16 | compilation | None | |

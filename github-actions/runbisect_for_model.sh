@@ -13,7 +13,7 @@ MODEL="$1"
 GOOD_COMMIT="$2"
 BAD_COMMIT="$3"
 DEVICE="$4"
-NEXT_COMMIT_AFTER_BAD=$(git rev-list --reverse "${BAD_COMMIT}..HEAD" | head -n 1)
+NEXT_COMMIT_AFTER_BAD=$(git rev-list --reverse "${GOOD_COMMIT}..HEAD" | head -n 1)
 
 git bisect reset || true
 git bisect start

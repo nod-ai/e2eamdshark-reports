@@ -14,6 +14,7 @@ GOOD_COMMIT="$2"
 BAD_COMMIT="$3"
 DEVICE="$4"
 NEXT_COMMIT_AFTER_BAD=$(git rev-list --reverse "${GOOD_COMMIT}..HEAD" | head -n 1)
+MODEL_WITH_DEVICE="${MODEL}(${DEVICE})"
 
 git bisect reset || true
 git bisect start
@@ -37,8 +38,8 @@ fi
 if [ "$BAD_COMMIT_HASH" = "$NEXT_COMMIT_AFTER_BAD" ]; then
     echo "[INFO] First bad commit is immediately after baseline bad commit ($BAD_COMMIT). Skipping CSV update."
 else
-    echo "$DATE,$MODEL,$BAD_COMMIT_HASH" >> "$CSV_FILE"
-    echo "[INFO] Appended bisect result to CSV -> $DATE -> $MODEL -> $BAD_COMMIT_HASH"
+    echo "$DATE,$MODEL_WITH_DEVICE,$BAD_COMMIT_HASH" >> "$CSV_FILE"
+    echo "[INFO] Appended bisect result to CSV -> $DATE -> $MODEL_WITH_DEVICE -> $BAD_COMMIT_HASH"
 fi
 
 cat "$CSV_FILE"

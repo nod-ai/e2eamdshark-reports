@@ -42,7 +42,7 @@ jobs:
       E2E_VENV_DIR: ${{ github.workspace }}/test-suite_venv
       ALT_E2E_VENV_DIR: ${{ github.workspace }}/alt-test-suite_venv
       HF_TOKEN: ${{ secrets.HF_TOKEN }}
-      CACHE_DIR: ${{ matrix.cache-dir }}
+      CACHE_DIR: ${{ matrix.cache_dir }}
     steps:
       - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
     

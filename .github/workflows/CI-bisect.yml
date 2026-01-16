@@ -58,6 +58,8 @@ jobs:
 
       - name: Setup alt e2eamdshark python venv
         run: |
+          echo "CACHE DIR: "
+          echo $CACHE_DIR
           ls 
           rm -rf ${ALT_E2E_VENV_DIR}
           sudo apt update

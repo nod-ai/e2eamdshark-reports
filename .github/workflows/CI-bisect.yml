@@ -126,6 +126,7 @@ jobs:
             else
               export CACHE_DIR="/home/runner/groups/aig_amdsharks/test-suite-ci-cache"
             fi
+            echo "CACHE_DIR Set to : $CACHE_DIR"
             $REPORT_DIR/github-actions/runbisect_for_model.sh "$model" "$GOOD_COMMIT" "$BAD_COMMIT" "$DEVICE"
           done < $REPORT_DIR/github-actions/regression_models.txt
           cd ..

@@ -119,7 +119,14 @@ jobs:
             echo "==============================="
             echo "Bisecting $model"
             echo "==============================="
-            $REPORT_DIR/github-actions/runbisect_for_model.sh "$model" "$GOOD_COMMIT" "$BAD_COMMIT" "${{ matrix.config.DEVICE }}"
+
+            DEVICE="${{ matrix.config.DEVICE }}"
+            if [[ "$DEVICE" == "GPU" ]]; then
+              export CACHE_DIR="/home/runner/data/e2eamdshark/amdshark-test-suite-models-cache"
+            else
+              export CACHE_DIR="/home/runner/groups/aig_amdsharks/test-suite-ci-cache"
+            fi
+            $REPORT_DIR/github-actions/runbisect_for_model.sh "$model" "$GOOD_COMMIT" "$BAD_COMMIT" "$DEVICE"
           done < $REPORT_DIR/github-actions/regression_models.txt
           cd ..
 

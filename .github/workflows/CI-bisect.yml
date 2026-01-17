@@ -134,12 +134,14 @@ jobs:
       - name: "Push Artifacts"
         # if: github.event_name == 'schedule'
         run: |
+          git pull origin main
           rm "github-actions/regression_models.txt"
           rm "github-actions/model_old_new_status.json"
           rm -rf test-suite
           rm -rf iree
           
           git fetch origin
+          git merge origin/main
           git checkout main
           DEFAULT_BRANCH="main"
           git status

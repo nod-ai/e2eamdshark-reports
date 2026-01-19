@@ -1,3 +1,12 @@
+# Top issues
+
+https://github.com/iree-org/iree/issues/22942 : Kunwar : 378 models
+
+https://github.com/iree-org/iree/issues/23185 : Eric Feng : 119 models
+
+
+
+
 # ONNX model Passing status 
 
 ### ONNX model Zoo

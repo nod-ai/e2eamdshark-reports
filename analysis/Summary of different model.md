@@ -8,6 +8,9 @@ https://github.com/iree-org/iree/issues/23185 : Eric Feng : 119 models
 
 https://github.com/iree-org/iree/issues/22957 : Max : 69 models
 
+https://github.com/iree-org/iree/issues/23013 : Unassigned : 41 models
+
+https://github.com/iree-org/iree/issues/22977 : Zach : 10 models
 
 
 

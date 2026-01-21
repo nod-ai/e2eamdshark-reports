@@ -7,7 +7,7 @@
 | IREE Compilation | 281 | 78.1% | 78.7% |
 | Gold Inference | 281 | 78.1% | 100.0% |
 | IREE Inference Invocation | 281 | 78.1% | 100.0% |
-| Inference Comparison (PASS) | 261 | 72.5% | 92.9% |
+| Inference Comparison (PASS) | 277 | 76.9% | 98.6% |
 ## Fail Summary
 
 **TOTAL TESTS = 360**
@@ -17,7 +17,7 @@
 | IREE Compilation | 76 | 21.1% |
 | Gold Inference | 0 | 0.0% |
 | IREE Inference Invocation | 0 | 0.0% |
-| Inference Comparison | 20 | 5.6% |
+| Inference Comparison | 4 | 1.1% |
 ## Test Run Detail
 Test was run with the following arguments:
 Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_vai-hf-cnn-fp32-shard1_unique_onnx_json/vai-hf-cnn-fp32-shard1_unique.json', './e2eamdshark-reports/ci_reports_rocm_vai-hf-cnn-fp32-shard2_unique_onnx_json/vai-hf-cnn-fp32-shard2_unique.json', './e2eamdshark-reports/ci_reports_rocm_vai-hf-cnn-fp32-shard3_unique_onnx_json/vai-hf-cnn-fp32-shard3_unique.json'], output='./e2eamdshark-reports/vai-hf-cnn-fp32_unique.json', report=True, report_file='./e2eamdshark-reports/vai-hf-cnn-fp32_unique.md')
@@ -96,17 +96,17 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_vai-hf-cnn-fp32-shard1
 | convnextv2_pico.fcmae_ft_in1k | PASS | None | |
 | convnextv2_tiny.fcmae | PASS | None | |
 | convnextv2_tiny.fcmae_ft_in1k | PASS | None | |
-| crossvit_15_240 | Numerics | None | |
-| crossvit_15_dagger_240 | Numerics | None | |
-| crossvit_15_dagger_408 | Numerics | None | |
-| crossvit_18_240 | Numerics | None | |
-| crossvit_18_dagger_240 | Numerics | None | |
-| crossvit_18_dagger_408 | Numerics | None | |
-| crossvit_9_240 | Numerics | None | |
-| crossvit_9_dagger_240 | Numerics | None | |
-| crossvit_base_240 | Numerics | None | |
-| crossvit_small_240 | Numerics | None | |
-| crossvit_tiny_240 | Numerics | None | |
+| crossvit_15_240 | PASS | None | |
+| crossvit_15_dagger_240 | PASS | None | |
+| crossvit_15_dagger_408 | PASS | None | |
+| crossvit_18_240 | PASS | None | |
+| crossvit_18_dagger_240 | PASS | None | |
+| crossvit_18_dagger_408 | PASS | None | |
+| crossvit_9_240 | PASS | None | |
+| crossvit_9_dagger_240 | PASS | None | |
+| crossvit_base_240 | PASS | None | |
+| crossvit_small_240 | PASS | None | |
+| crossvit_tiny_240 | PASS | None | |
 | darknetaa53 | PASS | None | |
 | davit_base.msft_in1k | compilation | None | |
 | davit_small.msft_in1k | compilation | None | |
@@ -131,11 +131,11 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_vai-hf-cnn-fp32-shard1
 | dm_nfnet_f4.dm_in1k | compilation | None | |
 | eca_botnext26ts_256 | PASS | None | |
 | ecaresnet269d | PASS | None | |
-| edgenext_base | Numerics | None | |
-| edgenext_small | Numerics | None | |
-| edgenext_small_rw | Numerics | None | |
-| edgenext_x_small | Numerics | None | |
-| edgenext_xx_small | Numerics | None | |
+| edgenext_base | PASS | None | |
+| edgenext_small | PASS | None | |
+| edgenext_small_rw | PASS | None | |
+| edgenext_x_small | PASS | None | |
+| edgenext_xx_small | PASS | None | |
 | efficientformer_l1.snap_dist_in1k | PASS | None | |
 | efficientformer_l3.snap_dist_in1k | PASS | None | |
 | efficientformer_l7.snap_dist_in1k | PASS | None | |

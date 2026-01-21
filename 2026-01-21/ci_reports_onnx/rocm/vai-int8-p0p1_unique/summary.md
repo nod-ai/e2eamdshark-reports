@@ -7,7 +7,7 @@
 | IREE Compilation | 332 | 77.8% | 77.9% |
 | Gold Inference | 332 | 77.8% | 100.0% |
 | IREE Inference Invocation | 332 | 77.8% | 100.0% |
-| Inference Comparison (PASS) | 275 | 64.4% | 82.8% |
+| Inference Comparison (PASS) | 276 | 64.6% | 83.1% |
 ## Fail Summary
 
 **TOTAL TESTS = 427**
@@ -17,7 +17,7 @@
 | IREE Compilation | 94 | 22.0% |
 | Gold Inference | 0 | 0.0% |
 | IREE Inference Invocation | 0 | 0.0% |
-| Inference Comparison | 57 | 13.3% |
+| Inference Comparison | 56 | 13.1% |
 ## Test Run Detail
 Test was run with the following arguments:
 Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_vai-int8-p0p1-shard1_unique_onnx_json/vai-int8-p0p1-shard1_unique.json', './e2eamdshark-reports/ci_reports_rocm_vai-int8-p0p1-shard2_unique_onnx_json/vai-int8-p0p1-shard2_unique.json', './e2eamdshark-reports/ci_reports_rocm_vai-int8-p0p1-shard3_unique_onnx_json/vai-int8-p0p1-shard3_unique.json'], output='./e2eamdshark-reports/vai-int8-p0p1_unique.json', report=True, report_file='./e2eamdshark-reports/vai-int8-p0p1_unique.md')
@@ -25,7 +25,7 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_rocm_vai-int8-p0p1-shard1_u
 | Test | Exit Status | Mean Benchmark Time (ms) | Notes |
 |--|--|--|--|
 | cs3darknet_focus_l_train_vaiq | PASS | None | |
-| cs3darknet_focus_l_vaiq | Numerics | None | |
+| cs3darknet_focus_l_vaiq | PASS | None | |
 | cs3darknet_focus_m_train_vaiq | PASS | None | |
 | cs3darknet_focus_m_vaiq | PASS | None | |
 | cs3darknet_l_train_vaiq | PASS | None | |

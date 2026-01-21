@@ -8,52 +8,372 @@ progression tolerance: 5.0%
 
 |model name|exit_status|analysis|old_time_ms|new_time_ms|change_ms|percent_change|
 |---|---|---|---|---|---|---|
-|migraphx_ORT__bert_base_cased_1|PASS|within tol|1515.1703|1469.5395|-45.6308|-3.01%|
-|migraphx_ORT__bert_base_uncased_1|PASS|within tol|1463.853|1460.5515|-3.3015|-0.23%|
-|migraphx_ORT__bert_large_uncased_1|PASS|within tol|12293.5211|12297.5318|4.0106|0.03%|
-|migraphx_ORT__distilgpt2_1|PASS|within tol|683.2416|714.8756|31.634|4.63%|
-|migraphx_ORT__onnx_models__bert_base_cased_1_fp16_gpu|Numerics|within tol|2486.6412|2495.2957|8.6545|0.35%|
-|migraphx_ORT__onnx_models__bert_large_uncased_1_fp16_gpu|Numerics|within tol|10231.869|10491.4162|259.5471|2.54%|
-|migraphx_ORT__onnx_models__distilgpt2_1_fp16_gpu|Numerics|within tol|632.4529|635.6109|3.158|0.5%|
-|migraphx_cadene__dpn92i1|Numerics|within tol|434.5477|435.624|1.0762|0.25%|
-|migraphx_cadene__inceptionv4i16|PASS|within tol|8861.9528|8887.8818|25.929|0.29%|
-|migraphx_cadene__resnext101_64x4di1|PASS|within tol|817.6018|816.9123|-0.6895|-0.08%|
-|migraphx_huggingface-transformers__bert_mrpc8|PASS|regression|9699.4226|10669.2582|969.8355|10.0%|
-|migraphx_mlperf__resnet50_v1|PASS|within tol|205.6265|203.1197|-2.5068|-1.22%|
-|migraphx_models__whisper-tiny-decoder|PASS|within tol|300.4547|292.263|-8.1916|-2.73%|
-|migraphx_models__whisper-tiny-encoder|Numerics|progression|1145.554|1038.5026|-107.0514|-9.34%|
-|migraphx_pytorch-examples__wlang_gru|PASS|within tol|57.0396|57.9958|0.9563|1.68%|
-|migraphx_torchvision__densenet121i32|PASS|within tol|4775.4136|4790.0668|14.6532|0.31%|
-|migraphx_torchvision__inceptioni1|PASS|within tol|348.1285|349.8034|1.6749|0.48%|
-|migraphx_torchvision__resnet50i1|PASS|within tol|194.1425|194.6778|0.5353|0.28%|
+|migraphx_ORT__bert_base_cased_1|PASS|within tol|1469.5395|1490.9669|21.4274|1.46%|
+|migraphx_ORT__bert_base_uncased_1|PASS|within tol|1460.5515|1486.7927|26.2412|1.8%|
+|migraphx_ORT__bert_large_uncased_1|PASS|within tol|12297.5318|12232.4322|-65.0995|-0.53%|
+|migraphx_ORT__distilgpt2_1|PASS|within tol|714.8756|736.2612|21.3856|2.99%|
+|migraphx_ORT__onnx_models__bert_base_cased_1_fp16_gpu|Numerics|within tol|2495.2957|2534.3143|39.0186|1.56%|
+|migraphx_ORT__onnx_models__bert_large_uncased_1_fp16_gpu|Numerics|within tol|10491.4162|10092.2876|-399.1286|-3.8%|
+|migraphx_ORT__onnx_models__distilgpt2_1_fp16_gpu|Numerics|regression|635.6109|668.7756|33.1647|5.22%|
+|migraphx_cadene__dpn92i1|Numerics|within tol|435.624|438.7833|3.1593|0.73%|
+|migraphx_cadene__inceptionv4i16|PASS|within tol|8887.8818|8838.7029|-49.1789|-0.55%|
+|migraphx_cadene__resnext101_64x4di1|PASS|within tol|816.9123|819.0862|2.1739|0.27%|
+|migraphx_huggingface-transformers__bert_mrpc8|PASS|progression|10669.2582|9878.8026|-790.4556|-7.41%|
+|migraphx_mlperf__resnet50_v1|PASS|within tol|203.1197|203.2532|0.1335|0.07%|
+|migraphx_models__whisper-tiny-decoder|PASS|within tol|292.263|299.7416|7.4786|2.56%|
+|migraphx_models__whisper-tiny-encoder|Numerics|within tol|1038.5026|1084.6987|46.1961|4.45%|
+|migraphx_pytorch-examples__wlang_gru|PASS|within tol|57.9958|55.6221|-2.3738|-4.09%|
+|migraphx_torchvision__densenet121i32|PASS|within tol|4790.0668|4822.3876|32.3208|0.67%|
+|migraphx_torchvision__inceptioni1|PASS|within tol|349.8034|348.1874|-1.616|-0.46%|
+|migraphx_torchvision__resnet50i1|PASS|within tol|194.6778|192.4547|-2.2231|-1.14%|
 
-## 4 Regressions Found:
+## No Regressions Found
 
-|model name|old_status|new_status|
-|---|---|---|
-
-## 20 Progressions Found:
+## 343 Progressions Found:
 
 |model name|old_status|new_status|
 |---|---|---|
-|beit_large_patch16_384_Opset16|compiled_inference|PASS|
-|beit_large_patch16_384_Opset17|compiled_inference|PASS|
-|convnext_xlarge_384_in22ft1k_Opset16|compiled_inference|PASS|
-|convnext_xlarge_384_in22ft1k_Opset17|compiled_inference|PASS|
-|deit3_large_patch16_384_Opset16_timm|compiled_inference|PASS|
-|xception41_Opset16|compiled_inference|PASS|
-|xception41_Opset17|compiled_inference|PASS|
-|xception41_Opset18|compiled_inference|PASS|
-|xception41p_Opset16|compiled_inference|PASS|
-|xception41p_Opset17|compiled_inference|PASS|
-|xception41p_Opset18|compiled_inference|PASS|
-|xception65_Opset16|compiled_inference|PASS|
-|xception65_Opset17|compiled_inference|PASS|
-|xception65_Opset18|compiled_inference|PASS|
-|xception65p_Opset16|compiled_inference|PASS|
-|xception65p_Opset17|compiled_inference|PASS|
-|xception65p_Opset18|compiled_inference|PASS|
-|xception71_Opset16|compiled_inference|PASS|
-|xception71_Opset17|compiled_inference|PASS|
-|xception71_Opset18|compiled_inference|PASS|
+|RRDB_ESRGAN_vaiq_int8|compilation|Numerics|
+|crossvit_15_240_Opset16|Numerics|PASS|
+|crossvit_15_240_Opset16_timm|Numerics|PASS|
+|crossvit_15_240_Opset17|Numerics|PASS|
+|crossvit_15_240_Opset17_timm|Numerics|PASS|
+|crossvit_15_dagger_240_Opset16|Numerics|PASS|
+|crossvit_15_dagger_240_Opset16_timm|Numerics|PASS|
+|crossvit_15_dagger_240_Opset17|Numerics|PASS|
+|crossvit_15_dagger_240_Opset17_timm|Numerics|PASS|
+|crossvit_15_dagger_408_Opset16|Numerics|PASS|
+|crossvit_15_dagger_408_Opset16_timm|Numerics|PASS|
+|crossvit_15_dagger_408_Opset17|Numerics|PASS|
+|crossvit_15_dagger_408_Opset17_timm|Numerics|PASS|
+|crossvit_18_240_Opset16|Numerics|PASS|
+|crossvit_18_240_Opset16_timm|Numerics|PASS|
+|crossvit_18_240_Opset17|Numerics|PASS|
+|crossvit_18_240_Opset17_timm|Numerics|PASS|
+|crossvit_18_dagger_240_Opset16|Numerics|PASS|
+|crossvit_18_dagger_240_Opset16_timm|Numerics|PASS|
+|crossvit_18_dagger_240_Opset17|Numerics|PASS|
+|crossvit_18_dagger_240_Opset17_timm|Numerics|PASS|
+|crossvit_18_dagger_408_Opset16|Numerics|PASS|
+|crossvit_18_dagger_408_Opset16_timm|Numerics|PASS|
+|crossvit_18_dagger_408_Opset17|Numerics|PASS|
+|crossvit_18_dagger_408_Opset17_timm|Numerics|PASS|
+|crossvit_9_240_Opset16|Numerics|PASS|
+|crossvit_9_240_Opset16_timm|Numerics|PASS|
+|crossvit_9_240_Opset17|Numerics|PASS|
+|crossvit_9_240_Opset17_timm|Numerics|PASS|
+|crossvit_9_dagger_240_Opset16|Numerics|PASS|
+|crossvit_9_dagger_240_Opset16_timm|Numerics|PASS|
+|crossvit_9_dagger_240_Opset17|Numerics|PASS|
+|crossvit_9_dagger_240_Opset17_timm|Numerics|PASS|
+|crossvit_base_240_Opset16|Numerics|PASS|
+|crossvit_base_240_Opset16_timm|Numerics|PASS|
+|crossvit_base_240_Opset17|Numerics|PASS|
+|crossvit_base_240_Opset17_timm|Numerics|PASS|
+|crossvit_small_240_Opset16|Numerics|PASS|
+|crossvit_small_240_Opset16_timm|Numerics|PASS|
+|crossvit_small_240_Opset17|Numerics|PASS|
+|crossvit_small_240_Opset17_timm|Numerics|PASS|
+|crossvit_tiny_240_Opset16|Numerics|PASS|
+|crossvit_tiny_240_Opset16_timm|Numerics|PASS|
+|crossvit_tiny_240_Opset17|Numerics|PASS|
+|crossvit_tiny_240_Opset17_timm|Numerics|PASS|
+|cs3darknet_focus_l_Opset16|Numerics|PASS|
+|cs3darknet_focus_l_Opset17|Numerics|PASS|
+|cs3darknet_focus_l_Opset18|Numerics|PASS|
+|cs3darknet_focus_l_Opset18_timm|Numerics|PASS|
+|cs3darknet_focus_m_Opset16|Numerics|PASS|
+|cs3darknet_focus_m_Opset16_timm|Numerics|PASS|
+|cs3darknet_focus_m_Opset17|Numerics|PASS|
+|cs3darknet_focus_m_Opset18|Numerics|PASS|
+|cs3darknet_l_Opset16|Numerics|PASS|
+|cs3darknet_l_Opset16_timm|Numerics|PASS|
+|cs3darknet_l_Opset17|Numerics|PASS|
+|cs3darknet_l_Opset18|Numerics|PASS|
+|cs3darknet_m_Opset16|Numerics|PASS|
+|cs3darknet_m_Opset17|Numerics|PASS|
+|cs3darknet_m_Opset17_timm|Numerics|PASS|
+|cs3darknet_m_Opset18|Numerics|PASS|
+|cs3darknet_x_Opset16|Numerics|PASS|
+|cs3darknet_x_Opset17|Numerics|PASS|
+|cs3darknet_x_Opset17_timm|Numerics|PASS|
+|cs3darknet_x_Opset18|Numerics|PASS|
+|cs3edgenet_x_Opset16|Numerics|PASS|
+|cs3edgenet_x_Opset17|Numerics|PASS|
+|cs3edgenet_x_Opset18|Numerics|PASS|
+|cs3edgenet_x_Opset18_timm|Numerics|PASS|
+|cs3se_edgenet_x_Opset16|Numerics|PASS|
+|cs3se_edgenet_x_Opset17|Numerics|PASS|
+|cs3sedarknet_l_Opset16|Numerics|PASS|
+|cs3sedarknet_l_Opset17|Numerics|PASS|
+|cs3sedarknet_x_Opset16|Numerics|PASS|
+|cs3sedarknet_x_Opset17|Numerics|PASS|
+|dla60_res2net_Opset16|Numerics|PASS|
+|dla60_res2net_Opset17|Numerics|PASS|
+|dla60_res2net_Opset17_timm|Numerics|PASS|
+|dla60_res2net_Opset18|Numerics|PASS|
+|dla60_res2next_Opset16|Numerics|PASS|
+|dla60_res2next_Opset17|Numerics|PASS|
+|dla60_res2next_Opset18|Numerics|PASS|
+|dla60_res2next_Opset18_timm|Numerics|PASS|
+|dpn107_Opset16|Numerics|PASS|
+|dpn107_Opset16_timm|Numerics|PASS|
+|dpn107_Opset17|Numerics|PASS|
+|dpn107_Opset18|Numerics|PASS|
+|dpn107_Opset18_timm|Numerics|PASS|
+|dpn131_Opset16|Numerics|PASS|
+|dpn131_Opset17|Numerics|PASS|
+|dpn131_Opset18|Numerics|PASS|
+|dpn131_Opset18_timm|Numerics|PASS|
+|dpn68_Opset16|Numerics|PASS|
+|dpn68_Opset17|Numerics|PASS|
+|dpn68_Opset17_timm|Numerics|PASS|
+|dpn68_Opset18|Numerics|PASS|
+|dpn92_Opset16|Numerics|PASS|
+|dpn92_Opset17|Numerics|PASS|
+|dpn92_Opset18|Numerics|PASS|
+|dpn98_Opset16|Numerics|PASS|
+|dpn98_Opset17|Numerics|PASS|
+|dpn98_Opset17_timm|Numerics|PASS|
+|dpn98_Opset18|Numerics|PASS|
+|edgenext_small_Opset16|Numerics|PASS|
+|edgenext_small_Opset16_timm|Numerics|PASS|
+|edgenext_small_Opset17|Numerics|PASS|
+|edgenext_small_Opset17_timm|Numerics|PASS|
+|edgenext_small_Opset18|Numerics|PASS|
+|edgenext_small_rw_Opset16|Numerics|PASS|
+|edgenext_small_rw_Opset16_timm|Numerics|PASS|
+|edgenext_small_rw_Opset17|Numerics|PASS|
+|edgenext_small_rw_Opset18|Numerics|PASS|
+|edgenext_x_small_Opset16|Numerics|PASS|
+|edgenext_x_small_Opset16_timm|Numerics|PASS|
+|edgenext_x_small_Opset17|Numerics|PASS|
+|edgenext_x_small_Opset17_timm|Numerics|PASS|
+|edgenext_x_small_Opset18|Numerics|PASS|
+|edgenext_xx_small_Opset16|Numerics|PASS|
+|edgenext_xx_small_Opset16_timm|Numerics|PASS|
+|edgenext_xx_small_Opset17|Numerics|PASS|
+|edgenext_xx_small_Opset18|Numerics|PASS|
+|edgenext_xx_small_Opset18_timm|Numerics|PASS|
+|res2net101_26w_4s_Opset16|Numerics|PASS|
+|res2net101_26w_4s_Opset16_timm|Numerics|PASS|
+|res2net101_26w_4s_Opset17|Numerics|PASS|
+|res2net101_26w_4s_Opset18|Numerics|PASS|
+|res2net50_14w_8s_Opset16|Numerics|PASS|
+|res2net50_14w_8s_Opset16_timm|Numerics|PASS|
+|res2net50_14w_8s_Opset17|Numerics|PASS|
+|res2net50_14w_8s_Opset18|Numerics|PASS|
+|res2net50_26w_4s_Opset16|Numerics|PASS|
+|res2net50_26w_4s_Opset16_timm|Numerics|PASS|
+|res2net50_26w_4s_Opset17|Numerics|PASS|
+|res2net50_26w_4s_Opset18|Numerics|PASS|
+|res2net50_26w_6s_Opset16|Numerics|PASS|
+|res2net50_26w_6s_Opset17|Numerics|PASS|
+|res2net50_26w_6s_Opset17_timm|Numerics|PASS|
+|res2net50_26w_6s_Opset18|Numerics|PASS|
+|res2net50_26w_8s_Opset16|Numerics|PASS|
+|res2net50_26w_8s_Opset16_timm|Numerics|PASS|
+|res2net50_26w_8s_Opset17|Numerics|PASS|
+|res2net50_26w_8s_Opset18|Numerics|PASS|
+|res2net50_48w_2s_Opset16|Numerics|PASS|
+|res2net50_48w_2s_Opset17|Numerics|PASS|
+|res2net50_48w_2s_Opset18|Numerics|PASS|
+|res2next50_Opset16|Numerics|PASS|
+|res2next50_Opset17|Numerics|PASS|
+|res2next50_Opset18|Numerics|PASS|
+|res2next50_Opset18_timm|Numerics|PASS|
+|rexnet_100_Opset16|Numerics|PASS|
+|rexnet_100_Opset16_timm|Numerics|PASS|
+|rexnet_100_Opset17|Numerics|PASS|
+|rexnet_130_Opset16|Numerics|PASS|
+|rexnet_130_Opset16_timm|Numerics|PASS|
+|rexnet_130_Opset17|Numerics|PASS|
+|rexnet_150_Opset16|Numerics|PASS|
+|rexnet_150_Opset17|Numerics|PASS|
+|rexnet_150_Opset17_timm|Numerics|PASS|
+|rexnet_200_Opset16|Numerics|PASS|
+|rexnet_200_Opset16_timm|Numerics|PASS|
+|rexnet_200_Opset17|Numerics|PASS|
+|rexnetr_200.sw_in12k|Numerics|PASS|
+|rexnetr_200_Opset16|Numerics|PASS|
+|rexnetr_200_Opset17|Numerics|PASS|
+|rexnetr_200_Opset17_timm|Numerics|PASS|
+|rexnetr_300.sw_in12k|Numerics|PASS|
+|vit_large_patch16_384_Opset16|compiled_inference|PASS|
+|vit_large_patch16_384_Opset17|compiled_inference|PASS|
+|vit_large_patch16_384_Opset18|compiled_inference|PASS|
+|xcit_large_24_p16_224_Opset16|Numerics|PASS|
+|xcit_large_24_p16_224_Opset16_timm|Numerics|PASS|
+|xcit_large_24_p16_224_Opset17|Numerics|PASS|
+|xcit_large_24_p16_224_Opset17_timm|Numerics|PASS|
+|xcit_large_24_p16_224_Opset18|Numerics|PASS|
+|xcit_large_24_p16_224_dist_Opset16|Numerics|PASS|
+|xcit_large_24_p16_224_dist_Opset17|Numerics|PASS|
+|xcit_large_24_p16_224_dist_Opset18|Numerics|PASS|
+|xcit_large_24_p16_384_dist_Opset16|Numerics|PASS|
+|xcit_large_24_p16_384_dist_Opset16_timm|Numerics|PASS|
+|xcit_large_24_p16_384_dist_Opset17|Numerics|PASS|
+|xcit_large_24_p16_384_dist_Opset17_timm|Numerics|PASS|
+|xcit_large_24_p16_384_dist_Opset18|Numerics|PASS|
+|xcit_large_24_p8_224_Opset16|Numerics|PASS|
+|xcit_large_24_p8_224_Opset17|Numerics|PASS|
+|xcit_large_24_p8_224_Opset17_timm|Numerics|PASS|
+|xcit_large_24_p8_224_Opset18|Numerics|PASS|
+|xcit_large_24_p8_224_dist_Opset16|Numerics|PASS|
+|xcit_large_24_p8_224_dist_Opset17|Numerics|PASS|
+|xcit_large_24_p8_224_dist_Opset18|Numerics|PASS|
+|xcit_large_24_p8_384_dist_Opset16|Numerics|PASS|
+|xcit_large_24_p8_384_dist_Opset16_timm|Numerics|PASS|
+|xcit_large_24_p8_384_dist_Opset17|Numerics|PASS|
+|xcit_large_24_p8_384_dist_Opset17_timm|Numerics|PASS|
+|xcit_large_24_p8_384_dist_Opset18|Numerics|PASS|
+|xcit_medium_24_p16_224_Opset16|Numerics|PASS|
+|xcit_medium_24_p16_224_Opset16_timm|Numerics|PASS|
+|xcit_medium_24_p16_224_Opset17|Numerics|PASS|
+|xcit_medium_24_p16_224_Opset18|Numerics|PASS|
+|xcit_medium_24_p16_224_Opset18_timm|Numerics|PASS|
+|xcit_medium_24_p16_224_dist_Opset16|Numerics|PASS|
+|xcit_medium_24_p16_224_dist_Opset17|Numerics|PASS|
+|xcit_medium_24_p16_224_dist_Opset18|Numerics|PASS|
+|xcit_medium_24_p16_384_dist_Opset16|Numerics|PASS|
+|xcit_medium_24_p16_384_dist_Opset16_timm|Numerics|PASS|
+|xcit_medium_24_p16_384_dist_Opset17|Numerics|PASS|
+|xcit_medium_24_p16_384_dist_Opset17_timm|Numerics|PASS|
+|xcit_medium_24_p16_384_dist_Opset18|Numerics|PASS|
+|xcit_medium_24_p8_224_Opset16|Numerics|PASS|
+|xcit_medium_24_p8_224_Opset16_timm|Numerics|PASS|
+|xcit_medium_24_p8_224_Opset17|Numerics|PASS|
+|xcit_medium_24_p8_224_Opset17_timm|Numerics|PASS|
+|xcit_medium_24_p8_224_Opset18|Numerics|PASS|
+|xcit_medium_24_p8_224_dist_Opset16|Numerics|PASS|
+|xcit_medium_24_p8_224_dist_Opset17|Numerics|PASS|
+|xcit_medium_24_p8_224_dist_Opset18|Numerics|PASS|
+|xcit_medium_24_p8_384_dist_Opset16|Numerics|PASS|
+|xcit_medium_24_p8_384_dist_Opset16_timm|Numerics|PASS|
+|xcit_medium_24_p8_384_dist_Opset17|Numerics|PASS|
+|xcit_medium_24_p8_384_dist_Opset17_timm|Numerics|PASS|
+|xcit_medium_24_p8_384_dist_Opset18|Numerics|PASS|
+|xcit_nano_12_p16_224_Opset16|Numerics|PASS|
+|xcit_nano_12_p16_224_Opset16_timm|Numerics|PASS|
+|xcit_nano_12_p16_224_Opset17|Numerics|PASS|
+|xcit_nano_12_p16_224_Opset18|Numerics|PASS|
+|xcit_nano_12_p16_224_Opset18_timm|Numerics|PASS|
+|xcit_nano_12_p16_224_dist_Opset16|Numerics|PASS|
+|xcit_nano_12_p16_224_dist_Opset17|Numerics|PASS|
+|xcit_nano_12_p16_224_dist_Opset18|Numerics|PASS|
+|xcit_nano_12_p16_384_dist_Opset16|Numerics|PASS|
+|xcit_nano_12_p16_384_dist_Opset16_timm|Numerics|PASS|
+|xcit_nano_12_p16_384_dist_Opset17|Numerics|PASS|
+|xcit_nano_12_p16_384_dist_Opset17_timm|Numerics|PASS|
+|xcit_nano_12_p16_384_dist_Opset18|Numerics|PASS|
+|xcit_nano_12_p8_224_Opset16|Numerics|PASS|
+|xcit_nano_12_p8_224_Opset16_timm|Numerics|PASS|
+|xcit_nano_12_p8_224_Opset17|Numerics|PASS|
+|xcit_nano_12_p8_224_Opset18|Numerics|PASS|
+|xcit_nano_12_p8_224_dist_Opset16|Numerics|PASS|
+|xcit_nano_12_p8_224_dist_Opset16_timm|Numerics|PASS|
+|xcit_nano_12_p8_224_dist_Opset17|Numerics|PASS|
+|xcit_nano_12_p8_224_dist_Opset18|Numerics|PASS|
+|xcit_nano_12_p8_224_dist_Opset18_timm|Numerics|PASS|
+|xcit_nano_12_p8_384_dist_Opset16|Numerics|PASS|
+|xcit_nano_12_p8_384_dist_Opset16_timm|Numerics|PASS|
+|xcit_nano_12_p8_384_dist_Opset17|Numerics|PASS|
+|xcit_nano_12_p8_384_dist_Opset18|Numerics|PASS|
+|xcit_nano_12_p8_384_dist_Opset18_timm|Numerics|PASS|
+|xcit_small_12_p16_224_Opset16|Numerics|PASS|
+|xcit_small_12_p16_224_Opset17|Numerics|PASS|
+|xcit_small_12_p16_224_Opset17_timm|Numerics|PASS|
+|xcit_small_12_p16_224_Opset18|Numerics|PASS|
+|xcit_small_12_p16_224_dist_Opset16|Numerics|PASS|
+|xcit_small_12_p16_224_dist_Opset16_timm|Numerics|PASS|
+|xcit_small_12_p16_224_dist_Opset17|Numerics|PASS|
+|xcit_small_12_p16_224_dist_Opset18|Numerics|PASS|
+|xcit_small_12_p16_384_dist_Opset16|Numerics|PASS|
+|xcit_small_12_p16_384_dist_Opset16_timm|Numerics|PASS|
+|xcit_small_12_p16_384_dist_Opset17|Numerics|PASS|
+|xcit_small_12_p16_384_dist_Opset17_timm|Numerics|PASS|
+|xcit_small_12_p16_384_dist_Opset18|Numerics|PASS|
+|xcit_small_12_p8_224_Opset16|Numerics|PASS|
+|xcit_small_12_p8_224_Opset17|Numerics|PASS|
+|xcit_small_12_p8_224_Opset18|Numerics|PASS|
+|xcit_small_12_p8_224_dist_Opset16|Numerics|PASS|
+|xcit_small_12_p8_224_dist_Opset16_timm|Numerics|PASS|
+|xcit_small_12_p8_224_dist_Opset17|Numerics|PASS|
+|xcit_small_12_p8_224_dist_Opset18|Numerics|PASS|
+|xcit_small_12_p8_384_dist_Opset16|Numerics|PASS|
+|xcit_small_12_p8_384_dist_Opset16_timm|Numerics|PASS|
+|xcit_small_12_p8_384_dist_Opset17|Numerics|PASS|
+|xcit_small_12_p8_384_dist_Opset17_timm|Numerics|PASS|
+|xcit_small_12_p8_384_dist_Opset18|Numerics|PASS|
+|xcit_small_24_p16_224_Opset16|Numerics|PASS|
+|xcit_small_24_p16_224_Opset16_timm|Numerics|PASS|
+|xcit_small_24_p16_224_Opset17|Numerics|PASS|
+|xcit_small_24_p16_224_Opset17_timm|Numerics|PASS|
+|xcit_small_24_p16_224_Opset18|Numerics|PASS|
+|xcit_small_24_p16_224_dist_Opset16|Numerics|PASS|
+|xcit_small_24_p16_224_dist_Opset17|Numerics|PASS|
+|xcit_small_24_p16_224_dist_Opset18|Numerics|PASS|
+|xcit_small_24_p8_224_Opset16|Numerics|PASS|
+|xcit_small_24_p8_224_Opset16_timm|Numerics|PASS|
+|xcit_small_24_p8_224_Opset17|Numerics|PASS|
+|xcit_small_24_p8_224_Opset18|Numerics|PASS|
+|xcit_small_24_p8_224_Opset18_timm|Numerics|PASS|
+|xcit_small_24_p8_224_dist_Opset16|Numerics|PASS|
+|xcit_small_24_p8_224_dist_Opset17|Numerics|PASS|
+|xcit_small_24_p8_224_dist_Opset18|Numerics|PASS|
+|xcit_small_24_p8_384_dist_Opset16|Numerics|PASS|
+|xcit_small_24_p8_384_dist_Opset16_timm|Numerics|PASS|
+|xcit_small_24_p8_384_dist_Opset17|Numerics|PASS|
+|xcit_small_24_p8_384_dist_Opset18|Numerics|PASS|
+|xcit_small_24_p8_384_dist_Opset18_timm|Numerics|PASS|
+|xcit_tiny_12_p16_224_Opset16|Numerics|PASS|
+|xcit_tiny_12_p16_224_Opset17|Numerics|PASS|
+|xcit_tiny_12_p16_224_Opset18|Numerics|PASS|
+|xcit_tiny_12_p16_224_dist_Opset16|Numerics|PASS|
+|xcit_tiny_12_p16_224_dist_Opset16_timm|Numerics|PASS|
+|xcit_tiny_12_p16_224_dist_Opset17|Numerics|PASS|
+|xcit_tiny_12_p16_224_dist_Opset18|Numerics|PASS|
+|xcit_tiny_12_p16_384_dist_Opset16|Numerics|PASS|
+|xcit_tiny_12_p16_384_dist_Opset16_timm|Numerics|PASS|
+|xcit_tiny_12_p16_384_dist_Opset17|Numerics|PASS|
+|xcit_tiny_12_p16_384_dist_Opset17_timm|Numerics|PASS|
+|xcit_tiny_12_p16_384_dist_Opset18|Numerics|PASS|
+|xcit_tiny_12_p8_224_Opset16|Numerics|PASS|
+|xcit_tiny_12_p8_224_Opset16_timm|Numerics|PASS|
+|xcit_tiny_12_p8_224_Opset17|Numerics|PASS|
+|xcit_tiny_12_p8_224_Opset17_timm|Numerics|PASS|
+|xcit_tiny_12_p8_224_Opset18|Numerics|PASS|
+|xcit_tiny_12_p8_224_dist_Opset16|Numerics|PASS|
+|xcit_tiny_12_p8_224_dist_Opset17|Numerics|PASS|
+|xcit_tiny_12_p8_224_dist_Opset18|Numerics|PASS|
+|xcit_tiny_12_p8_384_dist_Opset16|Numerics|PASS|
+|xcit_tiny_12_p8_384_dist_Opset16_timm|Numerics|PASS|
+|xcit_tiny_12_p8_384_dist_Opset17|Numerics|PASS|
+|xcit_tiny_12_p8_384_dist_Opset17_timm|Numerics|PASS|
+|xcit_tiny_12_p8_384_dist_Opset18|Numerics|PASS|
+|xcit_tiny_24_p16_224_Opset16|Numerics|PASS|
+|xcit_tiny_24_p16_224_Opset17|Numerics|PASS|
+|xcit_tiny_24_p16_224_Opset18|Numerics|PASS|
+|xcit_tiny_24_p16_224_dist_Opset16|Numerics|PASS|
+|xcit_tiny_24_p16_224_dist_Opset16_timm|Numerics|PASS|
+|xcit_tiny_24_p16_224_dist_Opset17|Numerics|PASS|
+|xcit_tiny_24_p16_224_dist_Opset18|Numerics|PASS|
+|xcit_tiny_24_p16_224_dist_Opset18_timm|Numerics|PASS|
+|xcit_tiny_24_p16_384_dist_Opset16|Numerics|PASS|
+|xcit_tiny_24_p16_384_dist_Opset16_timm|Numerics|PASS|
+|xcit_tiny_24_p16_384_dist_Opset17|Numerics|PASS|
+|xcit_tiny_24_p16_384_dist_Opset18|Numerics|PASS|
+|xcit_tiny_24_p16_384_dist_Opset18_timm|Numerics|PASS|
+|xcit_tiny_24_p8_224_Opset16|Numerics|PASS|
+|xcit_tiny_24_p8_224_Opset17|Numerics|PASS|
+|xcit_tiny_24_p8_224_Opset18|Numerics|PASS|
+|xcit_tiny_24_p8_224_Opset18_timm|Numerics|PASS|
+|xcit_tiny_24_p8_224_dist_Opset16|Numerics|PASS|
+|xcit_tiny_24_p8_224_dist_Opset16_timm|Numerics|PASS|
+|xcit_tiny_24_p8_224_dist_Opset17|Numerics|PASS|
+|xcit_tiny_24_p8_224_dist_Opset18|Numerics|PASS|
+|xcit_tiny_24_p8_384_dist_Opset16|Numerics|PASS|
+|xcit_tiny_24_p8_384_dist_Opset17|Numerics|PASS|
+|xcit_tiny_24_p8_384_dist_Opset17_timm|Numerics|PASS|
+|xcit_tiny_24_p8_384_dist_Opset18|Numerics|PASS|
 

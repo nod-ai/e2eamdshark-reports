@@ -8,31 +8,30 @@ progression tolerance: 10.0%
 
 |model name|exit_status|analysis|old_time_ms|new_time_ms|change_ms|percent_change|
 |---|---|---|---|---|---|---|
-|migraphx_ORT__bert_base_cased_1|PASS|regression|85.632|1469.5395|1383.9075|1616.11%|
-|migraphx_ORT__bert_base_uncased_1|PASS|regression|86.1524|1460.5515|1374.3991|1595.31%|
-|migraphx_ORT__bert_large_uncased_1|PASS|regression|260.9527|12297.5318|12036.5791|4612.55%|
-|migraphx_ORT__distilgpt2_1|PASS|regression|31.2671|714.8756|683.6085|2186.35%|
-|migraphx_ORT__onnx_models__bert_base_cased_1_fp16_gpu|Numerics|regression|83.0977|2495.2957|2412.198|2902.85%|
-|migraphx_ORT__onnx_models__bert_large_uncased_1_fp16_gpu|Numerics|regression|244.0676|10491.4162|10247.3486|4198.57%|
-|migraphx_ORT__onnx_models__distilgpt2_1_fp16_gpu|Numerics|regression|40.5572|635.6109|595.0537|1467.2%|
-|migraphx_cadene__dpn92i1|Numerics|regression|186.2736|435.624|249.3503|133.86%|
-|migraphx_cadene__inceptionv4i16|PASS|regression|7257.2016|8887.8818|1630.6801|22.47%|
-|migraphx_cadene__resnext101_64x4di1|PASS|regression|330.1171|816.9123|486.7952|147.46%|
-|migraphx_huggingface-transformers__bert_mrpc8|PASS|regression|420.8|10669.2582|10248.4582|2435.47%|
-|migraphx_mlperf__resnet50_v1|PASS|regression|100.8666|203.1197|102.2531|101.37%|
-|migraphx_models__whisper-tiny-decoder|PASS|regression|40.8811|292.263|251.3819|614.91%|
-|migraphx_models__whisper-tiny-encoder|Numerics|regression|182.9736|1038.5026|855.529|467.57%|
-|migraphx_pytorch-examples__wlang_gru|PASS|progression|70.2852|57.9958|-12.2893|-17.48%|
-|migraphx_torchvision__densenet121i32|PASS|regression|1377.2882|4790.0668|3412.7786|247.79%|
-|migraphx_torchvision__inceptioni1|PASS|regression|258.7426|349.8034|91.0608|35.19%|
-|migraphx_torchvision__resnet50i1|PASS|regression|99.4756|194.6778|95.2022|95.7%|
+|migraphx_ORT__bert_base_cased_1|PASS|regression|85.632|1490.9669|1405.3349|1641.13%|
+|migraphx_ORT__bert_base_uncased_1|PASS|regression|86.1524|1486.7927|1400.6403|1625.77%|
+|migraphx_ORT__bert_large_uncased_1|PASS|regression|260.9527|12232.4322|11971.4795|4587.61%|
+|migraphx_ORT__distilgpt2_1|PASS|regression|31.2671|736.2612|704.9941|2254.75%|
+|migraphx_ORT__onnx_models__bert_base_cased_1_fp16_gpu|Numerics|regression|83.0977|2534.3143|2451.2166|2949.8%|
+|migraphx_ORT__onnx_models__bert_large_uncased_1_fp16_gpu|Numerics|regression|244.0676|10092.2876|9848.22|4035.04%|
+|migraphx_ORT__onnx_models__distilgpt2_1_fp16_gpu|Numerics|regression|40.5572|668.7756|628.2184|1548.97%|
+|migraphx_cadene__dpn92i1|Numerics|regression|186.2736|438.7833|252.5096|135.56%|
+|migraphx_cadene__inceptionv4i16|PASS|regression|7257.2016|8838.7029|1581.5013|21.79%|
+|migraphx_cadene__resnext101_64x4di1|PASS|regression|330.1171|819.0862|488.9691|148.12%|
+|migraphx_huggingface-transformers__bert_mrpc8|PASS|regression|420.8|9878.8026|9458.0026|2247.62%|
+|migraphx_mlperf__resnet50_v1|PASS|regression|100.8666|203.2532|102.3866|101.51%|
+|migraphx_models__whisper-tiny-decoder|PASS|regression|40.8811|299.7416|258.8605|633.2%|
+|migraphx_models__whisper-tiny-encoder|Numerics|regression|182.9736|1084.6987|901.7251|492.82%|
+|migraphx_pytorch-examples__wlang_gru|PASS|progression|70.2852|55.6221|-14.6631|-20.86%|
+|migraphx_torchvision__densenet121i32|PASS|regression|1377.2882|4822.3876|3445.0994|250.14%|
+|migraphx_torchvision__inceptioni1|PASS|regression|258.7426|348.1874|89.4448|34.57%|
+|migraphx_torchvision__resnet50i1|PASS|regression|99.4756|192.4547|92.9791|93.47%|
 
-## 31 Regressions Found:
+## 30 Regressions Found:
 
 |model name|old_status|new_status|
 |---|---|---|
 |RDN_pytorch_vaiq_int8|Numerics|compiled_inference|
-|RRDB_ESRGAN_vaiq_int8|Numerics|compilation|
 |crossvit_15_240|PASS|Numerics|
 |crossvit_15_dagger_240|PASS|Numerics|
 |crossvit_15_dagger_408|PASS|Numerics|
@@ -63,7 +62,7 @@ progression tolerance: 10.0%
 |migx_bench_bert-large-uncased_8_384|PASS|compiled_inference|
 |model--albert-xxl-v2-finetuned-squad--anas-awadalla|Numerics|compiled_inference|
 
-## 231 Progressions Found:
+## 233 Progressions Found:
 
 |model name|old_status|new_status|
 |---|---|---|
@@ -270,6 +269,8 @@ progression tolerance: 10.0%
 |pvt_v2_b4|Numerics|PASS|
 |pvt_v2_b5|Numerics|PASS|
 |resnest50d_1s4x24d_vaiq|compilation|PASS|
+|rexnetr_200.sw_in12k|Numerics|PASS|
+|rexnetr_300.sw_in12k|Numerics|PASS|
 |tf_efficientnet_b0.aa_in1k|Numerics|PASS|
 |tf_efficientnet_b1.aa_in1k|Numerics|PASS|
 |tf_efficientnet_b2.aa_in1k|Numerics|PASS|

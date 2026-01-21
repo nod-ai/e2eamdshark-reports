@@ -7,7 +7,7 @@
 | IREE Compilation | 359 | 99.7% | 100.0% |
 | Gold Inference | 359 | 99.7% | 100.0% |
 | IREE Inference Invocation | 359 | 99.7% | 100.0% |
-| Inference Comparison (PASS) | 311 | 86.4% | 86.6% |
+| Inference Comparison (PASS) | 313 | 86.9% | 87.2% |
 ## Fail Summary
 
 **TOTAL TESTS = 360**
@@ -17,7 +17,7 @@
 | IREE Compilation | 0 | 0.0% |
 | Gold Inference | 0 | 0.0% |
 | IREE Inference Invocation | 0 | 0.0% |
-| Inference Comparison | 48 | 13.3% |
+| Inference Comparison | 46 | 12.8% |
 ## Test Run Detail
 Test was run with the following arguments:
 Namespace(sources=['./e2eamdshark-reports/ci_reports_llvm-cpu_vai-hf-cnn-fp32-shard1_unique_onnx_json/vai-hf-cnn-fp32-shard1_unique.json', './e2eamdshark-reports/ci_reports_llvm-cpu_vai-hf-cnn-fp32-shard2_unique_onnx_json/vai-hf-cnn-fp32-shard2_unique.json', './e2eamdshark-reports/ci_reports_llvm-cpu_vai-hf-cnn-fp32-shard3_unique_onnx_json/vai-hf-cnn-fp32-shard3_unique.json'], output='./e2eamdshark-reports/vai-hf-cnn-fp32_unique.json', report=True, report_file='./e2eamdshark-reports/vai-hf-cnn-fp32_unique.md')
@@ -258,8 +258,8 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_llvm-cpu_vai-hf-cnn-fp32-sh
 | resnetrs270 | PASS | None | |
 | resnetrs350 | PASS | None | |
 | resnetrs420 | PASS | None | |
-| rexnetr_200.sw_in12k | Numerics | None | |
-| rexnetr_300.sw_in12k | Numerics | None | |
+| rexnetr_200.sw_in12k | PASS | None | |
+| rexnetr_300.sw_in12k | PASS | None | |
 | sebotnet33ts_256 | PASS | None | |
 | swin_base_patch4_window12_384.ms_in1k | PASS | None | |
 | swin_base_patch4_window7_224.ms_in1k | PASS | None | |

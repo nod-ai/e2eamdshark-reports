@@ -1,11 +1,11 @@
 
 # COMPILATION ERROR ANALYSIS
 
-**Total compilation failures: 116**
+**Total compilation failures: 115**
 
 | Status | Count |
 |---|---|
-| Timeouts | 1 |
+| Timeouts | 0 |
 | Errors | 115 |
 | No log | 0 |
 
@@ -220,7 +220,7 @@
 | test_name | command | error |
 |---|---|---|
 | maskrcnn_resnet50_fpn_v2_Opset16 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/maskrcnn_resnet50_fpn_v2_Opset16/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/maskrcnn_resnet50_fpn_v2_Opset16/compiled_model.vmfb | failed to legalize unresolved materialization from ('!torch.vtensor<[0,224,224],f32>') to ('!torch.vtensor<[],f32>') that remained live after conversion |
-| maskrcnn_resnet50_fpn_v2_Opset17 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/maskrcnn_resnet50_fpn_v2_Opset17/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/maskrcnn_resnet50_fpn_v2_Opset17/compiled_model.vmfb | failed to legalize unresolved materialization from ('!torch.vtensor<[0,224,224],f32>') to ('!torch.vtensor<[],f32>') that remained live after conversion |
+| maskrcnn_resnet50_fpn_v2_Opset17 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/maskrcnn_resnet50_fpn_v2_Opset17/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/maskrcnn_resnet50_fpn_v2_Opset17/compiled_model.vmfb | failed to legalize unresolved materialization from ('!torch.vtensor<[25769803776],f32>') to ('!torch.vtensor<[?,?,?,?],f32>') that remained live after conversion |
 | maskrcnn_resnet50_fpn_v2_Opset18 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/maskrcnn_resnet50_fpn_v2_Opset18/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/maskrcnn_resnet50_fpn_v2_Opset18/compiled_model.vmfb | failed to legalize unresolved materialization from ('!torch.vtensor<[0,224,224],f32>') to ('!torch.vtensor<[],f32>') that remained live after conversion |
 
 ### Error: 'OP' op has invalid Read access range [0 to -393216 for -393216] of resource %18 with size -393216
@@ -242,10 +242,4 @@
 | xlnetlmhead_Opset16 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/xlnetlmhead_Opset16/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/xlnetlmhead_Opset16/compiled_model.vmfb | 'stream.async.dispatch' op has invalid Read access range [0 to -524288 for -524288] of resource %18 with size -524288 |
 | xlnetlmhead_Opset17 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/xlnetlmhead_Opset17/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/xlnetlmhead_Opset17/compiled_model.vmfb | 'stream.async.dispatch' op has invalid Read access range [0 to -524288 for -524288] of resource %18 with size -524288 |
 | xlnetlmhead_Opset18 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/xlnetlmhead_Opset18/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/xlnetlmhead_Opset18/compiled_model.vmfb | 'stream.async.dispatch' op has invalid Read access range [0 to -524288 for -524288] of resource %18 with size -524288 |
-
-## TIMEOUT TESTS
-
-| test_name | command |
-|---|---|
-| RRDB_ESRGAN_vaiq_int8 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/RRDB_ESRGAN_vaiq_int8/model.torch_onnx.mlir --iree-hal-target-backends=llvm-cpu --iree-llvmcpu-target-cpu=host -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/RRDB_ESRGAN_vaiq_int8/compiled_model.vmfb |
 

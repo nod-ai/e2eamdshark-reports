@@ -1,0 +1,15 @@
+# Test Run Comparison Report
+
+## One Regression Found:
+
+|model name|old_status|new_status|
+|---|---|---|
+|hf_diagram_detr_r50_finetuned|Numerics|setup|
+
+## 2 Progressions Found:
+
+|model name|old_status|new_status|
+|---|---|---|
+|hf_resnet50.a1_in1k|Numerics|PASS|
+|hf_wide_resnet50_2.racm_in1k|Numerics|PASS|
+

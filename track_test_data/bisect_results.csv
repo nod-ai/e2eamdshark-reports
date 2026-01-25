@@ -2,3 +2,4 @@ Date,Model,First Bad Commit
 2026-01-16,DeepLabV3_resnet50_vaiq_int8(GPU),[f8d15497a7646bbd4a40b18000335e7392392f17]
 2026-01-17,migx_bench_bert-large-uncased_16_128(CPU),[7afe6e7ae687385c283876f766c77cc0ee748d93]
 2026-01-24,migx_bench_bert-large-uncased_16_128(CPU),[6709ef9063b95351fda823b35321dfff7f859027]
+2026-01-25,model--s2t-medium-librispeech-asr--facebook(CPU),[818f45f681923142b0dfd1a4b02deffdebfda707]

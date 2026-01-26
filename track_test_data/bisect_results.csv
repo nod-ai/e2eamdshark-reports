@@ -3,3 +3,4 @@ Date,Model,First Bad Commit
 2026-01-17,migx_bench_bert-large-uncased_16_128(CPU),[7afe6e7ae687385c283876f766c77cc0ee748d93]
 2026-01-24,migx_bench_bert-large-uncased_16_128(CPU),[6709ef9063b95351fda823b35321dfff7f859027]
 2026-01-25,model--s2t-medium-librispeech-asr--facebook(CPU),[818f45f681923142b0dfd1a4b02deffdebfda707]
+2026-01-26,bvlcalexnet-12-qdq(GPU),[1d89835a8d4e8113e164ac26fd7f2b1576435304]

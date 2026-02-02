@@ -1,0 +1,78 @@
+# Copyright 2025 Advanced Micro Devices, Inc.
+#
+# Licensed under the Apache License v2.0 with LLVM Exceptions.
+# See https://llvm.org/LICENSE.txt for license information.
+# SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
+
+name: CI - Generate Comparison Reports
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 22 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  generate-comparison:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Compute today's date
+        id: today
+        run: |
+          echo "date=$(date +%Y-%m-%d)" >> $GITHUB_OUTPUT
+
+      - name: Generate comparison reports
+        run: |
+          chmod +x Utils/generate_comparison_reports.sh
+          ./Utils/generate_comparison_reports.sh "${{ steps.today.outputs.date }}"
+
+      - name: Upload comparison reports
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
+        with:
+          name: comparison-reports
+          path: |
+            ${{ steps.today.outputs.date }}/comparison_reports/
+
+      - name: Checkout default branch (schedule only)
+        if: github.event_name == 'schedule'
+        run: |
+          git fetch origin
+          git checkout main
+
+      - name: Commit and push comparison reports
+        if: github.event_name == 'schedule'
+        run: |
+          DEFAULT_BRANCH="main"
+          git status
+          git branch
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add ${{ steps.today.outputs.date }}/comparison_reports/
+
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "$(cat <<'EOF'
+          add GPU vs CPU comparison reports for ${{ steps.today.outputs.date }}
+
+          Co-Authored-By: Claude (Claude-Sonnet-4.5) <noreply@anthropic.com>
+          EOF
+          )"
+            git push origin "$DEFAULT_BRANCH"
+          fi

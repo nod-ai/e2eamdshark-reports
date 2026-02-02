@@ -17,6 +17,9 @@ if [ ! -d "$DATE_DIR" ]; then
     exit 1
 fi
 
+# Get all date directories sorted in descending order
+ALL_DATES=$(ls -d [0-9][0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9] 2>/dev/null | sort -r)
+
 # Create output directory for comparison reports
 OUTPUT_DIR="$DATE_DIR/comparison_reports"
 mkdir -p "$OUTPUT_DIR"
@@ -78,23 +81,84 @@ for DIR_NAME in "${POSSIBLE_DIRS[@]}"; do
     echo "  Found GPU combined report: $(basename $GPU_COMBINED_DIR)"
     echo "  Found CPU combined report: $(basename $CPU_COMBINED_DIR)"
 
-    # Check if both summary files exist
-    if [ -f "$GPU_SUMMARY" ] && [ -f "$CPU_SUMMARY" ]; then
-        OUTPUT_FILE="$OUTPUT_DIR/${DIR_NAME}_gpu_vs_cpu_comparison.md"
-
-        echo "  Generating comparison report for $DIR_NAME..."
-        python3 Utils/compare_files.py "$GPU_SUMMARY" "$CPU_SUMMARY" "$OUTPUT_FILE"
-
-        REPORTS_GENERATED=$((REPORTS_GENERATED + 1))
-    else
-        echo "  Warning: Missing summary.md files in combined-reports directories"
+    # Check if both current summary files exist
+    if [ ! -f "$GPU_SUMMARY" ] || [ ! -f "$CPU_SUMMARY" ]; then
+        echo "  Warning: Missing current summary.md files in combined-reports directories"
         if [ ! -f "$GPU_SUMMARY" ]; then
             echo "    - Missing: $GPU_SUMMARY"
         fi
         if [ ! -f "$CPU_SUMMARY" ]; then
             echo "    - Missing: $CPU_SUMMARY"
         fi
+        continue
     fi
+
+    # Find previous GPU data
+    PREV_GPU_SUMMARY="none"
+    PREV_GPU_DATE=""
+
+    echo "  Finding previous GPU data..."
+    for PREV_DATE in $ALL_DATES; do
+        if [[ "$PREV_DATE" < "$DATE_DIR" ]]; then
+            PREV_ROCM_DIR="$PREV_DATE/$DIR_NAME/rocm"
+            if [ -d "$PREV_ROCM_DIR" ]; then
+                PREV_GPU_COMBINED_DIR=$(find "$PREV_ROCM_DIR" -maxdepth 1 -type d -name "combined-reports*" 2>/dev/null | head -n 1)
+                if [ -n "$PREV_GPU_COMBINED_DIR" ]; then
+                    PREV_SUMMARY="$PREV_GPU_COMBINED_DIR/summary.md"
+                    if [ -f "$PREV_SUMMARY" ]; then
+                        PREV_GPU_SUMMARY="$PREV_SUMMARY"
+                        PREV_GPU_DATE="$PREV_DATE"
+                        echo "    Found previous GPU data from: $PREV_GPU_DATE"
+                        break
+                    fi
+                fi
+            fi
+        fi
+    done
+
+    if [ "$PREV_GPU_SUMMARY" == "none" ]; then
+        echo "    Warning: No previous GPU data found for regression comparison"
+    fi
+
+    # Find previous CPU data
+    PREV_CPU_SUMMARY="none"
+    PREV_CPU_DATE=""
+
+    echo "  Finding previous CPU data..."
+    for PREV_DATE in $ALL_DATES; do
+        if [[ "$PREV_DATE" < "$DATE_DIR" ]]; then
+            PREV_LLVM_CPU_DIR="$PREV_DATE/$DIR_NAME/llvm-cpu"
+            if [ -d "$PREV_LLVM_CPU_DIR" ]; then
+                PREV_CPU_COMBINED_DIR=$(find "$PREV_LLVM_CPU_DIR" -maxdepth 1 -type d -name "combined-reports*" 2>/dev/null | head -n 1)
+                if [ -n "$PREV_CPU_COMBINED_DIR" ]; then
+                    PREV_SUMMARY="$PREV_CPU_COMBINED_DIR/summary.md"
+                    if [ -f "$PREV_SUMMARY" ]; then
+                        PREV_CPU_SUMMARY="$PREV_SUMMARY"
+                        PREV_CPU_DATE="$PREV_DATE"
+                        echo "    Found previous CPU data from: $PREV_CPU_DATE"
+                        break
+                    fi
+                fi
+            fi
+        fi
+    done
+
+    if [ "$PREV_CPU_SUMMARY" == "none" ]; then
+        echo "    Warning: No previous CPU data found for regression comparison"
+    fi
+
+    # Generate unified report
+    OUTPUT_FILE="$OUTPUT_DIR/${DIR_NAME}_comparison_report.md"
+
+    echo "  Generating unified comparison report for $DIR_NAME..."
+    python3 Utils/generate_unified_report.py \
+        "$GPU_SUMMARY" \
+        "$CPU_SUMMARY" \
+        "$PREV_GPU_SUMMARY" \
+        "$PREV_CPU_SUMMARY" \
+        "$OUTPUT_FILE"
+
+    REPORTS_GENERATED=$((REPORTS_GENERATED + 1))
 
     echo ""
 done

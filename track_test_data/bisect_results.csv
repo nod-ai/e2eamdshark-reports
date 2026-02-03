@@ -5,3 +5,4 @@ Date,Model,First Bad Commit
 2026-01-25,model--s2t-medium-librispeech-asr--facebook(CPU),[818f45f681923142b0dfd1a4b02deffdebfda707]
 2026-01-26,bvlcalexnet-12-qdq(GPU),[1d89835a8d4e8113e164ac26fd7f2b1576435304]
 2026-01-30,regnetz_d8_evos_Opset16_timm(CPU),[7aa7be5fd3f237f3ef885437f3d1be3f8798dac6]
+2026-02-03,t5-decoder-with-lm-head-12(GPU),[86395216f0f41d8aa0172609f02480a25c942f5e]

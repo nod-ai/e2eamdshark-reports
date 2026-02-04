@@ -17,6 +17,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: data-tracker-main
+  cancel-in-progress: false
+
 jobs:
   find_regression_commit:
     if: ${{ github.repository_owner == 'nod-ai' || github.event_name != 'schedule' }}

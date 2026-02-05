@@ -17,9 +17,9 @@ on:
 permissions:
   contents: write
 
-concurrency:
-  group: data-tracker-main
-  cancel-in-progress: false
+# concurrency:
+#   group: data-tracker-main
+#   cancel-in-progress: false
 
 jobs:
   find_regression_commit:

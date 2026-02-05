@@ -16,6 +16,12 @@ DEVICE="$4"
 NEXT_COMMIT_AFTER_BAD=$(git rev-list --reverse "${GOOD_COMMIT}..HEAD" | head -n 1)
 MODEL_WITH_DEVICE="${MODEL}(${DEVICE})"
 
+if [[ "$DEVICE" == "GPU" ]]; then
+    export CACHE_DIR="/home/runner/data/e2eamdshark/amdshark-test-suite-models-cache"
+else
+    export CACHE_DIR="/home/runner/groups/aig_amdsharks/test-suite-ci-cache"
+fi
+
 git bisect reset || true
 git bisect start
 git bisect bad "$BAD_COMMIT"

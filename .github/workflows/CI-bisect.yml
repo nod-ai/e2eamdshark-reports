@@ -142,7 +142,7 @@ jobs:
           DEVICE="${{ matrix.config.DEVICE }}"
           ls
           pwd
-          touch" track_test_data/bisect_results_${DEVICE}.csv"
+          touch "track_test_data/bisect_results_${DEVICE}.csv"
           git checkout main
           git pull origin main
           rm "github-actions/regression_models.txt"

@@ -10,16 +10,12 @@ name: CI - Regression Tracker
 
 on:
   workflow_dispatch:
-  # pull_request:
+  pull_request:
   schedule:
     - cron: "27 22 * * *"
 
 permissions:
   contents: write
-
-concurrency:
-  group: data-tracker-main
-  cancel-in-progress: false
 
 jobs:
   find_regression_commit:
@@ -85,6 +81,7 @@ jobs:
           ls
           rm -rf iree/iree-build
           TODAY=$(date +%Y-%m-%d)
+          TODAY="2026-02-04"
 
           REPORT="${TODAY}/ci_reports_onnx/${{ matrix.config.BACKEND }}/combined-reports_unique/yesterday_comparison.md"
           JSON_STATUS="github-actions/model_old_new_status.json"
@@ -139,6 +136,9 @@ jobs:
         # if: github.event_name == 'schedule'
         run: |
           DEVICE="${{ matrix.config.DEVICE }}"
+          ls
+          pwd
+          git branch
           git pull origin main
           rm "github-actions/regression_models.txt"
           rm "github-actions/model_old_new_status.json"
@@ -154,7 +154,7 @@ jobs:
 
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add "track_test_data/bisect_results.csv_${DEVICE}"
+          git add "track_test_data/bisect_results_${DEVICE}.csv"
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 1
@@ -162,3 +162,4 @@ jobs:
             git commit -m "Update Regression CSV for ($(date +%Y-%m-%d))"
             git push origin "$DEFAULT_BRANCH"
           fi
+

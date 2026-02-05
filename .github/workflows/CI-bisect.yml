@@ -140,6 +140,8 @@ jobs:
         # if: github.event_name == 'schedule'
         run: |
           DEVICE="${{ matrix.config.DEVICE }}"
+          ls
+          pwd
           touch" track_test_data/bisect_results_${DEVICE}.csv"
           git checkout main
           git pull origin main

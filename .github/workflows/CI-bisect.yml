@@ -138,52 +138,30 @@ jobs:
       - name: "Push Artifacts"
         # if: github.event_name == 'schedule'
         run: |
+          git pull origin main
           rm "github-actions/regression_models.txt"
           rm "github-actions/model_old_new_status.json"
           rm -rf test-suite
           rm -rf iree
 
+          git fetch origin
+          git merge origin/main
+          git checkout main
           DEFAULT_BRANCH="main"
+          git status
+          git branch
+
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Stage the changes
           git add track_test_data/bisect_results.csv
 
           if git diff --cached --quiet; then
             echo "No changes to commit"
-            exit 0
+            exit 1
+          else
+            git commit -m "Update Regression CSV for ($(date +%Y-%m-%d))"
+            git push origin "$DEFAULT_BRANCH"
           fi
 
-          # Commit the changes
-          git commit -m "Update Regression CSV for ($(date +%Y-%m-%d)) - ${{ matrix.config.BACKEND }}"
 
-          # Pull with rebase and retry logic to handle concurrent updates
-          MAX_RETRIES=5
-          RETRY_COUNT=0
-          while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
-            git pull --rebase origin "$DEFAULT_BRANCH" && break
-            RETRY_COUNT=$((RETRY_COUNT + 1))
-            if [ $RETRY_COUNT -lt $MAX_RETRIES ]; then
-              echo "Pull failed, retrying in 10 seconds... (Attempt $RETRY_COUNT/$MAX_RETRIES)"
-              sleep 10
-            else
-              echo "Failed to pull after $MAX_RETRIES attempts"
-              exit 1
-            fi
-          done
-
-          # Push with retry logic
-          RETRY_COUNT=0
-          while [ $RETRY_COUNT -lt $MAX_RETRIES ]; do
-            git push origin "$DEFAULT_BRANCH" && break
-            RETRY_COUNT=$((RETRY_COUNT + 1))
-            if [ $RETRY_COUNT -lt $MAX_RETRIES ]; then
-              echo "Push failed, retrying in 10 seconds... (Attempt $RETRY_COUNT/$MAX_RETRIES)"
-              sleep 10
-              git pull --rebase origin "$DEFAULT_BRANCH"
-            else
-              echo "Failed to push after $MAX_RETRIES attempts"
-              exit 1
-            fi
-          done

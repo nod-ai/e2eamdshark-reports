@@ -28,7 +28,7 @@ BAD_COMMIT_HASH=$(git bisect log | grep '^# first bad commit' | awk '{print $5}'
 DATE=$(date "+%Y-%m-%d")
 
 # Append the information to a CSV file
-CSV_FILE="$PWD/../track_test_data/bisect_results.csv"
+CSV_FILE="$PWD/../track_test_data/bisect_results_${DEVICE}.csv"
 
 # Check if the CSV file exists, if not, add headers
 if [ ! -f "$CSV_FILE" ]; then

@@ -63,7 +63,7 @@ if [[ "$DEVICE" == "GPU" ]]; then
     --cleanup=3 \
     -v \
     --report
-    cat test-onnx/"$MODEL"/setup.log
+  cat test-onnx/"$MODEL"/setup.log
 else
   python3 run.py \
     -r ./test-onnx \

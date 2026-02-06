@@ -13,6 +13,7 @@ MODEL="$1"
 GOOD_COMMIT="$2"
 BAD_COMMIT="$3"
 DEVICE="$4"
+MODE="${5:-}"
 NEXT_COMMIT_AFTER_BAD=$(git rev-list --reverse "${GOOD_COMMIT}..HEAD" | head -n 1)
 MODEL_WITH_DEVICE="${MODEL}(${DEVICE})"
 
@@ -35,6 +36,9 @@ DATE=$(date "+%Y-%m-%d")
 
 # Append the information to a CSV file
 CSV_FILE="$PWD/../track_test_data/bisect_results_${DEVICE}.csv"
+if [[ "$MODE" == "HF" ]]; then
+  CSV_FILE="$PWD/../track_test_data/bisect_results_${DEVICE}_HF.csv"
+fi
 
 # Check if the CSV file exists, if not, add headers
 if [ ! -f "$CSV_FILE" ]; then

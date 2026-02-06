@@ -10,6 +10,7 @@ name: CI - Regression Tracker
 
 on:
   workflow_dispatch:
+  pull_request:
   schedule:
     - cron: "27 22 * * *"
 
@@ -53,112 +54,119 @@ jobs:
           python-version: "3.11"
 
       - name: Clone AMD-Shark-TestSuite
-        run: | 
-          git clone --depth 1 https://github.com/nod-ai/AMD-SHARK-TestSuite.git test-suite
-
-      - name: Setup alt e2eamdshark python venv
         run: |
-          ls 
-          rm -rf ${ALT_E2E_VENV_DIR}
-          sudo apt update
-          python3.11 -m venv ${ALT_E2E_VENV_DIR}
-          source ${ALT_E2E_VENV_DIR}/bin/activate
-          ls
-          which python
-          python3 -m pip install --upgrade pip
-          python3 -m pip install --upgrade pip
-          python3 -m pip install -r ./alt_e2eamdshark/base_requirements.txt
-        working-directory: ./test-suite
+          cd /home/runner/data/e2eamdshark/amdshark-test-suite-models-cache/
+          du -sh
+          echo "==========================="
+          ll
+          echo "==========================="
+          ls -R
 
-      - name: "Extract regression models"
-        run: |
-          date
-          pwd
-          source ${ALT_E2E_VENV_DIR}/bin/activate
-          which python
-          pip freeze
-          ls
-          rm -rf iree/iree-build
-          TODAY=$(date +%Y-%m-%d)
-          # TODAY="2026-02-04"
+      #     git clone -depth 1 https://github.com/nod-ai/AMD-SHARK-TestSuite.git test-suite
 
-          REPORT="${TODAY}/ci_reports_onnx/${{ matrix.config.BACKEND }}/combined-reports_unique/yesterday_comparison.md"
-          JSON_STATUS="github-actions/model_old_new_status.json"
+      # - name: Setup alt e2eamdshark python venv
+      #   run: |
+      #     ls 
+      #     rm -rf ${ALT_E2E_VENV_DIR}
+      #     sudo apt update
+      #     python3.11 -m venv ${ALT_E2E_VENV_DIR}
+      #     source ${ALT_E2E_VENV_DIR}/bin/activate
+      #     ls
+      #     which python
+      #     python3 -m pip install --upgrade pip
+      #     python3 -m pip install --upgrade pip
+      #     python3 -m pip install -r ./alt_e2eamdshark/base_requirements.txt
+      #   working-directory: ./test-suite
 
-          cat $REPORT
+      # - name: "Extract regression models"
+      #   run: |
+      #     date
+      #     pwd
+      #     source ${ALT_E2E_VENV_DIR}/bin/activate
+      #     which python
+      #     pip freeze
+      #     ls
+      #     rm -rf iree/iree-build
+      #     TODAY=$(date +%Y-%m-%d)
+      #     # TODAY="2026-02-04"
 
-          # extract model name, old and new status in a json file from the yesterday_comparison.md file
-          python3 github-actions/extract_model_old_new_status_from_md.py "$REPORT"
+      #     REPORT="${TODAY}/ci_reports_onnx/${{ matrix.config.BACKEND }}/combined-reports_unique/yesterday_comparison.md"
+      #     JSON_STATUS="github-actions/model_old_new_status.json"
 
-          # extract model names in a .txt file
-          python3 github-actions/extract_regression_model_names.py "$JSON_STATUS"
+      #     cat $REPORT
 
-          echo "JSON status"
-          cat "$JSON_STATUS"
-          echo "Regression models:"
-          cat "github-actions/regression_models.txt"
+      #     # extract model name, old and new status in a json file from the yesterday_comparison.md file
+      #     python3 github-actions/extract_model_old_new_status_from_md.py "$REPORT"
 
-      - name: "Bisect Regression"
-        run: |
-          source ${ALT_E2E_VENV_DIR}/bin/activate
-          echo "================================ starting to bisect regression commits... ===================================="
-          git clone https://github.com/iree-org/iree.git
-          cd iree
+      #     # extract model names in a .txt file
+      #     python3 github-actions/extract_regression_model_names.py "$JSON_STATUS"
 
-          GOOD_COMMIT=$(git tag \
-              | grep '^iree-3\.[0-9]\+\.0rc' \
-              | sort -V -r \
-              | sed -n '3p')
-          BAD_COMMIT=$(git rev-parse HEAD)
+      #     echo "JSON status"
+      #     cat "$JSON_STATUS"
+      #     echo "Regression models:"
+      #     cat "github-actions/regression_models.txt"
 
-          REPORT_DIR="$(pwd)/../"
-          sed -i '1!d' $REPORT_DIR/github-actions/regression_models.txt
-          while read -r model; do
-            echo "==============================="
-            echo "Bisecting $model"
-            echo "==============================="
+      # - name: "Bisect Regression"
+      #   run: |
+      #     source ${ALT_E2E_VENV_DIR}/bin/activate
+      #     echo "================================ starting to bisect regression commits... ===================================="
+      #     git clone https://github.com/iree-org/iree.git
+      #     cd iree
 
-            DEVICE="${{ matrix.config.DEVICE }}"
-            if [[ "$DEVICE" == "GPU" ]]; then
-              export CACHE_DIR="/home/runner/data/e2eamdshark/amdshark-test-suite-models-cache"
-            else
-              export CACHE_DIR="/home/runner/groups/aig_amdsharks/test-suite-ci-cache"
-            fi
-            echo "CACHE_DIR Set to : $CACHE_DIR"
-            $REPORT_DIR/github-actions/runbisect_for_model.sh "$model" "$GOOD_COMMIT" "$BAD_COMMIT" "$DEVICE"
-          done < $REPORT_DIR/github-actions/regression_models.txt
-          cd ..
+      #     GOOD_COMMIT=$(git tag \
+      #         | grep '^iree-3\.[0-9]\+\.0rc' \
+      #         | sort -V -r \
+      #         | sed -n '3p')
+      #     BAD_COMMIT=$(git rev-parse HEAD)
 
-          echo "==================================== done with bisecting regression. ===================================="
+      #     REPORT_DIR="$(pwd)/../"
+      #     sed -i '1!d' $REPORT_DIR/github-actions/regression_models.txt
+      #     while read -r model; do
+      #       echo "==============================="
+      #       echo "Bisecting $model"
+      #       echo "==============================="
 
-      - name: "Push Artifacts"
-        # if: github.event_name == 'schedule'
-        run: |
-          DEVICE="${{ matrix.config.DEVICE }}"
-          ls
-          pwd
-          git branch
-          git pull origin main
-          rm "github-actions/regression_models.txt"
-          rm "github-actions/model_old_new_status.json"
-          rm -rf test-suite
-          rm -rf iree
+      #       DEVICE="${{ matrix.config.DEVICE }}"
+      #       if [[ "$DEVICE" == "GPU" ]]; then
+      #         export CACHE_DIR="/home/runner/data/e2eamdshark/amdshark-test-suite-models-cache"
+      #       else
+      #         export CACHE_DIR="/home/runner/groups/aig_amdsharks/test-suite-ci-cache"
+      #       fi
+      #       echo "CACHE_DIR Set to : $CACHE_DIR"
+      #       $REPORT_DIR/github-actions/runbisect_for_model.sh "$model" "$GOOD_COMMIT" "$BAD_COMMIT" "$DEVICE"
+      #     done < $REPORT_DIR/github-actions/regression_models.txt
+      #     cd ..
+
+      #     echo "==================================== done with bisecting regression. ===================================="
+
+      # - name: "Push Artifacts"
+      #   # if: github.event_name == 'schedule'
+      #   run: |
+      #     DEVICE="${{ matrix.config.DEVICE }}"
+      #     ls
+      #     pwd
+      #     git branch
+      #     git pull origin main
+      #     rm "github-actions/regression_models.txt"
+      #     rm "github-actions/model_old_new_status.json"
+      #     rm -rf test-suite
+      #     rm -rf iree
           
-          git fetch origin
-          git merge origin/main
-          git checkout main
-          DEFAULT_BRANCH="main"
-          git status
-          git branch
+      #     git fetch origin
+      #     git merge origin/main
+      #     git checkout main
+      #     DEFAULT_BRANCH="main"
+      #     git status
+      #     git branch
 
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add "track_test_data/bisect_results_${DEVICE}.csv"
-          if git diff --cached --quiet; then
-            echo "No changes to commit"
-            exit 1
-          else
-            git commit -m "Update Regression CSV for ($(date +%Y-%m-%d))"
-            git push origin "$DEFAULT_BRANCH"
-          fi
+      #     git config user.name "github-actions[bot]"
+      #     git config user.email "github-actions[bot]@users.noreply.github.com"
+      #     git add "track_test_data/bisect_results_${DEVICE}.csv"
+      #     if git diff --cached --quiet; then
+      #       echo "No changes to commit"
+      #       exit 1
+      #     else
+      #       git commit -m "Update Regression CSV for ($(date +%Y-%m-%d))"
+      #       git push origin "$DEFAULT_BRANCH"
+      #     fi
 

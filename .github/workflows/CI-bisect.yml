@@ -58,9 +58,10 @@ jobs:
           cd /home/runner/data/e2eamdshark/amdshark-test-suite-models-cache/
           du -sh
           echo "==========================="
-          ll
-          echo "==========================="
           ls -R
+          echo "==========================="
+          ls -l
+          
 
       #     git clone -depth 1 https://github.com/nod-ai/AMD-SHARK-TestSuite.git test-suite
 

@@ -61,6 +61,9 @@ jobs:
           ls -R
           echo "==========================="
           ls -l
+          cd ..
+          echo "==========================="
+          ls -l /home/runner/data/e2eamdshark/
           
 
       #     git clone -depth 1 https://github.com/nod-ai/AMD-SHARK-TestSuite.git test-suite

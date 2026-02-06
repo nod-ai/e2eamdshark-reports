@@ -55,7 +55,7 @@ jobs:
 
       - name: Clone AMD-Shark-TestSuite
         run: |
-          sudo chmod -R a+rX /home/runner/data/e2eamdshark/
+          sudo chmod -R a+wX /home/runner/data/e2eamdshark/
           ls -l /home/runner/data/e2eamdshark/
           
 

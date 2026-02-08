@@ -10,6 +10,7 @@ name: CI - Regression Tracker For HF
 
 on:
   workflow_dispatch:
+  pull_request:
   schedule:
     - cron: "27 21 * * *"
 

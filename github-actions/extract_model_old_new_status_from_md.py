@@ -18,9 +18,9 @@ md_path = Path(sys.argv[1])
 text = md_path.read_text()
 
 match = re.search(
-    r"##\s+.+?\s+Regression[s]?\s+Found:\s*\n+"
+    r"##\s+.+?\s+Regression[s]?\s+Found:?\s*\n+"
     r"(.*?)"
-    r"\n##\s+(?:No|.+?)\s+Progression[s]?\s+Found:",
+    r"\n##\s+(?:No|.+?)\s+Progression[s]?\s+Found:?",
     text,
     re.DOTALL,
 )

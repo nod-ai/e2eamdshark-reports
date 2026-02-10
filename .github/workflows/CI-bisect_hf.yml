@@ -10,6 +10,7 @@ name: CI - Regression Tracker For HF
 
 on:
   workflow_dispatch:
+  pull_request:
   schedule:
     - cron: "27 21 * * *"
 
@@ -81,7 +82,7 @@ jobs:
           ls
           rm -rf iree/iree-build
           TODAY=$(date +%Y-%m-%d)
-          # TODAY="2026-02-04"
+          TODAY="2026-02-05"
 
           REPORT="${TODAY}/hf-model-top1k/${{ matrix.config.BACKEND }}/combined-reports_unique/yesterday_comparison.md"
           JSON_STATUS="github-actions/model_old_new_status.json"

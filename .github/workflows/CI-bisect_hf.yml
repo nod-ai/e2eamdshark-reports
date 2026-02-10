@@ -114,8 +114,8 @@ jobs:
                 | sed -n '3p')
             BAD_COMMIT=$(git rev-parse HEAD)
   
-            REPORT_DIR="$(pwd)/../"
-            sed -i '1!d' $REPORT_DIR/github-actions/regression_models.txt
+            REPORT_DIR="$(pwd)/.."
+            sed -i '1!d' ../github-actions/regression_models.txt
             while read -r model; do
               echo "==============================="
               echo "Bisecting $model"

@@ -49,6 +49,7 @@ source iree-build/.env && export PYTHONPATH
 
 cd $PWD/../test-suite/alt_e2eamdshark
 pip install -r ./base_requirements.txt
+pip install -r ./alt_e2eamdshark/hf_requirements.txt
 
 # run run.py
 if [[ "$DEVICE" == "GPU" ]]; then

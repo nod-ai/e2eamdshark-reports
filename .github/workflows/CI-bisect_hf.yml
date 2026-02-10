@@ -115,6 +115,7 @@ jobs:
             BAD_COMMIT=$(git rev-parse HEAD)
   
             REPORT_DIR="$(pwd)/.."
+            ls $REPORT_DIR/github-actions
             sed -i '1!d' ../github-actions/regression_models.txt
             while read -r model; do
               echo "==============================="

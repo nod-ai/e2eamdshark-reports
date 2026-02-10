@@ -23,7 +23,7 @@ echo "Bisect testing model: $MODEL on $DEVICE"
 source ${ALT_E2E_VENV_DIR}/bin/activate
 which python
 
-pip install -f https://iree.dev/pip-release-links.html --upgrade --pre iree-base-compiler iree-base-runtime iree-turbine
+pip install -f https://iree.dev/pip-release-links.html --upgrade --pre iree-turbine
 pip install -f https://iree.dev/pip-release-links.html --upgrade --pre \
        iree-base-compiler iree-base-runtime --src deps \
        -e "git+https://github.com/iree-org/iree-turbine.git#egg=iree-turbine"
@@ -49,7 +49,7 @@ source iree-build/.env && export PYTHONPATH
 
 cd $PWD/../test-suite/alt_e2eamdshark
 pip install -r ./base_requirements.txt
-pip install -r ./alt_e2eamdshark/hf_requirements.txt
+pip install -r ./hf_requirements.txt
 
 # run run.py
 if [[ "$DEVICE" == "GPU" ]]; then

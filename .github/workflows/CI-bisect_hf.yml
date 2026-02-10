@@ -87,9 +87,9 @@ jobs:
           REPORT="${TODAY}/hf-model-top1k/${{ matrix.config.BACKEND }}/combined-reports_unique/yesterday_comparison.md"
           JSON_STATUS="github-actions/model_old_new_status.json"
 
-          cat $REPORT || echo "REPORT_FOUND=false" >> $GITHUB_ENV && EXIT_EARLY="true"
-          if [ "$EXIT_EARLY" == "true" ]; then
-            exit 1
+          cat "$REPORT" || ( echo "REPORT_FOUND=false" >> "$GITHUB_ENV" && EXIT_EARLY="true" )
+          if [ "$EXIT_EARLY" = "true" ]; then
+            exit 0
           fi
 
           # extract model name, old and new status in a json file from the yesterday_comparison.md file

@@ -68,6 +68,7 @@ jobs:
           python3 -m pip install --upgrade pip
           python3 -m pip install --upgrade pip
           python3 -m pip install -r ./alt_e2eamdshark/base_requirements.txt
+          pip install -r ./alt_e2eamdshark/hf_requirements.txt
         working-directory: ./test-suite
 
       - name: "Extract regression models"

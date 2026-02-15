@@ -53,6 +53,7 @@ pip install -r ./hf_requirements.txt
 
 # run run.py
 if [[ "$DEVICE" == "GPU" ]]; then
+  echo "Running For GPU"
   python3 run.py \
     -r ./test-onnx \
     -t "$MODEL" \
@@ -63,6 +64,7 @@ if [[ "$DEVICE" == "GPU" ]]; then
     --cleanup=3 \
     -v \
     --report
+  cat test-onnx/"$MODEL"/setup.log
 else
   python3 run.py \
     -r ./test-onnx \

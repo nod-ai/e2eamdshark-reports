@@ -22,12 +22,13 @@ jobs:
     name: "Find Regression Commit"
     strategy:
       matrix:
-        config: [{
-                  DEVICE: "GPU",
-                  BACKEND: "rocm",
-                  runs-on: "linux-mi325-1gpu-ossci-nod-ai",
-                  cache_dir: "/home/runner/data/e2eamdshark/amdshark-test-suite-models-cache"
-                },
+        config: [
+                # {
+                #   DEVICE: "GPU",
+                #   BACKEND: "rocm",
+                #   runs-on: "linux-mi325-1gpu-ossci-nod-ai",
+                #   cache_dir: "/home/runner/data/e2eamdshark/amdshark-test-suite-models-cache"
+                # },
                 {
                   DEVICE: "CPU",
                   BACKEND: "llvm-cpu",
@@ -100,6 +101,7 @@ jobs:
           echo "JSON status"
           cat "$JSON_STATUS"
           echo "Regression models:"
+          echo "hf_densenet121.ra_in1k" > "github-actions/regression_models.txt"
           cat "github-actions/regression_models.txt"
 
       - name: "Bisect Regression"
@@ -110,11 +112,8 @@ jobs:
             git clone https://github.com/iree-org/iree.git
             cd iree
   
-            GOOD_COMMIT=$(git tag \
-                | grep '^iree-3\.[0-9]\+\.0rc' \
-                | sort -V -r \
-                | sed -n '3p')
-            BAD_COMMIT=$(git rev-parse HEAD)
+            GOOD_COMMIT="b1d73d080ffe27e6d693031e12c31bc7e411e876"
+            BAD_COMMIT="e65d4a545e10d32b32c1dc292ed31f2397df90aa"
   
             REPORT_DIR="$(pwd)/../"
             sed -i '1!d' $REPORT_DIR/github-actions/regression_models.txt
@@ -137,35 +136,35 @@ jobs:
             echo "==================================== done with bisecting regression. ===================================="
           fi
 
-      - name: "Push Artifacts"
-        # if: github.event_name == 'schedule'
-        run: |
-          if [ "${{ env.REPORT_FOUND }}" != "false" ]; then
-            DEVICE="${{ matrix.config.DEVICE }}"
-            ls
-            pwd
-            git branch
-            git pull origin main
-            rm "github-actions/regression_models.txt"
-            rm "github-actions/model_old_new_status.json"
-            rm -rf test-suite
-            rm -rf iree
+      # - name: "Push Artifacts"
+      #   # if: github.event_name == 'schedule'
+      #   run: |
+      #     if [ "${{ env.REPORT_FOUND }}" != "false" ]; then
+      #       DEVICE="${{ matrix.config.DEVICE }}"
+      #       ls
+      #       pwd
+      #       git branch
+      #       git pull origin main
+      #       rm "github-actions/regression_models.txt"
+      #       rm "github-actions/model_old_new_status.json"
+      #       rm -rf test-suite
+      #       rm -rf iree
             
-            git fetch origin
-            git merge origin/main
-            git checkout main
-            DEFAULT_BRANCH="main"
-            git status
-            git branch
+      #       git fetch origin
+      #       git merge origin/main
+      #       git checkout main
+      #       DEFAULT_BRANCH="main"
+      #       git status
+      #       git branch
   
-            git config user.name "github-actions[bot]"
-            git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add "track_test_data/bisect_results_${DEVICE}_HF.csv"
-            if git diff --cached --quiet; then
-              echo "No changes to commit"
-              exit 1
-            else
-              git commit -m "Update Regression CSV for ($(date +%Y-%m-%d))"
-              git push origin "$DEFAULT_BRANCH"
-            fi
-          fi
+      #       git config user.name "github-actions[bot]"
+      #       git config user.email "github-actions[bot]@users.noreply.github.com"
+      #       git add "track_test_data/bisect_results_${DEVICE}_HF.csv"
+      #       if git diff --cached --quiet; then
+      #         echo "No changes to commit"
+      #         exit 1
+      #       else
+      #         git commit -m "Update Regression CSV for ($(date +%Y-%m-%d))"
+      #         git push origin "$DEFAULT_BRANCH"
+      #       fi
+      #     fi

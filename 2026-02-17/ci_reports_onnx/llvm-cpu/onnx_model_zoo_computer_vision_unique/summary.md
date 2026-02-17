@@ -6,8 +6,8 @@
 | Setup | 826 | 100.0% | 100.0% |
 | IREE Compilation | 826 | 100.0% | 100.0% |
 | Gold Inference | 826 | 100.0% | 100.0% |
-| IREE Inference Invocation | 822 | 99.5% | 99.5% |
-| Inference Comparison (PASS) | 814 | 98.5% | 99.0% |
+| IREE Inference Invocation | 823 | 99.6% | 99.6% |
+| Inference Comparison (PASS) | 817 | 98.9% | 99.3% |
 ## Fail Summary
 
 **TOTAL TESTS = 826**
@@ -16,8 +16,8 @@
 | Setup | 0 | 0.0% |
 | IREE Compilation | 0 | 0.0% |
 | Gold Inference | 0 | 0.0% |
-| IREE Inference Invocation | 4 | 0.5% |
-| Inference Comparison | 8 | 1.0% |
+| IREE Inference Invocation | 3 | 0.4% |
+| Inference Comparison | 6 | 0.7% |
 ## Test Run Detail
 Test was run with the following arguments:
 Namespace(sources=['./e2eamdshark-reports/ci_reports_llvm-cpu_onnx_model_zoo_computer_vision_1_unique_onnx_json/onnx_model_zoo_computer_vision_1_unique.json', './e2eamdshark-reports/ci_reports_llvm-cpu_onnx_model_zoo_computer_vision_2_unique_onnx_json/onnx_model_zoo_computer_vision_2_unique.json', './e2eamdshark-reports/ci_reports_llvm-cpu_onnx_model_zoo_computer_vision_3_unique_onnx_json/onnx_model_zoo_computer_vision_3_unique.json', './e2eamdshark-reports/ci_reports_llvm-cpu_onnx_model_zoo_computer_vision_4_unique_onnx_json/onnx_model_zoo_computer_vision_4_unique.json', './e2eamdshark-reports/ci_reports_llvm-cpu_onnx_model_zoo_computer_vision_5_unique_onnx_json/onnx_model_zoo_computer_vision_5_unique.json'], output='./e2eamdshark-reports/onnx_model_zoo_computer_vision_unique.json', report=True, report_file='./e2eamdshark-reports/onnx_model_zoo_computer_vision_unique.md')
@@ -292,7 +292,7 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_llvm-cpu_onnx_model_zoo_com
 | regnety_120_Opset17_timm | PASS | None | |
 | regnetz_040_Opset17_timm | PASS | None | |
 | regnetz_c16_Opset17_timm | PASS | None | |
-| regnetz_c16_evos_Opset16_timm | Numerics | None | |
+| regnetz_c16_evos_Opset16_timm | PASS | None | |
 | regnetz_d32_Opset16_timm | PASS | None | |
 | regnetz_e8_Opset16_timm | PASS | None | |
 | repvgg_a2_Opset17_timm | PASS | None | |
@@ -381,8 +381,8 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_llvm-cpu_onnx_model_zoo_com
 | vit_small_patch32_384_Opset16_timm | PASS | None | |
 | vit_srelpos_medium_patch16_224_Opset16_timm | PASS | None | |
 | vit_srelpos_medium_patch16_224_Opset17_timm | PASS | None | |
-| xception41_Opset17_timm | PASS | None | |
-| xception71_Opset17_timm | PASS | None | |
+| xception41_Opset17_timm | compiled_inference | None | |
+| xception71_Opset17_timm | compiled_inference | None | |
 | xcit_large_24_p8_224_Opset16_timm | PASS | None | |
 | xcit_small_12_p8_224_dist_Opset17_timm | PASS | None | |
 | xcit_tiny_12_p16_224_Opset17_timm | PASS | None | |
@@ -469,7 +469,7 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_llvm-cpu_onnx_model_zoo_com
 | pit_xs_224_Opset18_timm | PASS | None | |
 | regnet_x_32gf_Opset16_torch_hub | PASS | None | |
 | regnet_x_8gf_Opset18_torch_hub | PASS | None | |
-| regnetx_002_Opset17_timm | compiled_inference | None | |
+| regnetx_002_Opset17_timm | PASS | None | |
 | regnetx_016_Opset16_timm | PASS | None | |
 | regnetx_040_Opset16_timm | PASS | None | |
 | regnetx_064_Opset16_timm | PASS | None | |
@@ -543,7 +543,7 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_llvm-cpu_onnx_model_zoo_com
 | vit_tiny_patch16_224_Opset16_timm | PASS | None | |
 | wide_resnet101_2_Opset18_timm | PASS | None | |
 | wide_resnet50_2_Opset16_timm | PASS | None | |
-| xception41p_Opset16_timm | compiled_inference | None | |
+| xception41p_Opset16_timm | PASS | None | |
 | xcit_large_24_p16_224_Opset17_timm | PASS | None | |
 | xcit_large_24_p8_224_Opset17_timm | PASS | None | |
 | xcit_small_12_p16_384_dist_Opset17_timm | PASS | None | |
@@ -620,7 +620,7 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_llvm-cpu_onnx_model_zoo_com
 | regnety_040_Opset16_timm | PASS | None | |
 | regnety_320_Opset17_timm | PASS | None | |
 | regnetz_d8_Opset17_timm | PASS | None | |
-| regnetz_d8_evos_Opset16_timm | Numerics | None | |
+| regnetz_d8_evos_Opset16_timm | PASS | None | |
 | repvgg_b1g4_Opset17_timm | PASS | None | |
 | res2next50_Opset18_timm | PASS | None | |
 | resnest14d_Opset17_timm | PASS | None | |
@@ -666,7 +666,7 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_llvm-cpu_onnx_model_zoo_com
 | vit_tiny_patch16_384_Opset16_timm | PASS | None | |
 | vit_tiny_patch16_384_Opset17_timm | PASS | None | |
 | wide_resnet101_2_Opset17_torch_hub | PASS | None | |
-| xception65_Opset18_timm | PASS | None | |
+| xception65_Opset18_timm | compiled_inference | None | |
 | xcit_large_24_p16_224_Opset16_timm | PASS | None | |
 | xcit_medium_24_p16_224_Opset16_timm | PASS | None | |
 | xcit_medium_24_p16_384_dist_Opset17_timm | PASS | None | |
@@ -757,7 +757,7 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_llvm-cpu_onnx_model_zoo_com
 | regnetv_064_Opset16_timm | PASS | None | |
 | regnetx_160_Opset16_timm | PASS | None | |
 | regnetx_320_Opset17_timm | PASS | None | |
-| regnety_002_Opset16_timm | compiled_inference | None | |
+| regnety_002_Opset16_timm | PASS | None | |
 | regnetz_b16_Opset16_timm | PASS | None | |
 | repvgg_b3_Opset17_timm | PASS | None | |
 | res2net50_26w_4s_Opset16_timm | PASS | None | |
@@ -832,7 +832,7 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_llvm-cpu_onnx_model_zoo_com
 | vit_tiny_patch16_224_in21k_Opset17_timm | PASS | None | |
 | vit_tiny_patch16_224_in21k_Opset18_timm | PASS | None | |
 | wide_resnet50_2_Opset17_torch_hub | PASS | None | |
-| xception65p_Opset18_timm | compiled_inference | None | |
+| xception65p_Opset18_timm | PASS | None | |
 | xception_Opset18_timm | PASS | None | |
 | xcit_large_24_p8_384_dist_Opset17_timm | PASS | None | |
 | xcit_medium_24_p16_384_dist_Opset16_timm | PASS | None | |

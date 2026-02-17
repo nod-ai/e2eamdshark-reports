@@ -6,8 +6,8 @@
 | Setup | 1954 | 99.8% | 99.8% |
 | IREE Compilation | 1839 | 94.0% | 94.1% |
 | Gold Inference | 1839 | 94.0% | 100.0% |
-| IREE Inference Invocation | 1825 | 93.3% | 99.2% |
-| Inference Comparison (PASS) | 1658 | 84.7% | 90.8% |
+| IREE Inference Invocation | 1828 | 93.4% | 99.4% |
+| Inference Comparison (PASS) | 1657 | 84.7% | 90.6% |
 ## Fail Summary
 
 **TOTAL TESTS = 1957**
@@ -16,8 +16,8 @@
 | Setup | 3 | 0.2% |
 | IREE Compilation | 115 | 5.9% |
 | Gold Inference | 0 | 0.0% |
-| IREE Inference Invocation | 14 | 0.7% |
-| Inference Comparison | 167 | 8.5% |
+| IREE Inference Invocation | 11 | 0.6% |
+| Inference Comparison | 171 | 8.7% |
 ## Test Run Detail
 Test was run with the following arguments:
 Namespace(sources=['./e2eamdshark-reports/ci_reports_llvm-cpu_hf_onnx_model_zoo_non_legacy_00_onnx_json/hf_onnx_model_zoo_non_legacy_00.json', './e2eamdshark-reports/ci_reports_llvm-cpu_hf_onnx_model_zoo_non_legacy_01_onnx_json/hf_onnx_model_zoo_non_legacy_01.json', './e2eamdshark-reports/ci_reports_llvm-cpu_hf_onnx_model_zoo_non_legacy_02_onnx_json/hf_onnx_model_zoo_non_legacy_02.json', './e2eamdshark-reports/ci_reports_llvm-cpu_hf_onnx_model_zoo_non_legacy_03_onnx_json/hf_onnx_model_zoo_non_legacy_03.json', './e2eamdshark-reports/ci_reports_llvm-cpu_hf_onnx_model_zoo_non_legacy_04_onnx_json/hf_onnx_model_zoo_non_legacy_04.json', './e2eamdshark-reports/ci_reports_llvm-cpu_hf_onnx_model_zoo_non_legacy_05_onnx_json/hf_onnx_model_zoo_non_legacy_05.json', './e2eamdshark-reports/ci_reports_llvm-cpu_hf_onnx_model_zoo_non_legacy_06_onnx_json/hf_onnx_model_zoo_non_legacy_06.json', './e2eamdshark-reports/ci_reports_llvm-cpu_hf_onnx_model_zoo_non_legacy_07_onnx_json/hf_onnx_model_zoo_non_legacy_07.json', './e2eamdshark-reports/ci_reports_llvm-cpu_hf_onnx_model_zoo_non_legacy_08_onnx_json/hf_onnx_model_zoo_non_legacy_08.json', './e2eamdshark-reports/ci_reports_llvm-cpu_hf_onnx_model_zoo_non_legacy_09_onnx_json/hf_onnx_model_zoo_non_legacy_09.json'], output='./e2eamdshark-reports/hf_onnx_model_zoo_non_legacy.json', report=True, report_file='./e2eamdshark-reports/hf_onnx_model_zoo_non_legacy.md')
@@ -652,9 +652,9 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_llvm-cpu_hf_onnx_model_zoo_
 | regnet_y_8gf_Opset18 | PASS | None | |
 | regnetv_064_Opset16 | PASS | None | |
 | regnetv_064_Opset17 | PASS | None | |
-| regnetx_002_Opset16 | compiled_inference | None | |
-| regnetx_002_Opset17 | compiled_inference | None | |
-| regnetx_002_Opset18 | compiled_inference | None | |
+| regnetx_002_Opset16 | PASS | None | |
+| regnetx_002_Opset17 | PASS | None | |
+| regnetx_002_Opset18 | PASS | None | |
 | regnetx_004_Opset16 | PASS | None | |
 | regnetx_004_Opset17 | PASS | None | |
 | regnetx_004_Opset18 | PASS | None | |
@@ -688,8 +688,8 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_llvm-cpu_hf_onnx_model_zoo_
 | regnetx_320_Opset16 | PASS | None | |
 | regnetx_320_Opset17 | PASS | None | |
 | regnetx_320_Opset18 | PASS | None | |
-| regnety_002_Opset16 | compiled_inference | None | |
-| regnety_002_Opset17 | compiled_inference | None | |
+| regnety_002_Opset16 | PASS | None | |
+| regnety_002_Opset17 | PASS | None | |
 | regnety_004_Opset16 | PASS | None | |
 | regnety_004_Opset17 | PASS | None | |
 | regnety_006_Opset16 | PASS | None | |
@@ -720,14 +720,14 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_llvm-cpu_hf_onnx_model_zoo_
 | regnetz_b16_Opset17 | PASS | None | |
 | regnetz_c16_Opset16 | PASS | None | |
 | regnetz_c16_Opset17 | PASS | None | |
-| regnetz_c16_evos_Opset16 | PASS | None | |
-| regnetz_c16_evos_Opset17 | PASS | None | |
+| regnetz_c16_evos_Opset16 | Numerics | None | |
+| regnetz_c16_evos_Opset17 | Numerics | None | |
 | regnetz_d32_Opset16 | PASS | None | |
 | regnetz_d32_Opset17 | PASS | None | |
 | regnetz_d8_Opset16 | PASS | None | |
 | regnetz_d8_Opset17 | PASS | None | |
-| regnetz_d8_evos_Opset16 | PASS | None | |
-| regnetz_d8_evos_Opset17 | PASS | None | |
+| regnetz_d8_evos_Opset16 | Numerics | None | |
+| regnetz_d8_evos_Opset17 | Numerics | None | |
 | regnetz_e8_Opset16 | PASS | None | |
 | regnetz_e8_Opset17 | PASS | None | |
 | repvgg_a2_Opset16 | PASS | None | |
@@ -1043,8 +1043,8 @@ Namespace(sources=['./e2eamdshark-reports/ci_reports_llvm-cpu_hf_onnx_model_zoo_
 | deit3_base_patch16_224_Opset16 | PASS | None | |
 | deit3_base_patch16_384_Opset17 | PASS | None | |
 | deit3_large_patch16_224_Opset16 | PASS | None | |
-| deit3_large_patch16_384_Opset17 | PASS | None | |
-| deit3_large_patch16_384_Opset18 | PASS | None | |
+| deit3_large_patch16_384_Opset17 | compiled_inference | None | |
+| deit3_large_patch16_384_Opset18 | compiled_inference | None | |
 | deit3_small_patch16_384_Opset16 | PASS | None | |
 | deit3_small_patch16_384_Opset17 | PASS | None | |
 | deit3_small_patch16_384_Opset18 | PASS | None | |

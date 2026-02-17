@@ -13,7 +13,7 @@
 
 | Error | Count |
 |---|---|
-| 'OP' op failed to distribute | 380 |
+| 'OP' op failed to distribute | 378 |
 | function 'OP' uses 67584 bytes of shared memory | 27 |
 | function 'OP' uses 73728 bytes of shared memory | 23 |
 | failed to legalize operation 'OP' that was explicitly marked illegal | 21 |
@@ -41,6 +41,7 @@
 | function 'OP' uses 75264 bytes of shared memory | 2 |
 | function 'OP' uses 68608 bytes of shared memory | 2 |
 | Cannot set layouts on a dynamically shaped iteration space | 2 |
+| (no error details) | 2 |
 | 'OP' op unhandled tensor operation | 2 |
 | function 'OP' uses 81920 bytes of shared memory | 1 |
 | function 'OP' uses 82432 bytes of shared memory | 1 |
@@ -52,7 +53,7 @@
 
 ### Error: 'OP' op failed to distribute
 
-**Count: 380**
+**Count: 378**
 
 | test_name | command | error |
 |---|---|---|
@@ -335,11 +336,9 @@
 | edgenext_x_small_Opset17 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/edgenext_x_small_Opset17/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/edgenext_x_small_Opset17/compiled_model.vmfb | 'func.func' op failed to distribute |
 | edgenext_x_small_Opset18 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/edgenext_x_small_Opset18/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/edgenext_x_small_Opset18/compiled_model.vmfb | 'func.func' op failed to distribute |
 | jx_nest_base_Opset17 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/jx_nest_base_Opset17/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/jx_nest_base_Opset17/compiled_model.vmfb | 'func.func' op failed to distribute |
-| jx_nest_base_Opset18 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/jx_nest_base_Opset18/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/jx_nest_base_Opset18/compiled_model.vmfb | 'func.func' op failed to distribute |
 | jx_nest_small_Opset17 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/jx_nest_small_Opset17/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/jx_nest_small_Opset17/compiled_model.vmfb | 'func.func' op failed to distribute |
 | jx_nest_small_Opset18 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/jx_nest_small_Opset18/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/jx_nest_small_Opset18/compiled_model.vmfb | 'func.func' op failed to distribute |
 | jx_nest_tiny_Opset17 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/jx_nest_tiny_Opset17/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/jx_nest_tiny_Opset17/compiled_model.vmfb | 'func.func' op failed to distribute |
-| jx_nest_tiny_Opset18 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/jx_nest_tiny_Opset18/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/jx_nest_tiny_Opset18/compiled_model.vmfb | 'func.func' op failed to distribute |
 | mobilevit_s_Opset16 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/mobilevit_s_Opset16/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/mobilevit_s_Opset16/compiled_model.vmfb | 'func.func' op failed to distribute |
 | mobilevit_s_Opset17 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/mobilevit_s_Opset17/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/mobilevit_s_Opset17/compiled_model.vmfb | 'func.func' op failed to distribute |
 | mobilevit_s_Opset18 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/mobilevit_s_Opset18/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/mobilevit_s_Opset18/compiled_model.vmfb | 'func.func' op failed to distribute |
@@ -802,7 +801,7 @@
 
 | test_name | command | error |
 |---|---|---|
-| maskrcnn_resnet50_fpn_v2_Opset16 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/maskrcnn_resnet50_fpn_v2_Opset16/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/maskrcnn_resnet50_fpn_v2_Opset16/compiled_model.vmfb | failed to legalize unresolved materialization from ('!torch.vtensor<[25769803776],f32>') to ('!torch.vtensor<[?,?,?,?],f32>') that remained live after conversion |
+| maskrcnn_resnet50_fpn_v2_Opset16 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/maskrcnn_resnet50_fpn_v2_Opset16/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/maskrcnn_resnet50_fpn_v2_Opset16/compiled_model.vmfb | failed to legalize unresolved materialization from ('!torch.vtensor<[0,224,224],f32>') to ('!torch.vtensor<[],f32>') that remained live after conversion |
 | maskrcnn_resnet50_fpn_v2_Opset17 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/maskrcnn_resnet50_fpn_v2_Opset17/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/maskrcnn_resnet50_fpn_v2_Opset17/compiled_model.vmfb | failed to legalize unresolved materialization from ('!torch.vtensor<[0,224,224],f32>') to ('!torch.vtensor<[],f32>') that remained live after conversion |
 | maskrcnn_resnet50_fpn_v2_Opset18 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/maskrcnn_resnet50_fpn_v2_Opset18/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/maskrcnn_resnet50_fpn_v2_Opset18/compiled_model.vmfb | failed to legalize unresolved materialization from ('!torch.vtensor<[0,224,224],f32>') to ('!torch.vtensor<[],f32>') that remained live after conversion |
 
@@ -852,6 +851,15 @@
 |---|---|---|
 | model--microsoft_deberta-base_squad--Palak | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/model--microsoft_deberta-base_squad--Palak/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/model--microsoft_deberta-base_squad--Palak/compiled_model.vmfb | Cannot set layouts on a dynamically shaped iteration space |
 | model--microsoft_deberta-large_squad--Palak | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/model--microsoft_deberta-large_squad--Palak/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/model--microsoft_deberta-large_squad--Palak/compiled_model.vmfb | Cannot set layouts on a dynamically shaped iteration space |
+
+### Error: (no error details)
+
+**Count: 2**
+
+| test_name | command | error |
+|---|---|---|
+| jx_nest_base_Opset18 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/jx_nest_base_Opset18/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/jx_nest_base_Opset18/compiled_model.vmfb |  |
+| jx_nest_tiny_Opset18 | iree-compile /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/jx_nest_tiny_Opset18/model.torch_onnx.mlir --iree-hal-target-backends=rocm --iree-hip-target=gfx942 -o /home/runner/_work/AMD-SHARK-TestSuite/AMD-SHARK-TestSuite/test-suite/alt_e2eamdshark/./test-onnx/jx_nest_tiny_Opset18/compiled_model.vmfb |  |
 
 ### Error: 'OP' op unhandled tensor operation
 

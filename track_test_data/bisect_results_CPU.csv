@@ -1,3 +1,4 @@
+Date,Model,First Bad Commit
 2026-02-05,fcn-resnet101-11(CPU),[5fa3b7e6023b2f9be3f7b209918d56ea28a52fcb]
 2026-02-06,migx_bench_bert-large-uncased_16_128(CPU),[5fa3b7e6023b2f9be3f7b209918d56ea28a52fcb]
 2026-02-07,regnetz_d8_evos_Opset16_timm(CPU),[a68f144c0405580b499031f7a60b4ca1186b632c]

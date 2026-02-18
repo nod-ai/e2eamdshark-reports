@@ -39,6 +39,18 @@ jobs:
           chmod +x Utils/generate_comparison_reports.sh
           ./Utils/generate_comparison_reports.sh "${{ steps.today.outputs.date }}"
 
+      - name: Extract GPU vs CPU comparison summary
+        if: always()
+        run: |
+          chmod +x Utils/extract_gpu_cpu_comparison.py
+          python3 Utils/extract_gpu_cpu_comparison.py "${{ steps.today.outputs.date }}"
+
+      - name: Update latest comparison reports folder
+        if: always()
+        run: |
+          chmod +x Utils/update_latest_reports.py
+          python3 Utils/update_latest_reports.py "${{ steps.today.outputs.date }}"
+
       - name: Upload comparison reports
         if: always()
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
@@ -46,6 +58,14 @@ jobs:
           name: comparison-reports
           path: |
             ${{ steps.today.outputs.date }}/comparison_reports/
+
+      - name: Upload latest comparison reports
+        if: always()
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
+        with:
+          name: latest-comparison-reports
+          path: |
+            latest_comparison_reports/
 
       - name: Checkout default branch (schedule only)
         if: github.event_name == 'schedule'
@@ -64,6 +84,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
           git add ${{ steps.today.outputs.date }}/comparison_reports/
+          git add latest_comparison_reports/
 
           if git diff --cached --quiet; then
             echo "No changes to commit"
@@ -71,7 +92,7 @@ jobs:
             git commit -m "$(cat <<'EOF'
           add GPU vs CPU comparison reports for ${{ steps.today.outputs.date }}
 
-          Co-Authored-By: Claude (Claude-Sonnet-4.5) <noreply@anthropic.com>
+          Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>
           EOF
           )"
             git push origin "$DEFAULT_BRANCH"

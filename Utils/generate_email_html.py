@@ -137,15 +137,13 @@ def generate_section_html(report_name, data):
     </div>
   </div>
   <p style="color: #666; font-size: 12px; margin: 10px 0;">
-    <strong>GPU Status:</strong> <a href="{gpu_link}" style="color: #0066cc; text-decoration: none; background-color: #f5f5f5; padding: 2px 4px; font-size: 11px; font-family: monospace;">{data['gpu_status']}</a><br>
-    <strong>CPU Status:</strong> <a href="{cpu_link}" style="color: #0066cc; text-decoration: none; background-color: #f5f5f5; padding: 2px 4px; font-size: 11px; font-family: monospace;">{data['cpu_status']}</a>
+    <a href="{gpu_link}" style="display: inline-block; color: #0066cc; text-decoration: underline; background-color: #e6f3ff; padding: 4px 8px; margin-right: 10px; border-radius: 3px; font-weight: bold;">GPU Status</a>
+    <a href="{cpu_link}" style="display: inline-block; color: #0066cc; text-decoration: underline; background-color: #e6f3ff; padding: 4px 8px; border-radius: 3px; font-weight: bold;">CPU Status</a>
   </p>
 '''
 
     # Total Tests - check if GPU and CPU have the same count
     if data['total_tests'] and len(data['total_tests']) > 1:
-        html += '  <h3 style="color: #444; margin-top: 20px;">Total Tests</h3>\n'
-
         # Extract GPU and CPU rows
         gpu_row = None
         cpu_row = None
@@ -157,12 +155,10 @@ def generate_section_html(report_name, data):
 
         # Check if both have the same total
         if gpu_row and cpu_row and gpu_row[1] == cpu_row[1]:
-            html += f'  <p style="color: #555; margin: 5px 0;"><strong>Total Tests:</strong> {gpu_row[1]} (same for both GPU and CPU)</p>\n'
+            html += f'  <p style="color: #555; margin: 15px 0 5px 0;"><strong>Total Tests:</strong> {gpu_row[1]}</p>\n'
         else:
-            # Show table without "Change" column
-            headers = [data['total_tests'][0][0], data['total_tests'][0][1]]  # Platform, Total Tests
-            rows = [[row[0], row[1]] for row in data['total_tests'][1:]]
-            html += generate_html_table(headers, rows)
+            # Show message that they differ
+            html += f'  <p style="color: #555; margin: 15px 0 5px 0;"><strong>Total Tests:</strong> GPU: {gpu_row[1] if gpu_row else "N/A"}, CPU: {cpu_row[1] if cpu_row else "N/A"}</p>\n'
 
     # Side-by-side tables using HTML table layout
     html += '''
@@ -182,7 +178,7 @@ def generate_section_html(report_name, data):
     html += '''
       </td>
       <td style="width: 48%; vertical-align: top; padding-left: 2%;">
-        <h3 style="color: #cc3333; margin-bottom: 10px;">✗ Fail Summary</h3>
+        <h3 style="color: #cc3333; margin-bottom: 10px;">✗ Failing Summary</h3>
 '''
 
     # Fail table

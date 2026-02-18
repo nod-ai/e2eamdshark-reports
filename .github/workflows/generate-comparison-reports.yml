@@ -106,8 +106,7 @@ jobs:
 
   send-email:
     needs: generate-comparison
-    if: github.event_name == 'schedule'
-    runs-on: yash-vid-runner
+    runs-on: yash-vdi-runner
 
     steps:
       - name: Checkout repository

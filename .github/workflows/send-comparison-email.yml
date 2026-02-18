@@ -1,0 +1,60 @@
+# Copyright 2025 Advanced Micro Devices, Inc.
+#
+# Licensed under the Apache License v2.0 with LLVM Exceptions.
+# See https://llvm.org/LICENSE.txt for license information.
+# SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
+
+name: Send GPU vs CPU Comparison Email
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 17 * * *"  # Run daily at 17:00 UTC (after comparison reports are generated)
+
+permissions:
+  contents: read
+
+jobs:
+  send-email:
+    runs-on: yash-vid-runner
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Compute today's date
+        id: today
+        run: |
+          echo "date=$(date +%Y-%m-%d)" >> $GITHUB_OUTPUT
+
+      - name: Check if email HTML exists
+        id: check_html
+        run: |
+          if [ -f "latest_comparison_reports/gpu_vs_cpu_email.html" ]; then
+            echo "html_exists=true" >> $GITHUB_OUTPUT
+            echo "HTML file found: latest_comparison_reports/gpu_vs_cpu_email.html"
+          else
+            echo "html_exists=false" >> $GITHUB_OUTPUT
+            echo "Warning: HTML file not found"
+          fi
+
+      - name: Send email
+        if: steps.check_html.outputs.html_exists == 'true'
+        run: |
+          python3 Utils/send_comparison_email.py latest_comparison_reports/gpu_vs_cpu_email.html
+
+      - name: Report status
+        if: steps.check_html.outputs.html_exists == 'true'
+        run: |
+          echo "Email sent successfully for date: ${{ steps.today.outputs.date }}"
+
+      - name: Report missing HTML
+        if: steps.check_html.outputs.html_exists == 'false'
+        run: |
+          echo "Email not sent - HTML file not found"
+          exit 1

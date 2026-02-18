@@ -1,0 +1,18 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Auto-generated comparison reports (keep only in artifacts)
+latest_comparison_reports/*.md
+latest_comparison_reports/*.html
+!latest_comparison_reports/README.md
+!latest_comparison_reports/EMAIL_INSTRUCTIONS.md
+
+# Date-specific generated reports
+*/comparison_reports/gpu_vs_cpu_*.md
+*/comparison_reports/gpu_vs_cpu_*.html
+
+# Test/temporary files
+gpu_vs_cpu_comparison_summary.md

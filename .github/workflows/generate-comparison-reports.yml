@@ -103,3 +103,28 @@ jobs:
           )"
             git push origin "$DEFAULT_BRANCH"
           fi
+
+  send-email:
+    needs: generate-comparison
+    if: github.event_name == 'schedule'
+    runs-on: yash-vid-runner
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Send comparison email
+        run: |
+          if [ -f "latest_comparison_reports/gpu_vs_cpu_email.html" ]; then
+            python3 Utils/send_comparison_email.py latest_comparison_reports/gpu_vs_cpu_email.html
+            echo "Email sent successfully"
+          else
+            echo "Warning: HTML file not found, skipping email"
+          fi

@@ -45,6 +45,12 @@ jobs:
           chmod +x Utils/extract_gpu_cpu_comparison.py
           python3 Utils/extract_gpu_cpu_comparison.py "${{ steps.today.outputs.date }}"
 
+      - name: Generate email-friendly HTML
+        if: always()
+        run: |
+          chmod +x Utils/generate_email_html.py
+          python3 Utils/generate_email_html.py "${{ steps.today.outputs.date }}"
+
       - name: Update latest comparison reports folder
         if: always()
         run: |

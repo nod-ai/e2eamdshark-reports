@@ -80,7 +80,8 @@ def main():
         "ci_reports_onnx_comparison_report.md",
         "hf-model-top1k_comparison_report.md",
         "ci_reports_onnx_dup_comparison_report.md",
-        "gpu_vs_cpu_summary.md"
+        "gpu_vs_cpu_summary.md",
+        "gpu_vs_cpu_email.html"
     ]
 
     copied_count = 0

@@ -10,6 +10,7 @@ This folder is automatically updated by the CI workflow and contains:
 2. **hf-model-top1k_comparison_report.md** - Latest HuggingFace Top 1K models comparison
 3. **ci_reports_onnx_dup_comparison_report.md** - Latest ONNX duplicate tests comparison
 4. **gpu_vs_cpu_summary.md** - Combined summary of all three comparisons with side-by-side tables
+5. **gpu_vs_cpu_email.html** - Email-friendly HTML version with inline CSS (ready to send via email)
 
 ## How It Works
 

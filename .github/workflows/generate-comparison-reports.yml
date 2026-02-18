@@ -106,6 +106,7 @@ jobs:
 
   send-email:
     needs: generate-comparison
+    if: github.event_name == 'schedule'
     runs-on: self-hosted
 
     steps:

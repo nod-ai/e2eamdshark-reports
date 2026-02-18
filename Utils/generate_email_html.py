@@ -124,20 +124,45 @@ def generate_html_table(headers, rows, table_style="", cell_style=""):
 
 def generate_section_html(report_name, data):
     """Generate HTML for a single comparison section."""
+    # Create clickable links for GPU and CPU status
+    gpu_link = f'https://github.com/nod-ai/e2eamdshark-reports/blob/main/{data["gpu_status"]}'
+    cpu_link = f'https://github.com/nod-ai/e2eamdshark-reports/blob/main/{data["cpu_status"]}'
+
     html = f'''
 <div style="margin-bottom: 40px; font-family: Arial, sans-serif;">
-  <h2 style="color: #333; border-bottom: 2px solid #0066cc; padding-bottom: 10px;">{report_name}</h2>
+  <div style="display: table; width: 100%; border-bottom: 2px solid #0066cc; padding-bottom: 10px;">
+    <h2 style="display: table-cell; color: #333; margin: 0; vertical-align: middle;">{report_name}</h2>
+    <div style="display: table-cell; text-align: right; vertical-align: middle; font-size: 11px; color: #666;">
+      <em>Generated: {data['date']}</em>
+    </div>
+  </div>
   <p style="color: #666; font-size: 12px; margin: 10px 0;">
-    <strong>Generated on:</strong> {data['date']}<br>
-    <strong>GPU Status:</strong> <code style="background-color: #f5f5f5; padding: 2px 4px; font-size: 11px;">{data['gpu_status']}</code><br>
-    <strong>CPU Status:</strong> <code style="background-color: #f5f5f5; padding: 2px 4px; font-size: 11px;">{data['cpu_status']}</code>
+    <strong>GPU Status:</strong> <a href="{gpu_link}" style="color: #0066cc; text-decoration: none; background-color: #f5f5f5; padding: 2px 4px; font-size: 11px; font-family: monospace;">{data['gpu_status']}</a><br>
+    <strong>CPU Status:</strong> <a href="{cpu_link}" style="color: #0066cc; text-decoration: none; background-color: #f5f5f5; padding: 2px 4px; font-size: 11px; font-family: monospace;">{data['cpu_status']}</a>
   </p>
 '''
 
-    # Total Tests table
+    # Total Tests - check if GPU and CPU have the same count
     if data['total_tests'] and len(data['total_tests']) > 1:
         html += '  <h3 style="color: #444; margin-top: 20px;">Total Tests</h3>\n'
-        html += generate_html_table(data['total_tests'][0], data['total_tests'][1:])
+
+        # Extract GPU and CPU rows
+        gpu_row = None
+        cpu_row = None
+        for row in data['total_tests'][1:]:
+            if row[0] == 'GPU':
+                gpu_row = row
+            elif row[0] == 'CPU':
+                cpu_row = row
+
+        # Check if both have the same total
+        if gpu_row and cpu_row and gpu_row[1] == cpu_row[1]:
+            html += f'  <p style="color: #555; margin: 5px 0;"><strong>Total Tests:</strong> {gpu_row[1]} (same for both GPU and CPU)</p>\n'
+        else:
+            # Show table without "Change" column
+            headers = [data['total_tests'][0][0], data['total_tests'][0][1]]  # Platform, Total Tests
+            rows = [[row[0], row[1]] for row in data['total_tests'][1:]]
+            html += generate_html_table(headers, rows)
 
     # Side-by-side tables using HTML table layout
     html += '''
@@ -249,13 +274,14 @@ def generate_email_html(date_dir, output_file=None):
 </head>
 <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 1200px; margin: 0 auto; padding: 20px; background-color: #f5f5f5;">
     <div style="background-color: #ffffff; padding: 30px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-        <h1 style="color: #0066cc; border-bottom: 3px solid #0066cc; padding-bottom: 15px; margin-top: 0;">
-            GPU vs CPU Comparison Summary
-        </h1>
-        <p style="color: #666; font-size: 14px; margin-bottom: 30px;">
-            <strong>Compiled on:</strong> {date_dir}<br>
-            <strong>Generated:</strong> {current_date}
-        </p>
+        <div style="display: table; width: 100%; border-bottom: 3px solid #0066cc; padding-bottom: 15px; margin-top: 0;">
+            <h1 style="display: table-cell; color: #0066cc; margin: 0; vertical-align: middle;">
+                GPU vs CPU Comparison Summary
+            </h1>
+            <div style="display: table-cell; text-align: right; vertical-align: middle; font-size: 13px; color: #666;">
+                <em>Compiled: {date_dir} | Generated: {current_date}</em>
+            </div>
+        </div>
 
         {chr(10).join(sections_html)}
 

@@ -21,8 +21,14 @@ if not html_file_path.exists():
 with open(html_file_path, "r", encoding="utf-8") as file:
     html_content = file.read()
 
-# Email recipient
-mail_list = ["praveen.g2@amd.com"]
+# Read email list from file
+email_list_path = Path(__file__).with_name('email_list.txt')
+if not email_list_path.exists():
+    print(f"Error: Email list file not found: {email_list_path}")
+    sys.exit(1)
+
+with email_list_path.open('r') as f:
+    mail_list = [email.strip() for email in f.read().splitlines() if email.strip()]
 
 msg = MIMEMultipart("alternative")
 msg["From"] = "praveen.g2@amd.com"

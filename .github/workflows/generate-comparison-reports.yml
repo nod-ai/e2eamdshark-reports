@@ -106,7 +106,7 @@ jobs:
 
   send-email:
     needs: generate-comparison
-    runs-on: yash-vdi-runner
+    runs-on: self-hosted
 
     steps:
       - name: Checkout repository

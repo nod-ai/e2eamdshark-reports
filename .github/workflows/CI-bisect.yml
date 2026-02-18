@@ -128,6 +128,24 @@ jobs:
               else
                 export CACHE_DIR="/home/runner/groups/aig_amdsharks/test-suite-ci-cache"
               fi
+            
+              if [[ "$DEVICE" == "GPU" ]]; then
+                export CACHE_DIR="/home/runner/data/e2eamdshark/amdshark-test-suite-models-cache"
+              else
+                export CACHE_DIR="/home/runner/groups/aig_amdsharks/test-suite-ci-cache"
+              fi
+            
+              # Validate CACHE_DIR exists and has rwx for current user
+              if [[ ! -d "$CACHE_DIR" ]]; then
+                echo "ERROR: CACHE_DIR does not exist: $CACHE_DIR"
+                exit 1
+              elif [[ ! -r "$CACHE_DIR" || ! -w "$CACHE_DIR" || ! -x "$CACHE_DIR" ]]; then
+                echo "ERROR: CACHE_DIR missing rwx permissions: $CACHE_DIR ($(stat -c '%a' "$CACHE_DIR"))"
+                exit 1
+              fi
+              echo "CACHE_DIR validated: $CACHE_DIR ($(stat -c '%a' "$CACHE_DIR"))"
+
+
               echo "CACHE_DIR Set to : $CACHE_DIR"
               $REPORT_DIR/github-actions/runbisect_for_model.sh "$model" "$GOOD_COMMIT" "$BAD_COMMIT" "$DEVICE"
             done < $REPORT_DIR/github-actions/regression_models.txt

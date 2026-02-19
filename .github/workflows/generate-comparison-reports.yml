@@ -34,31 +34,44 @@ jobs:
         run: |
           echo "date=$(date +%Y-%m-%d)" >> $GITHUB_OUTPUT
 
+      - name: Check if date directory exists
+        id: check_dir
+        run: |
+          if [ -d "${{ steps.today.outputs.date }}" ]; then
+            echo "dir_exists=true" >> $GITHUB_OUTPUT
+            echo "Directory ${{ steps.today.outputs.date }} exists"
+          else
+            echo "dir_exists=false" >> $GITHUB_OUTPUT
+            echo "Warning: Directory ${{ steps.today.outputs.date }} does not exist yet"
+            echo "This is expected if upstream CI hasn't completed yet"
+          fi
+
       - name: Generate comparison reports
+        if: steps.check_dir.outputs.dir_exists == 'true'
         run: |
           chmod +x Utils/generate_comparison_reports.sh
           ./Utils/generate_comparison_reports.sh "${{ steps.today.outputs.date }}"
 
       - name: Extract GPU vs CPU comparison summary
-        if: always()
+        if: steps.check_dir.outputs.dir_exists == 'true'
         run: |
           chmod +x Utils/extract_gpu_cpu_comparison.py
           python3 Utils/extract_gpu_cpu_comparison.py "${{ steps.today.outputs.date }}"
 
       - name: Generate email-friendly HTML
-        if: always()
+        if: steps.check_dir.outputs.dir_exists == 'true'
         run: |
           chmod +x Utils/generate_email_html.py
           python3 Utils/generate_email_html.py "${{ steps.today.outputs.date }}"
 
       - name: Update latest comparison reports folder
-        if: always()
+        if: steps.check_dir.outputs.dir_exists == 'true'
         run: |
           chmod +x Utils/update_latest_reports.py
           python3 Utils/update_latest_reports.py "${{ steps.today.outputs.date }}"
 
       - name: Upload comparison reports
-        if: always()
+        if: steps.check_dir.outputs.dir_exists == 'true'
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
         with:
           name: comparison-reports
@@ -66,7 +79,7 @@ jobs:
             ${{ steps.today.outputs.date }}/comparison_reports/
 
       - name: Upload latest comparison reports
-        if: always()
+        if: steps.check_dir.outputs.dir_exists == 'true'
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
         with:
           name: latest-comparison-reports
@@ -80,7 +93,7 @@ jobs:
           git checkout main
 
       - name: Commit and push comparison reports
-        if: github.event_name == 'schedule'
+        if: github.event_name == 'schedule' && steps.check_dir.outputs.dir_exists == 'true'
         run: |
           DEFAULT_BRANCH="main"
           git status

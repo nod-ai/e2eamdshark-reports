@@ -34,18 +34,57 @@ jobs:
         run: |
           echo "date=$(date +%Y-%m-%d)" >> $GITHUB_OUTPUT
 
+      - name: Check if date directory exists
+        id: check_dir
+        run: |
+          if [ -d "${{ steps.today.outputs.date }}" ]; then
+            echo "dir_exists=true" >> $GITHUB_OUTPUT
+            echo "Directory ${{ steps.today.outputs.date }} exists"
+          else
+            echo "dir_exists=false" >> $GITHUB_OUTPUT
+            echo "Warning: Directory ${{ steps.today.outputs.date }} does not exist yet"
+            echo "This is expected if upstream CI hasn't completed yet"
+          fi
+
       - name: Generate comparison reports
+        if: steps.check_dir.outputs.dir_exists == 'true'
         run: |
           chmod +x Utils/generate_comparison_reports.sh
           ./Utils/generate_comparison_reports.sh "${{ steps.today.outputs.date }}"
 
+      - name: Extract GPU vs CPU comparison summary
+        if: steps.check_dir.outputs.dir_exists == 'true'
+        run: |
+          chmod +x Utils/extract_gpu_cpu_comparison.py
+          python3 Utils/extract_gpu_cpu_comparison.py "${{ steps.today.outputs.date }}"
+
+      - name: Generate email-friendly HTML
+        if: steps.check_dir.outputs.dir_exists == 'true'
+        run: |
+          chmod +x Utils/generate_email_html.py
+          python3 Utils/generate_email_html.py "${{ steps.today.outputs.date }}"
+
+      - name: Update latest comparison reports folder
+        if: steps.check_dir.outputs.dir_exists == 'true'
+        run: |
+          chmod +x Utils/update_latest_reports.py
+          python3 Utils/update_latest_reports.py "${{ steps.today.outputs.date }}"
+
       - name: Upload comparison reports
-        if: always()
+        if: steps.check_dir.outputs.dir_exists == 'true'
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
         with:
           name: comparison-reports
           path: |
             ${{ steps.today.outputs.date }}/comparison_reports/
+
+      - name: Upload latest comparison reports
+        if: steps.check_dir.outputs.dir_exists == 'true'
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f
+        with:
+          name: latest-comparison-reports
+          path: |
+            latest_comparison_reports/
 
       - name: Checkout default branch (schedule only)
         if: github.event_name == 'schedule'
@@ -54,7 +93,7 @@ jobs:
           git checkout main
 
       - name: Commit and push comparison reports
-        if: github.event_name == 'schedule'
+        if: github.event_name == 'schedule' && steps.check_dir.outputs.dir_exists == 'true'
         run: |
           DEFAULT_BRANCH="main"
           git status
@@ -64,6 +103,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
 
           git add ${{ steps.today.outputs.date }}/comparison_reports/
+          git add latest_comparison_reports/
 
           if git diff --cached --quiet; then
             echo "No changes to commit"
@@ -71,8 +111,43 @@ jobs:
             git commit -m "$(cat <<'EOF'
           add GPU vs CPU comparison reports for ${{ steps.today.outputs.date }}
 
-          Co-Authored-By: Claude (Claude-Sonnet-4.5) <noreply@anthropic.com>
+          Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>
           EOF
           )"
             git push origin "$DEFAULT_BRANCH"
+          fi
+
+  send-email:
+    needs: generate-comparison
+    if: github.event_name == 'schedule'
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Download latest comparison reports artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: latest-comparison-reports
+          path: ./latest_comparison_reports
+
+      - name: Verify downloaded files
+        run: |
+          echo "Files in latest_comparison_reports:"
+          ls -la latest_comparison_reports/
+
+      - name: Send comparison email
+        run: |
+          if [ -f "latest_comparison_reports/gpu_vs_cpu_email.html" ]; then
+            python3 Utils/send_comparison_email.py latest_comparison_reports/gpu_vs_cpu_email.html
+            echo "Email sent successfully"
+          else
+            echo "Error: HTML file not found in artifacts"
+            exit 1
           fi

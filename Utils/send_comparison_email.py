@@ -33,16 +33,18 @@ with email_list_path.open('r') as f:
 msg = MIMEMultipart("alternative")
 msg["From"] = "praveen.g2@amd.com"
 msg["To"] = ", ".join(mail_list)
-msg["Subject"] = f"GPU vs CPU Comparison Report - {date}"
+msg["Cc"] = "praveen.g2@amd.com"
+msg["Subject"] = f"ONNX Reports Summary - {date}"
 
 msg.attach(MIMEText(html_content, "html"))
 
-# Send via SMTP
+# Send via SMTP (include CC in recipients)
+all_recipients = mail_list + [msg["Cc"]]
 try:
     with smtplib.SMTP("atlsmtp10.amd.com", 25) as server:
         server.starttls()
-        server.sendmail(msg["From"], mail_list, msg.as_string())
-        print(f"Email sent successfully to {', '.join(mail_list)}")
+        server.sendmail(msg["From"], all_recipients, msg.as_string())
+        print(f"Email sent successfully to {', '.join(mail_list)} (CC: {msg['Cc']})")
 except Exception as e:
     print(f"Error sending email: {e}")
     sys.exit(1)

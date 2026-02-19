@@ -266,13 +266,13 @@ def generate_email_html(date_dir, output_file=None):
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GPU vs CPU Comparison Summary</title>
+    <title>ONNX Reports Summary</title>
 </head>
 <body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 1200px; margin: 0 auto; padding: 20px; background-color: #f5f5f5;">
     <div style="background-color: #ffffff; padding: 30px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
         <div style="border-bottom: 3px solid #0066cc; padding-bottom: 15px; margin-top: 0;">
             <h1 style="color: #0066cc; margin: 0; text-align: center;">
-                GPU vs CPU Comparison Summary
+                ONNX Reports Summary
             </h1>
             <div style="text-align: center; font-size: 13px; color: #666; margin-top: 5px;">
                 <em>Compiled: {date_dir} | Generated: {current_date}</em>

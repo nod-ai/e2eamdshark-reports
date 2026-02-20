@@ -84,7 +84,9 @@ rm -rf iree-build
 echo "********** Completed running run.py, now checking the current status with the old status **********"
 
 # Validate result via JSON
+CSV_FILE="$PWD/../track_test_data/bisect_results_${DEVICE}.csv"
 python3 $PWD/../github-actions/check_model_status.py \
   "$MODEL" \
   "$BASELINE_JSON" \
-  "$CURRENT_JSON"
+  "$CURRENT_JSON" \
+  "$CSV_FILE"

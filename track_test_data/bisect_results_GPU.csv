@@ -1,2 +1,3 @@
 Date,Model,First Bad Commit
 2026-02-05,RAFT_vaiq_int8(GPU),[5fa3b7e6023b2f9be3f7b209918d56ea28a52fcb]
+2026-02-20,esm_Opset16_transformers(GPU),[88b61a35408ada19ca12ae0851fadc97460740f3]

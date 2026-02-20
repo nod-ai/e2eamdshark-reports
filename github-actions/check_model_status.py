@@ -1,57 +1,55 @@
+# Copyright 2025 Advanced Micro Devices
+#
+# Licensed under the Apache License v2.0 with LLVM Exceptions.
+# See https://llvm.org/LICENSE.txt for license information.
 # SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 
 '''
-Bisecting Starts Here.
+Checks if the old status of the
+model matches with the current status
 '''
 
-MODEL="$1"
-GOOD_COMMIT="$2"
-BAD_COMMIT="$3"
-DEVICE="$4"
-MODE="${5:-}"
-NEXT_COMMIT_AFTER_BAD=$(git rev-list --reverse "${GOOD_COMMIT}..HEAD" | head -n 1)
-MODEL_WITH_DEVICE="${MODEL}(${DEVICE})"
+import json
+import sys
+from pathlib import Path
 
-if [[ "$DEVICE" == "GPU" ]]; then
-    export CACHE_DIR="/home/runner/data/e2eamdshark/amdshark-test-suite-models-cache"
-else
-    export CACHE_DIR="/home/runner/groups/aig_amdsharks/test-suite-ci-cache"
-fi
+MODEL = sys.argv[1]
+BASELINE_JSON = Path(sys.argv[2])
+CURRENT_JSON = Path(sys.argv[3])
+CSV_FILE = Path(sys.argv[4]) if len(sys.argv) > 4 else None
 
-# Append the information to a CSV file
-CSV_FILE="$PWD/../track_test_data/bisect_results_${DEVICE}.csv"
-if [[ "$MODE" == "HF" ]]; then
-  CSV_FILE="$PWD/../track_test_data/bisect_results_${DEVICE}_HF.csv"
-fi
+baseline = json.loads(BASELINE_JSON.read_text())
+current = json.loads(CURRENT_JSON.read_text())
 
-if [[ "$MODE" == "DUP" ]]; then
-  CSV_FILE="$PWD/../track_test_data/bisect_results_${DEVICE}_DUP.csv"
-fi
+if MODEL not in baseline:
+    print(f"[ERROR] {MODEL} not found in baseline json")
+    sys.exit(1)
 
-if [ ! -f "$CSV_FILE" ]; then
-    echo "Date,Model,First Bad Commit" > "$CSV_FILE"
-fi
+if MODEL not in current:
+    print(f"[ERROR] {MODEL} not found in current run json")
+    sys.exit(1)
 
-git bisect reset || true
-git bisect start
-git bisect bad "$BAD_COMMIT"
-git bisect good "$GOOD_COMMIT"
+expected_status = baseline[MODEL]["old_status"]
+actual_status = current[MODEL]["exit_status"]
 
-git bisect run $PWD/../github-actions/bisect_test.sh "$MODEL" "$DEVICE" "$CSV_FILE"
+# Check if actual status is "setup" - indicates setup failure
+# Exit code 128 aborts git bisect entirely
+if actual_status == "setup":
+    from datetime import date
+    today = date.today().strftime("%Y-%m-%d")
+    print(f"{today}, {MODEL}, setup failure")
+    # Write to CSV file (CSV_FILE is already created by runbisect_for_model.sh)
+    if CSV_FILE:
+        with open(CSV_FILE, "a") as f:
+            f.write(f"{today},{MODEL},setup failure\n")
+    sys.exit(128)
 
-echo "First bad commit for $MODEL:"
-BAD_COMMIT_HASH=$(git bisect log | grep '^# first bad commit' | awk '{print $5}')
-DATE=$(date "+%Y-%m-%d")
+print(f"Model: {MODEL}")
+print(f"Expected (old) status: {expected_status}")
+print(f"Actual status:         {actual_status}")
 
-
-
-if [ "$BAD_COMMIT_HASH" = "$NEXT_COMMIT_AFTER_BAD" ]; then
-    echo "[INFO] First bad commit is immediately after baseline bad commit ($BAD_COMMIT). Skipping CSV update."
-else
-    echo "$DATE,$MODEL_WITH_DEVICE,$BAD_COMMIT_HASH" >> "$CSV_FILE"
-    echo "[INFO] Appended bisect result to CSV -> $DATE -> $MODEL_WITH_DEVICE -> $BAD_COMMIT_HASH"
-fi
-
-cat "$CSV_FILE"
-
-git bisect visualize --oneline || true
+if actual_status == expected_status:
+    print(f"========= Status Mathces With Old Status for model: {MODEL} =========")
+else:
+    print(f"========= Status Did Not Match With Old Status for model: {MODEL} =========")
+    sys.exit(1)

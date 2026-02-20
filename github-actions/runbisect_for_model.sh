@@ -40,7 +40,10 @@ if [[ "$MODE" == "HF" ]]; then
   CSV_FILE="$PWD/../track_test_data/bisect_results_${DEVICE}_HF.csv"
 fi
 
-# Check if the CSV file exists, if not, add headers
+if [[ "$MODE" == "DUP" ]]; then
+  CSV_FILE="$PWD/../track_test_data/bisect_results_${DEVICE}_DUP.csv"
+fi
+
 if [ ! -f "$CSV_FILE" ]; then
     echo "Date,Model,First Bad Commit" > "$CSV_FILE"
 fi

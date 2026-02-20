@@ -1,8 +1,3 @@
-#!/bin/bash
-# Copyright 2025 Advanced Micro Devices
-#
-# Licensed under the Apache License v2.0 with LLVM Exceptions.
-# See https://llvm.org/LICENSE.txt for license information.
 # SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 
 '''
@@ -42,7 +37,7 @@ git bisect start
 git bisect bad "$BAD_COMMIT"
 git bisect good "$GOOD_COMMIT"
 
-git bisect run $PWD/../github-actions/bisect_test.sh "$MODEL" $DEVICE
+git bisect run $PWD/../github-actions/bisect_test.sh "$MODEL" "$DEVICE" "$CSV_FILE"
 
 echo "First bad commit for $MODEL:"
 BAD_COMMIT_HASH=$(git bisect log | grep '^# first bad commit' | awk '{print $5}')

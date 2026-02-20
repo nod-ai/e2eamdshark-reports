@@ -12,6 +12,7 @@ echo "********** main logic **********"
 
 MODEL="$1"
 DEVICE="$2"
+CSV_FILE="$3"
 
 rm -rf iree-build/ || true
 rm -f "$PWD/../test-suite/alt_e2eamdshark/X_regression_bisect.json" || true
@@ -87,4 +88,5 @@ echo "********** Completed running run.py, now checking the current status with 
 python3 $PWD/../github-actions/check_model_status.py \
   "$MODEL" \
   "$BASELINE_JSON" \
-  "$CURRENT_JSON"
+  "$CURRENT_JSON" \
+  "$CSV_FILE"

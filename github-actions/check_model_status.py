@@ -38,10 +38,8 @@ if actual_status == "setup":
     from datetime import date
     today = date.today().strftime("%Y-%m-%d")
     print(f"{today}, {MODEL}, setup failure")
-    # Write to CSV file
+    # Write to CSV file (CSV_FILE is already created by runbisect_for_model.sh)
     if CSV_FILE:
-        if not CSV_FILE.exists():
-            CSV_FILE.write_text("Date,Model,First Bad Commit\n")
         with open(CSV_FILE, "a") as f:
             f.write(f"{today},{MODEL},setup failure\n")
     sys.exit(128)

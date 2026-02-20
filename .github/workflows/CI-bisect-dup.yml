@@ -6,7 +6,7 @@
 
 # Workflow for Bisecting Regression.
 
-name: CI - Regression Tracker For HF
+name: CI - Regression Tracker For DUP
 
 on:
   workflow_dispatch:
@@ -17,7 +17,7 @@ permissions:
   contents: write
 
 jobs:
-  find_regression_commit_hf:
+  find_regression_commit_dup:
     if: ${{ github.repository_owner == 'nod-ai' || github.event_name != 'schedule' }}
     name: "Find Regression Commit"
     strategy:

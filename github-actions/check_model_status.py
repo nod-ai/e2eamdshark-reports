@@ -16,6 +16,7 @@ from pathlib import Path
 MODEL = sys.argv[1]
 BASELINE_JSON = Path(sys.argv[2])
 CURRENT_JSON = Path(sys.argv[3])
+CSV_FILE = Path(sys.argv[4]) if len(sys.argv) > 4 else None
 
 baseline = json.loads(BASELINE_JSON.read_text())
 current = json.loads(CURRENT_JSON.read_text())
@@ -30,6 +31,20 @@ if MODEL not in current:
 
 expected_status = baseline[MODEL]["old_status"]
 actual_status = current[MODEL]["exit_status"]
+
+# Check if actual status is "setup" - indicates setup failure
+# Exit code 128 aborts git bisect entirely
+if actual_status == "setup":
+    from datetime import date
+    today = date.today().strftime("%Y-%m-%d")
+    print(f"{today}, {MODEL}, setup failure")
+    # Write to CSV file
+    if CSV_FILE:
+        if not CSV_FILE.exists():
+            CSV_FILE.write_text("Date,Model,First Bad Commit\n")
+        with open(CSV_FILE, "a") as f:
+            f.write(f"{today},{MODEL},setup failure\n")
+    sys.exit(128)
 
 print(f"Model: {MODEL}")
 print(f"Expected (old) status: {expected_status}")

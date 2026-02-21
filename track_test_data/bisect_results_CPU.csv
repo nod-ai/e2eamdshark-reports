@@ -5,3 +5,4 @@ Date,Model,First Bad Commit
 2026-02-13,model--albert-xxl-v2-finetuned-squad--anas-awadalla(CPU),[5579e4c24c1416e2fb969c78eca794c5b0c2d0b7]
 2026-02-14,dm_nfnet_f0_Opset16(CPU),[9c4c42a81b5f69b41f05471dc308c7742d69ee45]
 2026-02-17,regnetz_c16_evos_Opset16(CPU),[a852a42734d182a7049433822c72607a06dca8fd]
+2026-02-21,RDN_pytorch_vaiq_int8(CPU),[f22e5fb536bca7a1efbc52f0d5d96f3f4ecd2fe1]

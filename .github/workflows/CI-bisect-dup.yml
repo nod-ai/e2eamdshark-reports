@@ -10,6 +10,7 @@ name: CI - Regression Tracker For DUP
 
 on:
   workflow_dispatch:
+  pull_request:
   schedule:
     - cron: '30 22 * * 0'
 
@@ -81,7 +82,7 @@ jobs:
           ls
           rm -rf iree/iree-build
           TODAY=$(date +%Y-%m-%d)
-          # TODAY="2026-02-05"
+          TODAY="2026-02-22"
 
           REPORT="${TODAY}/ci_reports_onnx_dup/${{ matrix.config.BACKEND }}/combined-reports_others/yesterday_comparison.md"
           JSON_STATUS="github-actions/model_old_new_status.json"

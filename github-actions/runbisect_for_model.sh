@@ -136,14 +136,13 @@ if [ $VERIFICATION_RESULT -eq 0 ]; then
 else
     echo "[WARNING] Verification FAILED: Current status does NOT match old status"
     echo "[WARNING] The model may still be broken at HEAD, bisect result may need review"
+    exit 0
 fi
 
-if [ "$BAD_COMMIT_HASH" = "$NEXT_COMMIT_AFTER_BAD" ]; then
-    echo "[INFO] First bad commit is immediately after baseline bad commit ($BAD_COMMIT). Skipping CSV update."
-else
-    echo "$DATE,$MODEL_WITH_DEVICE,$BAD_COMMIT_HASH" >> "$CSV_FILE"
-    echo "[INFO] Appended bisect result to CSV -> $DATE -> $MODEL_WITH_DEVICE -> $BAD_COMMIT_HASH"
-fi
+
+echo "$DATE,$MODEL_WITH_DEVICE,$BAD_COMMIT_HASH" >> "$CSV_FILE"
+echo "[INFO] Appended bisect result to CSV -> $DATE -> $MODEL_WITH_DEVICE -> $BAD_COMMIT_HASH"
+
 
 cat "$CSV_FILE"
 

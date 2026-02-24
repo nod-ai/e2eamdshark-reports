@@ -48,6 +48,10 @@ for model, old_status, new_status in rows:
         "new_status": new_status,
     }
 
+if not regressions:
+    print("No regressions found to process")
+    sys.exit(1)
+
 with out_path.open("w") as f:
     json.dump(regressions, f, indent=2)
 

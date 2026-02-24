@@ -92,7 +92,7 @@ jobs:
           fi
 
           # extract model name, old and new status in a json file from the yesterday_comparison.md file
-          python3 github-actions/extract_model_old_new_status_from_md.py "$REPORT" || ( echo "REG_FOUND=false" >> "$GITHUB_ENV" && EXIT_EARLY="true" )
+          python3 github-actions/extract_model_old_new_status_from_md.py "$REPORT" || ( echo "REG_FOUND=false" >> "$GITHUB_ENV" && EXIT_EARLY="true" && exit 0 )
 
           # extract model names in a .txt file
           python3 github-actions/extract_regression_model_names.py "$JSON_STATUS"

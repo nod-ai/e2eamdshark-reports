@@ -50,7 +50,7 @@ source venv/bin/activate
 pip install -r $PWD/../test-suite/alt_e2eamdshark/base_requirements.txt
 pip install -r $PWD/../test-suite/alt_e2eamdshark/hf_requirements.txt
 pip install -r $PWD/../test-suite/alt_e2eamdshark/iree_requirements.txt
-pip install --no-deps -r $PWD/../test-suite/alt_e2eamdshark/alt_e2eamdshark/torch_mlir_requirements.txt
+pip install --no-deps -r $PWD/../test-suite/alt_e2eamdshark/torch_mlir_requirements.txt
 pip install --pre --upgrade iree-base-compiler iree-base-runtime -f https://iree.dev/pip-release-links.html
 
 # Build IREE and verify that the bad commit is actually a regression

@@ -88,18 +88,16 @@ jobs:
 
           if [ ! -f "$REPORT" ]; then
             echo "Report file not found: $REPORT"
-            echo "REPORT_FOUND=false" >> "$GITHUB_ENV"
             exit 0
           fi
           cat "$REPORT"
 
           # extract model name, old and new status in a json file from the yesterday_comparison.md file
-          python3 github-actions/extract_model_old_new_status_from_md.py "$REPORT" || { echo "REG_FOUND=false" >> "$GITHUB_ENV"; exit 0; }
+          python3 github-actions/extract_model_old_new_status_from_md.py "$REPORT" || { echo "No regressions found"; exit 0; }
 
           # check if JSON file was created
           if [ ! -f "$JSON_STATUS" ]; then
             echo "JSON file not found: $JSON_STATUS"
-            echo "JSON_FOUND=false" >> "$GITHUB_ENV"
             exit 0
           fi
 
@@ -111,9 +109,12 @@ jobs:
           echo "Regression models:"
           cat "github-actions/regression_models.txt"
 
+          # All checks passed, set flag to proceed with bisect
+          echo "PROCEED_WITH_BISECT=true" >> "$GITHUB_ENV"
+
       - name: "Bisect Regression"
         run: |
-          if [ "${{ env.REPORT_FOUND }}" != "false" ] && [ "${{ env.REG_FOUND }}" != "false" ] && [ "${{ env.JSON_FOUND }}" != "false" ]; then
+          if [ "${{ env.PROCEED_WITH_BISECT }}" == "true" ]; then
             source ${ALT_E2E_VENV_DIR}/bin/activate
             echo "================================ starting to bisect regression commits... ===================================="
             git clone https://github.com/iree-org/iree.git
@@ -149,7 +150,7 @@ jobs:
       - name: "Push Artifacts"
         # if: github.event_name == 'schedule'
         run: |
-          if [ "${{ env.REPORT_FOUND }}" != "false" ] && [ "${{ env.REG_FOUND }}" != "false" ] && [ "${{ env.JSON_FOUND }}" != "false" ]; then
+          if [ "${{ env.PROCEED_WITH_BISECT }}" == "true" ]; then
             DEVICE="${{ matrix.config.DEVICE }}"
             ls
             pwd

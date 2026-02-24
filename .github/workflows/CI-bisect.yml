@@ -91,7 +91,7 @@ jobs:
           fi
 
           # extract model name, old and new status in a json file from the yesterday_comparison.md file
-          python3 github-actions/extract_model_old_new_status_from_md.py "$REPORT"
+          python3 github-actions/extract_model_old_new_status_from_md.py "$REPORT" || ( echo "REG_FOUND=false" >> "$GITHUB_ENV" && EXIT_EARLY="true" )
 
           # extract model names in a .txt file
           python3 github-actions/extract_regression_model_names.py "$JSON_STATUS"
@@ -103,7 +103,7 @@ jobs:
 
       - name: "Bisect Regression"
         run: |
-          if [ "${{ env.REPORT_FOUND }}" != "false" ]; then
+          if [ "${{ env.REPORT_FOUND }}" != "false" ] && [ "${{ env.REG_FOUND }}" != "false" ]; then
             source ${ALT_E2E_VENV_DIR}/bin/activate
             echo "================================ starting to bisect regression commits... ===================================="
             git clone https://github.com/iree-org/iree.git
@@ -139,7 +139,7 @@ jobs:
       - name: "Push Artifacts"
         # if: github.event_name == 'schedule'
         run: |
-          if [ "${{ env.REPORT_FOUND }}" != "false" ]; then
+          if [ "${{ env.REPORT_FOUND }}" != "false" ] && [ "${{ env.REG_FOUND }}" != "false" ]; then
             DEVICE="${{ matrix.config.DEVICE }}"
             ls
             pwd

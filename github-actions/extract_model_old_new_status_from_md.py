@@ -27,7 +27,7 @@ match = re.search(
 
 if not match:
     print("No regressions found section")
-    sys.exit(0)
+    sys.exit(1)
 
 section = match.group(1)
 

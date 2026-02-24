@@ -43,7 +43,15 @@ echo "First bad commit for $MODEL:"
 BAD_COMMIT_HASH=$(git bisect log | grep '^# first bad commit' | awk '{print $5}')
 DATE=$(date "+%Y-%m-%d")
 
+# Recheck if actual regression
+python -m venv venv
+source venv/bin/activate
 
+pip install -r $PWD/../alt_e2eamdshark/base_requirements.txt
+pip install -r $PWD/../alt_e2eamdshark/hf_requirements.txt
+pip install -r $PWD/../alt_e2eamdshark/iree_requirements.txt
+pip install --no-deps -r $PWD/../alt_e2eamdshark/alt_e2eamdshark/torch_mlir_requirements.txt
+pip install --pre --upgrade iree-base-compiler iree-base-runtime -f https://iree.dev/pip-release-links.html
 
 if [ "$BAD_COMMIT_HASH" = "$NEXT_COMMIT_AFTER_BAD" ]; then
     echo "[INFO] First bad commit is immediately after baseline bad commit ($BAD_COMMIT). Skipping CSV update."

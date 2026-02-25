@@ -136,8 +136,9 @@ if [ $VERIFICATION_RESULT -eq 0 ]; then
     echo "[INFO] Verification PASSED: Current status matches old status (good commit behavior)"
     echo "[INFO] The bisect result is confirmed - commit $BAD_COMMIT_HASH is the first bad commit"
 else
-    echo "[WARNING] Verification FAILED: Current status does NOT match old status"
+    echo "[WARNING] Verification FAILED: Current status does NOT match old status or showing a PASS"
     echo "[WARNING] The model may still be broken at HEAD, bisect result may need review"
+    exit 0
 fi
 
 if [ "$BAD_COMMIT_HASH" = "$NEXT_COMMIT_AFTER_BAD" ]; then

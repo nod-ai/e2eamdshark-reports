@@ -128,7 +128,7 @@ python3 $PWD/../github-actions/check_model_status.py \
   "$MODEL" \
   "$BASELINE_JSON" \
   "$CURRENT_JSON" \
-  "$CSV_FILE"
+  "$CSV_FILE" \
   "verify_pass"
 
 VERIFICATION_RESULT=$?

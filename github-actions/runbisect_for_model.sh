@@ -69,6 +69,7 @@ pip install -f https://iree.dev/pip-release-links.html --upgrade --pre \
 pip uninstall -y iree-base-compiler iree-base-runtime
 
 git submodule update --init
+git checkout "$BAD_COMMIT_HASH"
 cmake -G Ninja -B iree-build/ -S . \
        -DCMAKE_BUILD_TYPE=RelWithDebInfo \
        -DIREE_ENABLE_ASSERTIONS=ON \
@@ -128,6 +129,7 @@ python3 $PWD/../github-actions/check_model_status.py \
   "$BASELINE_JSON" \
   "$CURRENT_JSON" \
   "$CSV_FILE"
+  "verify_pass"
 
 VERIFICATION_RESULT=$?
 if [ $VERIFICATION_RESULT -eq 0 ]; then

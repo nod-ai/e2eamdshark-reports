@@ -39,9 +39,9 @@ if VERIFY == True:
     if actual_status == "PASS":
         sys.exit(1)
     if expected_status == actual_status:
-        sys.exit(0)
-    else:
         sys.exit(1)
+    else:
+        sys.exit(0)
     
 # Check if actual status is "setup" - indicates setup failure
 # Exit code 128 aborts git bisect entirely

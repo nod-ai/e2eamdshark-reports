@@ -28,12 +28,6 @@ jobs:
                   BACKEND: "rocm",
                   runs-on: "linux-mi325-1gpu-ossci-nod-ai",
                   cache_dir: "/home/runner/data/e2eamdshark/amdshark-test-suite-models-cache"
-                },
-                {
-                  DEVICE: "CPU",
-                  BACKEND: "llvm-cpu",
-                  runs-on: "nodai-cpu-x86-64",
-                  cache_dir: "/home/runner/groups/aig_amdsharks/test-suite-ci-cache"
                 }]
       fail-fast: false
     runs-on: ${{matrix.config.runs-on}}

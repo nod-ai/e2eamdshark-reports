@@ -11,7 +11,7 @@ name: CI - Regression Tracker
 on:
   workflow_dispatch:
   schedule:
-    - cron: "27 22 * * *"
+    - cron: "27 13 * * *"
 
 permissions:
   contents: write

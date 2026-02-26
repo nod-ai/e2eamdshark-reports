@@ -80,7 +80,7 @@ jobs:
           ls
           rm -rf iree/iree-build
           TODAY=$(date +%Y-%m-%d)
-          # TODAY="2026-02-04"
+          TODAY="2026-01-26
 
           REPORT="${TODAY}/ci_reports_onnx/${{ matrix.config.BACKEND }}/combined-reports_unique/yesterday_comparison.md"
           JSON_STATUS="github-actions/model_old_new_status.json"
@@ -107,7 +107,6 @@ jobs:
           cat "$JSON_STATUS"
           echo "Regression models:"
           cat "github-actions/regression_models.txt"
-
           # All checks passed, set flag to proceed with bisect
           echo "PROCEED_WITH_BISECT=true" >> "$GITHUB_ENV"
 
@@ -119,11 +118,8 @@ jobs:
             git clone https://github.com/iree-org/iree.git
             cd iree
 
-            GOOD_COMMIT=$(git tag \
-                | grep '^iree-3\.[0-9]\+\.0rc' \
-                | sort -V -r \
-                | sed -n '3p')
-            BAD_COMMIT=$(git rev-parse HEAD)
+            GOOD_COMMIT="818f45f681923142b0dfd1a4b02deffdebfda707"
+            BAD_COMMIT="1a912be3a827e6344c03c5e44519d4e5c0eed078"
 
             REPORT_DIR="$(pwd)/../"
             sed -i '1!d' $REPORT_DIR/github-actions/regression_models.txt

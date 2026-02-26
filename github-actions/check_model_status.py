@@ -17,6 +17,7 @@ MODEL = sys.argv[1]
 BASELINE_JSON = Path(sys.argv[2])
 CURRENT_JSON = Path(sys.argv[3])
 CSV_FILE = Path(sys.argv[4]) if len(sys.argv) > 4 else None
+VERIFY = True if len(sys.argv) > 5 else False
 
 baseline = json.loads(BASELINE_JSON.read_text())
 current = json.loads(CURRENT_JSON.read_text())
@@ -32,6 +33,16 @@ if MODEL not in current:
 expected_status = baseline[MODEL]["old_status"]
 actual_status = current[MODEL]["exit_status"]
 
+
+
+if VERIFY == True:
+    if actual_status == "PASS":
+        sys.exit(1)
+    if expected_status == actual_status:
+        sys.exit(1)
+    else:
+        sys.exit(0)
+    
 # Check if actual status is "setup" - indicates setup failure
 # Exit code 128 aborts git bisect entirely
 if actual_status == "setup":
@@ -49,7 +60,7 @@ print(f"Expected (old) status: {expected_status}")
 print(f"Actual status:         {actual_status}")
 
 if actual_status == expected_status:
-    print(f"========= Status Mathces With Old Status for model: {MODEL} =========")
+    print(f"========= Status Matches With Old Status for model: {MODEL} =========")
 else:
     print(f"========= Status Did Not Match With Old Status for model: {MODEL} =========")
     sys.exit(1)

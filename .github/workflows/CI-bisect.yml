@@ -10,6 +10,7 @@ name: CI - Regression Tracker
 
 on:
   workflow_dispatch:
+  pull_request:
   schedule:
     - cron: "27 13 * * *"
 
@@ -23,12 +24,6 @@ jobs:
     strategy:
       matrix:
         config: [{
-                  DEVICE: "GPU",
-                  BACKEND: "rocm",
-                  runs-on: "linux-mi325-1gpu-ossci-nod-ai",
-                  cache_dir: "/home/runner/data/e2eamdshark/amdshark-test-suite-models-cache"
-                },
-                {
                   DEVICE: "CPU",
                   BACKEND: "llvm-cpu",
                   runs-on: "nodai-cpu-x86-64",
@@ -80,7 +75,7 @@ jobs:
           ls
           rm -rf iree/iree-build
           TODAY=$(date +%Y-%m-%d)
-          # TODAY="2026-02-04"
+          TODAY="2026-01-14"
 
           REPORT="${TODAY}/ci_reports_onnx/${{ matrix.config.BACKEND }}/combined-reports_unique/yesterday_comparison.md"
           JSON_STATUS="github-actions/model_old_new_status.json"
@@ -119,11 +114,8 @@ jobs:
             git clone https://github.com/iree-org/iree.git
             cd iree
 
-            GOOD_COMMIT=$(git tag \
-                | grep '^iree-3\.[0-9]\+\.0rc' \
-                | sort -V -r \
-                | sed -n '3p')
-            BAD_COMMIT=$(git rev-parse HEAD)
+            GOOD_COMMIT="b1d73d080ffe27e6d693031e12c31bc7e411e876"
+            BAD_COMMIT="e65d4a545e10d32b32c1dc292ed31f2397df90aa"
 
             REPORT_DIR="$(pwd)/../"
             sed -i '1!d' $REPORT_DIR/github-actions/regression_models.txt

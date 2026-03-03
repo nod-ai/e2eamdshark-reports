@@ -238,7 +238,7 @@ Extended weekly test run with additional coverage.
 ├────────────────────────────────────────────────────────────────────────────┤
 │                                                                            │
 │  Depends on: generate-comparison job                                       │
-│  Runs on: self-hosted runner                                               │
+│  Runs on: self-hosted runner  ->  currently using yrathore's VDI machine   │
 │  Only runs: On scheduled triggers (not workflow_dispatch)                  │
 │                                                                            │
 │  1. Downloads the latest-comparison-reports artifact                       │
@@ -418,7 +418,6 @@ If no regressions are found in `yesterday_comparison.md`, the bisect step is ski
 ### Graph not updating
 - Verify `summary.md` exists for the current date
 - Check that CSV files are being updated correctly
-~
-~
+
 ~
 ~

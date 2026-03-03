@@ -404,7 +404,7 @@ All workflows support `workflow_dispatch` for manual triggering:
 
 ## Troubleshooting
 
-### Setup Failure:
+### Setup Failure
 Occurs when running the tests, probably due to issues with CACHE_DIR.
 
 ### No report for today's date

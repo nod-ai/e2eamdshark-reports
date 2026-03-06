@@ -1,5 +1,6 @@
 Mahesh.Ravishankar@amd.com
 DhirajKumar.Prasad@amd.com
+StellA.Laurenzo@amd.com
 Nirvedh.Meshram@amd.com
 Sambhav.Jain@amd.com
 Robert.Suderman@amd.com

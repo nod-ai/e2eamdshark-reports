@@ -398,7 +398,6 @@ All workflows support `workflow_dispatch` for manual triggering:
 
 - **Test Infrastructure**: [nod-ai/AMD-SHARK-TestSuite/e2eamdshark](https://github.com/nod-ai/AMD-SHARK-TestSuite/tree/main/e2eamdshark)
 - **Regression Graph**: [Live Graph](https://nod-ai.github.io/e2eamdshark-reports/track_test_data/regression_comparison_graph.html)
-- **IREE Repository**: [iree-org/iree](https://github.com/iree-org/iree)
 
 ---
 
@@ -422,5 +421,3 @@ If no regressions are found in `yesterday_comparison.md`, the bisect step is ski
 - Verify `summary.md` exists for the current date
 - Check that CSV files are being updated correctly
 
-~
-~

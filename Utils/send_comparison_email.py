@@ -31,9 +31,9 @@ with email_list_path.open('r') as f:
     mail_list = [email.strip() for email in f.read().splitlines() if email.strip()]
 
 msg = MIMEMultipart("alternative")
-msg["From"] = "praveen.g2@amd.com"
+msg["From"] = "yrathore@amd.com"
 msg["To"] = ", ".join(mail_list)
-msg["Cc"] = "praveen.g2@amd.com"
+msg["Cc"] = "yrathore@amd.com"
 msg["Subject"] = f"ONNX Reports Summary - {date}"
 
 msg.attach(MIMEText(html_content, "html"))

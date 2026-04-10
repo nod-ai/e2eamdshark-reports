@@ -1,2 +1,4 @@
 Date,Model,First Bad Commit
 2026-03-02,hf_GIST-Embedding-v0(GPU),[566c36f7b17d3073d7b2891b6ed0d8b111879700]
+2026-04-10,hf_sentence-bert-base-ja-mean-tokens-v2,setup failure
+2026-04-10,hf_sentence-bert-base-ja-mean-tokens-v2(GPU),

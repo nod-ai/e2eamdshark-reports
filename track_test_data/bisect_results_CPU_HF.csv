@@ -8,3 +8,4 @@ Date,Model,First Bad Commit
 2026-05-06,hf_beit-base-patch16-224-pt22k(CPU),[d097bad562a7e941d5522c58c82f4e0a26907378]
 2026-05-13,hf_GIST-Embedding-v0,setup failure
 2026-05-13,hf_GIST-Embedding-v0(CPU),
+2026-05-14,hf_kda-albert-xxlarge-v2-race(CPU),[518608eeaeea85ea586134076ffb786377569274]

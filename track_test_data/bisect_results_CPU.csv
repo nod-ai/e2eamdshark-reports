@@ -1,3 +1,4 @@
 Date,Model,First Bad Commit
 2026-05-06,dpn107_Opset16(CPU),[d097bad562a7e941d5522c58c82f4e0a26907378]
 2026-05-21,RDN_pytorch_vaiq_int8(CPU),[382a147670bff286462abd4ed34c80e81a35f49d]
+2026-05-26,migx_bench_bert-large-uncased_16_128(CPU),[d0b3a9187a5eca60a4cc900a65845309b21cbcd8]

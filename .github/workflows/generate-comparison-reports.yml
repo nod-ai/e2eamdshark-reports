@@ -8,8 +8,8 @@ name: CI - Generate Comparison Reports
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "30 16 * * *"
+  # schedule:
+  #   - cron: "30 16 * * *"
 
 permissions:
   contents: write

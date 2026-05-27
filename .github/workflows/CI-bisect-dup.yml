@@ -10,8 +10,8 @@ name: CI - Regression Tracker For DUP
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '30 22 * * 0'
+  # schedule:
+  #   - cron: '30 22 * * 0'
 
 permissions:
   contents: write
